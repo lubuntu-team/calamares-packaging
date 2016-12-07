@@ -1,0 +1,6 @@
+# This is a false-alarm. This file does not contain licensing information,
+# instead, it's a configuration file for licence options in the installer.
+calamares: extra-license-file usr/share/calamares/modules/license.conf
+
+# Satisfied by dependency
+calamares: desktop-command-not-in-package usr/share/applications/calamares.desktop pkexec
