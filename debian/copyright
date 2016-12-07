@@ -3,7 +3,56 @@ Upstream-Name: calamares
 Source: https://github.com/calamares/calamares
 
 Files: *
-Copyright: 2016 Teo Mrnjavac <teo@kde.org>
+Copyright: 2014-2016, Teo Mrnjavac <teo@kde.org>
+           2014, Aurélien Gâteau <agateau@kde.org>
+           2014, Rohan Garg <rohan@kde.org>
+           2006, Alexander Neundorf, <neundorf@kde.org>
+	   2006, Allen Winter, <winter@kde.org>
+	   2009, Sebastian Trueg, <trueg@kde.org>
+	   2010-2011, Christian Muehlhaeuser <muesli@tomahawk-player.org>
+	   2016, Luca Giambonini <almack@chakraos.org>
+	   2016, Lisa Vitolo <shainer@chakraos.org>
+	   2014, Philip Müller <philm@manjaro.org>
+	   2011, Nikita Krupen'ko <krnekit@gmail.com>
+	   2011 Kitware, Inc.
+	   2008,2010,2011, by Volker Lanz
+	   2015, Anke Boersma <demm@kaosx.us>
+	   2014, Daniel Hillenbrand <codeworkx@bbqlinux.org>
+	   2014, Benjamin Vaudour <benjamin.vaudour@yahoo.fr>
+	   2014, Kevin Kofler <kevin.kofler@chello.at>
+	   2007, Matthias Kretz <kretz@kde.org>i
+	   2007, Bernhard Loos <nhuh.put@web.de>
+	   2010-2011, Christian Muehlhaeuser <muesli@tomahawk-player.org>
+	   2010-2011, Leo Franchi <lfranchi@kde.org>
+	   2010-2012, Jeff Mitchell <jeff@tomahawk-player.org>
+	   1999, Ian Zepp (icszepp@islc.net)
+	   2006, by Dominic Battre <dominic@battre.de>
+	   2006, by Martin Pool <mbp@canonical.com>
+License: GPL-3+
+
+Files: src/libcalamares/kdsingleapplicationguard/*
+Copyright: 2001-2010 Klaralvdalens Datakonsult AB
+License: LGPL-2
+ This library is free software: you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as published by
+ the Free Software Foundation, version 2 of the License.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ The Debian packaging is (C) 2013, Kouhei Sutou <kou@clear-code.com> and
+ is licensed under the LGPL-2, see `/usr/share/common-licenses/LGPL-2'.
+
+Files: debian/*
+Copyright: 2014 Rohan Garg <rohan@kde.org>
+           2016 Jonathan Carter <jcarter@linux.com>
+License: GPL-3+
+
 License: GPL-3+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -22,22 +71,3 @@ License: GPL-3+
  version 3 can be found in the file
  `/usr/share/common-licenses/GPL-3'.
 
-Files: debian/*
-Copyright: 2014 Rohan Garg <rohan@kde.org>
-           2016 Jonathan Carter <jcarter@linux.com>
-License: GPL-2+
- This package is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
- .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <http://www.gnu.org/licenses/>
- .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
