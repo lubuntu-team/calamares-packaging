@@ -39,8 +39,8 @@ Build-Depends: cmake,
                qttools5-dev-tools
 Standards-Version: 3.9.8
 Homepage: https://github.com/calamares/calamares
-Vcs-Git: https://github.com/calamares/calamares-debian.git
-Vcs-Browser: https://github.com/calamares/calamares-debian.git
+Vcs-Git: https://gitlab.com/highvoltage/calamares-packaging.git
+Vcs-Browser: https://gitlab.com/highvoltage/calamares-packaging/tree/master
 
 Package: calamares
 Architecture: any
