@@ -1,3 +1,0 @@
-# These are hooks that is incorperated in initramfs and does not need to be executable by itself.
-libcalamares2.4.5: script-not-executable usr/lib/calamares/modules/initramfscfg/encrypt_hook
-libcalamares2.4.5: script-not-executable usr/lib/calamares/modules/initramfscfg/encrypt_hook_nokey
