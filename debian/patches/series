@@ -1,3 +1,1 @@
-Build-wit-qtwebkit-instead-of-qwebengine
-fix-spelling-mistake
-fix-fdo-desktop-entry
+use-sudo-instead-of-pkexec
