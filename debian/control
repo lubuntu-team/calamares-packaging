@@ -21,9 +21,10 @@ Build-Depends: cmake,
                libkpmcore4-dev,
                libparted-dev,
                libpolkit-qt5-1-dev,
+               libpythonqt-dev,
+               libyaml-cpp-dev,
                libqt5svg5-dev,
                libqt5webkit5-dev,
-               libyaml-cpp-dev,
                os-prober,
                pkg-config,
                pkg-kde-tools,
@@ -39,8 +40,8 @@ Build-Depends: cmake,
                qttools5-dev-tools
 Standards-Version: 3.9.8
 Homepage: https://github.com/calamares/calamares
-Vcs-Git: https://gitlab.com/highvoltage/calamares-packaging.git
-Vcs-Browser: https://gitlab.com/highvoltage/calamares-packaging/tree/master
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-kde/kde-extras/calamares.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-kde/kde-extras/calamares.git
 
 Package: calamares
 Architecture: any
