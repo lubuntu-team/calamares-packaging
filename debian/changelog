@@ -1,5 +1,5 @@
-calamares (3.0.1-1) unstable; urgency=low
+calamares (3.1.0-1) unstable; urgency=low
 
   * Initial release (Closes: #842671)
 
- -- Jonathan Carter <jcarter@linux.com>  Sat, 10 Sep 2016 21:38:15 +0200
+ -- Jonathan Carter <jcarter@linux.com>  Wed, 22 Mar 2017 14:38:15 +0200
