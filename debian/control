@@ -45,7 +45,7 @@ Vcs-Git: https://anonscm.debian.org/git/pkg-kde/kde-extras/calamares.git
 
 Package: calamares
 Architecture: any
-Depends: libkpmcore3, os-prober, ${misc:Depends}, ${shlibs:Depends}
+Depends: libkpmcore4, os-prober, ${misc:Depends}, ${shlibs:Depends}
 Recommends: squashfs-tools
 Description: distribution-independent installer framework
  Calamares is a distribution-independent installer framework.
