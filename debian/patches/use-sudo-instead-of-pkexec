@@ -1,12 +1,6 @@
 Description: Use sudo instead of pkexec
  pkexec breaks window detection and causes calamares to not start under GNOME.
  Using sudo works fine and fixes above issues.
- .
- calamares (3.0.1-1) unstable; urgency=low
- .
-   * Initial release (Closes: #842671)
-Author: Jonathan Carter <jcarter@linux.com>
-Bug-Debian: https://bugs.debian.org/842671
 
 --- calamares-3.0.1.orig/calamares.desktop
 +++ calamares-3.0.1/calamares.desktop
