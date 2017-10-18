@@ -1,3 +1,10 @@
+calamares (3.1.6-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update standards version to 4.1.1 (no related changes)
+
+ -- Jonathan Carter <jcc@debian.org>  Tue, 17 Oct 2017 14:48:51 +0200
+
 calamares (3.1.5-1) unstable; urgency=medium
 
   * New upstream release
