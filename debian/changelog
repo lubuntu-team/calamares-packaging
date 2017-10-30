@@ -1,3 +1,16 @@
+calamares (3.1.7-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/copyright: update copyright years
+
+ -- Jonathan Carter <jcc@debian.org>  Sat, 28 Oct 2017 09:36:57 +0200
+
+calamares (3.1.6-4) unstable; urgency=medium
+
+  * Attempt to make package reproducible
+
+ -- Jonathan Carter <jcc@debian.org>  Mon, 23 Oct 2017 09:43:10 +0200
+
 calamares (3.1.6-3) unstable; urgency=medium
 
   * Update dependencies

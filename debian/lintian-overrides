@@ -7,11 +7,11 @@ calamares: script-not-executable usr/lib/calamares/modules/initramfscfg/encrypt_
 calamares: extra-license-file usr/share/calamares/modules/license.conf
 
 # Private libraries, so no -dev packages or symbol files
-calamares: non-dev-pkg-with-shlib-symlink usr/lib/libcalamaresui.so.3.1.6 usr/lib/libcalamaresui.so
-calamares: non-dev-pkg-with-shlib-symlink usr/lib/libcalamares.so.3.1.6 usr/lib/libcalamares.so
-calamares: no-symbols-control-file usr/lib/libcalamaresui.so.3.1.6
-calamares: no-symbols-control-file usr/lib/libcalamares.so.3.1.6
-calamares: package-name-doesnt-match-sonames libcalamares3.1.6 libcalamaresui3.1.6
+calamares: non-dev-pkg-with-shlib-symlink usr/lib/libcalamaresui.so.3.1.7 usr/lib/libcalamaresui.so
+calamares: non-dev-pkg-with-shlib-symlink usr/lib/libcalamares.so.3.1.7 usr/lib/libcalamares.so
+calamares: no-symbols-control-file usr/lib/libcalamaresui.so.3.1.7
+calamares: no-symbols-control-file usr/lib/libcalamares.so.3.1.7
+calamares: package-name-doesnt-match-sonames libcalamares3.1.7 libcalamaresui3.1.7
 
 # Debian live media relies on sudo so this message isn't needed
 calamares: desktop-command-not-in-package usr/share/applications/calamares.desktop sudo
