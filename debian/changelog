@@ -1,3 +1,9 @@
+calamares (3.1.7-2) unstable; urgency=medium
+
+  * Remove unneeded build dependency libpythonqt-dev (Closes: #880333)
+
+ -- Jonathan Carter <jcc@debian.org>  Mon, 13 Nov 2017 09:26:00 +0200
+
 calamares (3.1.7-1) unstable; urgency=medium
 
   * New upstream release
