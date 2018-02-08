@@ -3,8 +3,8 @@ Upstream-Name: calamares
 Source: https://github.com/calamares/calamares
 
 Files: *
-Copyright: 2017, Adriaan de Groot <groot@kde.org>
-           2017, Alf Gaida <agaida@siduction.org>
+Copyright: 2017-2018, Adriaan de Groot <groot@kde.org>
+           2017-2018, Alf Gaida <agaida@siduction.org>
 	   2017, Kyle Robbertze <krobbertze@gmail.com>
            2017, Gabriel Craciunescu <crazy@frugalware.org>
 	   2016, Artoo <artoo@manjaro.org>
