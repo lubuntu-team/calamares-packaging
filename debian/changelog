@@ -1,3 +1,9 @@
+calamares (3.1.12-2) UNRELEASED; urgency=medium
+
+  * Fix minor style issue in debian/patches/use-sudo-instead-of-pkexec
+
+ -- Jonathan Carter <jcc@debian.org>  Tue, 13 Feb 2018 14:25:57 +0200
+
 calamares (3.1.12-1) unstable; urgency=medium
 
   * New upstream release
