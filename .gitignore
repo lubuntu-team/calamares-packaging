@@ -46,27 +46,3 @@ CMakeLists.txt.user
 
 # Backup files
 *~
-
-.gitmodules
-AUTHORS
-CMakeLists.txt
-CMakeModules/
-CalamaresAddBrandingSubdirectory.cmake
-CalamaresAddLibrary.cmake
-CalamaresAddModuleSubdirectory.cmake
-CalamaresAddPlugin.cmake
-CalamaresBuildTreeSettings.cmake.in
-CalamaresConfig.cmake.in
-CalamaresConfigVersion.cmake.in
-CalamaresUse.cmake.in
-LICENSE
-README.md
-calamares.desktop
-ci/
-cmake_uninstall.cmake.in
-com.github.calamares.calamares.policy
-data/
-lang/
-settings.conf
-src/
-thirdparty/
