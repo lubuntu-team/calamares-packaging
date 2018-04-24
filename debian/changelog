@@ -1,8 +1,11 @@
-calamares (3.1.12-2) UNRELEASED; urgency=medium
+calamares (3.1.13-1) unstable; urgency=medium
 
+  * New upstream release
   * Fix minor style issue in debian/patches/use-sudo-instead-of-pkexec
+  * Move VCS to salsa.debian.org service
+  * Update standards version to 4.1.4
 
- -- Jonathan Carter <jcc@debian.org>  Tue, 13 Feb 2018 14:25:57 +0200
+ -- Jonathan Carter <jcc@debian.org>  Tue, 24 Apr 2018 11:26:24 +0200
 
 calamares (3.1.12-1) unstable; urgency=medium
 
