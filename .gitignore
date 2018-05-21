@@ -21,6 +21,7 @@ __pycache__
 *.pro.user
 *.pro.user.*
 *.moc
+*.qmlc
 moc_*.cpp
 qrc_*.cpp
 ui_*.h
@@ -46,3 +47,6 @@ CMakeLists.txt.user
 
 # Backup files
 *~
+
+# Kate
+*.kate-swp
