@@ -5,8 +5,11 @@ Source: https://github.com/calamares/calamares
 Files: *
 Copyright: 2017-2018, Adriaan de Groot <groot@kde.org>
            2017-2018, Alf Gaida <agaida@siduction.org>
+           2017-2018, Gabriel Craciunescu <crazy@frugalware.org>
+           2018, Philip Müller <philm@manjaro.org>
+           2018, AlmAck <gluca86@gmail.com>
+           2018, Caio Carvalho <caiojcarvalho@gmail.com>
 	   2017, Kyle Robbertze <krobbertze@gmail.com>
-           2017, Gabriel Craciunescu <crazy@frugalware.org>
 	   2016, Artoo <artoo@manjaro.org>
 	   2016, Luca Giambonini <almack@chakraos.org>
 	   2016, Lisa Vitolo <shainer@chakraos.org>

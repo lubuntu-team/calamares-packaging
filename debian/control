@@ -35,7 +35,9 @@ Build-Depends: cmake,
                qtbase5-dev,
                qtdeclarative5-dev,
                qttools5-dev,
-               qttools5-dev-tools
+               qttools5-dev-tools,
+               libpythonqt-qt5-python3-dev,
+               libpythonqt-qtall-qt5-python3-dev
 Standards-Version: 4.1.4
 Homepage: https://github.com/calamares/calamares
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde-extras/calamares
