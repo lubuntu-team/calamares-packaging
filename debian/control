@@ -42,8 +42,10 @@ Build-Depends: cmake,
                qttools5-dev-tools
 Standards-Version: 4.1.4
 Homepage: https://github.com/calamares/calamares
-Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde-extras/calamares
-Vcs-Git: https://salsa.debian.org/qt-kde-team/kde-extras/calamares.git
+Vcs-Browser: https://phab.lubuntu.me/source/calamares/
+Vcs-Git: https://phab.lubuntu.me/source/calamares.git
+XS-Debian-Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde-extras/calamares
+XS-Debian-Vcs-Git: https://salsa.debian.org/qt-kde-team/kde-extras/calamares.git
 
 Package: calamares
 Architecture: linux-any
