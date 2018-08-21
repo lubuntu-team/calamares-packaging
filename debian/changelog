@@ -1,3 +1,21 @@
+calamares (3.2.1-1ubuntu2) cosmic; urgency=medium
+
+  * Add package hook for apport.
+
+ -- Walter Lapchynski <wxl@ubuntu.com>  Sun, 19 Aug 2018 09:13:55 -0700
+
+calamares (3.2.1-1ubuntu1) cosmic; urgency=medium
+
+  * Add a build dependency on libpwquality-dev.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 14 Aug 2018 17:15:54 -0500
+
+calamares (3.2.1-1build1) cosmic; urgency=medium
+
+  * No-change rebuild for boost soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 17 Jul 2018 12:53:45 +0000
+
 calamares (3.2.1-1) unstable; urgency=medium
 
   * New upstream release

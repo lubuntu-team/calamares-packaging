@@ -1,7 +1,8 @@
 Source: calamares
 Section: utils
 Priority: optional
-Maintainer: Jonathan Carter <jcc@debian.org>
+Maintainer: Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
+XSBC-Original-Maintainer: Jonathan Carter <jcc@debian.org>
 Build-Depends: cmake,
                cryptsetup,
                debhelper (>= 11),
@@ -20,6 +21,7 @@ Build-Depends: cmake,
                libkpmcore-dev,
                libparted-dev,
                libpolkit-qt5-1-dev,
+               libpwquality-dev,
                libyaml-cpp-dev,
                libqt5svg5-dev,
                libqt5webkit5-dev,
