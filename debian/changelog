@@ -1,4 +1,4 @@
-calamares (3.2.2-0ubuntu1) UNRELEASED; urgency=medium
+calamares (3.2.2-0ubuntu1) cosmic; urgency=medium
 
   * New upstream release.
   * Remove the reverse-applicable fix-defaultde-variable.patch.
@@ -7,7 +7,7 @@ calamares (3.2.2-0ubuntu1) UNRELEASED; urgency=medium
     favor of a better upstream solution.
   * Remove reverse-applicable 0003-remove-wrong-path.patch.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 04 Sep 2018 16:38:57 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 04 Sep 2018 17:03:15 -0500
 
 calamares (3.2.1-1ubuntu3) cosmic; urgency=medium
 
