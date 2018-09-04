@@ -5,6 +5,7 @@ calamares (3.2.2-0ubuntu1) UNRELEASED; urgency=medium
   * Bump Standards-version to 4.2.1, no changes needed.
   * 0002-Add-patch-to-compile-with-pythonQt.patch is no longer needed in
     favor of a better upstream solution.
+  * Remove reverse-applicable 0003-remove-wrong-path.patch.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 04 Sep 2018 16:38:57 -0500
 

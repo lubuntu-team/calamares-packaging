@@ -1,3 +1,2 @@
 0001-replace-pkexec-by-sudo.patch
-0003-remove-wrong-path.patch
 apport-package-hook.patch
