@@ -1,4 +1,3 @@
 0001-replace-pkexec-by-sudo.patch
-0002-Add-patch-to-compile-with-pythonQt.patch
 0003-remove-wrong-path.patch
 apport-package-hook.patch
