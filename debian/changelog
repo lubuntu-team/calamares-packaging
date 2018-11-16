@@ -1,3 +1,10 @@
+calamares (3.2.2-0ubuntu4) UNRELEASED; urgency=medium
+
+  * Add support for XDG directories, which lays the foundation for OEM
+    support.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 15 Nov 2018 21:04:16 -0600
+
 calamares (3.2.2-0ubuntu3) disco; urgency=medium
 
   * No-change rebuild against boost1.67.

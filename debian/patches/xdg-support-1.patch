@@ -1,0 +1,95 @@
+Description: Add option to obey XDG dirs
+ This is patch 1/2 adding XDG directory support.
+Author: Adriaan de Groot <groot@kde.org>
+Origin: upstream
+Bug: https://github.com/calamares/calamares/issues/941
+Applied-Upstream: commit:c489320
+Last-Update: 2018-11-15
+--- a/src/calamares/main.cpp
++++ b/src/calamares/main.cpp
+@@ -44,6 +44,8 @@ handle_args( CalamaresApplication& a )
+                                           "Verbose output for debugging purposes (0-8).", "level" );
+     QCommandLineOption configOption( QStringList{ "c", "config"},
+                                      "Configuration directory to use, for testing purposes.", "config" );
++    QCommandLineOption xdgOption( QStringList{"X", "xdg-config"},
++                                  "Use XDG_{CONFIG,DATA}_DIRS as well." );
+ 
+     QCommandLineParser parser;
+     parser.setApplicationDescription( "Distribution-independent installer framework" );
+@@ -53,6 +55,7 @@ handle_args( CalamaresApplication& a )
+     parser.addOption( debugOption );
+     parser.addOption( debugLevelOption );
+     parser.addOption( configOption );
++    parser.addOption( xdgOption );
+ 
+     parser.process( a );
+ 
+@@ -72,6 +75,8 @@ handle_args( CalamaresApplication& a )
+     }
+     if ( parser.isSet( configOption ) )
+         CalamaresUtils::setAppDataDir( QDir( parser.value( configOption ) ) );
++    if ( parser.isSet( xdgOption ) )
++        CalamaresUtils::setXdgDirs();
+ }
+ 
+ int
+--- a/src/libcalamares/utils/CalamaresUtils.cpp
++++ b/src/libcalamares/utils/CalamaresUtils.cpp
+@@ -49,6 +49,9 @@ static QTranslator* s_brandingTranslator
+ static QTranslator* s_translator = nullptr;
+ static QString s_translatorLocaleName;
+ 
++static bool s_haveExtraDirs = false;
++static QStringList s_extraConfigDirs;
++static QStringList s_extraDataDirs;
+ 
+ static bool
+ isWritableDir( const QDir& dir )
+@@ -94,6 +97,31 @@ setAppDataDir( const QDir& dir )
+     s_isAppDataDirOverridden = true;
+ }
+ 
++void
++setXdgDirs()
++{
++    s_haveExtraDirs = true;
++    s_extraConfigDirs.append( QString( qgetenv( "XDG_CONFIG_DIRS" ) ).split(':') );
++    s_extraDataDirs.append( QString( qgetenv( "XDG_DATA_DIRS" ) ).split(':') );
++}
++
++QStringList
++extraConfigDirs()
++{
++    if ( s_haveExtraDirs )
++        return s_extraConfigDirs;
++    return QStringList();
++}
++
++QStringList
++extraDataDirs()
++{
++    if ( s_haveExtraDirs )
++        return s_extraDataDirs;
++    return QStringList();
++}
++
++
+ 
+ bool
+ isAppDataDirOverridden()
+--- a/src/libcalamares/utils/CalamaresUtils.h
++++ b/src/libcalamares/utils/CalamaresUtils.h
+@@ -79,6 +79,13 @@ namespace CalamaresUtils
+ 
+     DLLEXPORT void setQmlModulesDir( const QDir& dir );
+ 
++    /** @brief Setup extra config and data dirs from the XDG variables.
++     *
++     */
++    DLLEXPORT void setXdgDirs();
++    DLLEXPORT QStringList extraConfigDirs();
++    DLLEXPORT QStringList extraDataDirs();
++
+     /**
+      * @brief removeDiacritics replaces letters with diacritics and ligatures with
+      * alternative forms and digraphs.

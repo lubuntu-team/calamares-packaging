@@ -1,2 +1,4 @@
 0001-replace-pkexec-by-sudo.patch
 apport-package-hook.patch
+xdg-support-1.patch
+xdg-support-2.patch
