@@ -1,3 +1,15 @@
+calamares (3.2.2-0ubuntu3) disco; urgency=medium
+
+  * No-change rebuild against boost1.67.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 13 Nov 2018 18:44:56 -0600
+
+calamares (3.2.2-0ubuntu2) disco; urgency=medium
+
+  * No-change rebuild to build for python3.7 as the default.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 31 Oct 2018 13:13:24 +0000
+
 calamares (3.2.2-0ubuntu1) cosmic; urgency=medium
 
   * New upstream release.
