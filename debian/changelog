@@ -2,6 +2,7 @@ calamares (3.2.4-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Update copyright file.
+  * Bump Standards-version to 4.3.0, no changes needed.
 
  -- Dan Simmons <monetaryabyss@protonmail.com>  Fri, 15 Feb 2019 18:26:56 -0500
 
