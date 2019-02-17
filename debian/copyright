@@ -3,7 +3,7 @@ Upstream-Name: calamares
 Source: https://github.com/calamares/calamares
 
 Files: *
-Copyright: 2017-2018, Adriaan de Groot <groot@kde.org>
+Copyright: 2017-2019, Adriaan de Groot <groot@kde.org>
            2017-2018, Alf Gaida <agaida@siduction.org>
            2017-2018, Gabriel Craciunescu <crazy@frugalware.org>
            2018, Philip Müller <philm@manjaro.org>
@@ -102,6 +102,7 @@ License: LGPL-2
 Files: debian/*
 Copyright: 2014 Rohan Garg <rohan@kde.org>
            2016-2017 Jonathan Carter <jcc@debian.org>
+           2018-2019 Simon Quigley <tsimonq2@ubuntu.com>
 License: GPL-3+
 
 License: GPL-3+
