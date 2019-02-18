@@ -1,4 +1,4 @@
-calamares (3.2.4-0ubuntu1) UNRELEASED; urgency=medium
+calamares (3.2.4-0ubuntu1) disco; urgency=medium
 
   * New upstream release.
   * Update copyright file.
@@ -6,6 +6,7 @@ calamares (3.2.4-0ubuntu1) UNRELEASED; urgency=medium
   * Remove patches applied for XDG directories that is no longer needed.
   * Remove trailing whitespace in rules.
   * Update lintian-overrides.
+  * Run wrap-and-sort.
 
  -- Dan Simmons <kc2bez@lubuntu.me>  Fri, 15 Feb 2019 18:26:56 -0500
 
