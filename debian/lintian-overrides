@@ -1,10 +1,6 @@
 # These are hooks that is incorperated in initramfs and does not need to be executable by itself.
 calamares: script-not-executable
 
-# This is a false-alarm. This file does not contain licensing information,
-# instead, it's a configuration file for licence options in the installer.
-calamares: extra-license-file usr/share/calamares/modules/license.conf
-
 # Private libraries, so no -dev packages or symbol files
 calamares: non-dev-pkg-with-shlib-symlink
 calamares: no-symbols-control-file
@@ -12,6 +8,3 @@ calamares: package-name-doesnt-match-sonames
 
 # Debian live media relies on sudo so this message isn't needed
 calamares: desktop-command-not-in-package usr/share/applications/calamares.desktop sudo
-
-# Odd false alarm
-calamares: spelling-error-in-binary usr/bin/calamares Iif If
