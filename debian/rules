@@ -11,4 +11,3 @@ override_dh_auto_configure:
 
 # Some test don't work well, we don't need to run them at package build time.
 override_dh_auto_test:
-

@@ -4,6 +4,7 @@ calamares (3.2.4-0ubuntu1) UNRELEASED; urgency=medium
   * Update copyright file.
   * Bump Standards-version to 4.3.0, no changes needed.
   * Remove patches applied for XDG directories that is no longer needed.
+  * Remove trailing whitespace in rules.
 
  -- Dan Simmons <kc2bez@lubuntu.me>  Fri, 15 Feb 2019 18:26:56 -0500
 
