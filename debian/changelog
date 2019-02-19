@@ -10,6 +10,17 @@ calamares (3.2.4-0ubuntu1) disco; urgency=medium
 
  -- Dan Simmons <kc2bez@lubuntu.me>  Fri, 15 Feb 2019 18:26:56 -0500
 
+calamares (3.2.3-1ubuntu1) disco; urgency=medium
+
+  * Merge from Debian Sid. Remaining changes:
+    - Change the maintainer to Lubuntu and Simon Quigley to copyright.
+    - Add package hook for apport.
+    - Add a build dependency on libpwquality-dev.
+    - Update Vcs-* for maintaining in Lubuntu.
+  * Remove the XDG support patches which were applied upstream.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 12 Jan 2019 15:16:51 -0600
+
 calamares (3.2.2-0ubuntu4) disco; urgency=medium
 
   * Add support for XDG directories, which lays the foundation for OEM
