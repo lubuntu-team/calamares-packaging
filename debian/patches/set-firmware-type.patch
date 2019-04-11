@@ -1,0 +1,19 @@
+Description: [partition] Set firmware type
+Author: Adriaan de Groot <groot@kde.org>
+Origin: upstream
+Applied-Upstream: commit:105f9c48617b390743aefe2e612d1761a420a7fc
+Last-Update: 2019-04-11
+--- a/src/modules/partition/gui/PartitionViewStep.cpp
++++ b/src/modules/partition/gui/PartitionViewStep.cpp
+@@ -553,6 +553,11 @@ PartitionViewStep::setConfigurationMap(
+         efiSP = QStringLiteral( "/boot/efi" );
+     gs->insert( "efiSystemPartition", efiSP );
+ 
++    // Set up firmwareType global storage entry. This is used, e.g. by the bootloader module.
++    QString firmwareType( PartUtils::isEfiSystem() ? QStringLiteral( "efi" ) : QStringLiteral( "bios" ) );
++    cDebug() << "Setting firmwareType to" << firmwareType;
++    gs->insert( "firmwareType", firmwareType );
++
+     // SWAP SETTINGS
+     //
+     // This is a bit convoluted because there's legacy settings to handle as well

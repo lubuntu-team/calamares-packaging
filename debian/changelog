@@ -1,3 +1,12 @@
+calamares (3.2.4-0ubuntu3) UNRELEASED; urgency=medium
+
+  * Cherry-pick several beneficial upstream patches:
+    - Ensure the firmware type is set in the global configuration.
+    - Avoid heap-wrangling the CreatePartitionDialog.
+    - Drop some re-parenting trickery.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 11 Apr 2019 12:39:57 -0500
+
 calamares (3.2.4-0ubuntu2) disco; urgency=medium
 
   * Restore button updates in partition page (LP: #1823569).
