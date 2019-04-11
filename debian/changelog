@@ -1,3 +1,9 @@
+calamares (3.2.4-0ubuntu2) disco; urgency=medium
+
+  * Restore button updates in partition page (LP: #1823569).
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Mon, 08 Apr 2019 07:18:07 -0400
+
 calamares (3.2.4-0ubuntu1) disco; urgency=medium
 
   * New upstream release.
