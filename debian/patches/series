@@ -1,6 +1,3 @@
 0001-replace-pkexec-by-sudo.patch
 apport-package-hook.patch
 update-buttons.patch
-set-firmware-type.patch
-avoid-heap-wrangling.patch
-drop-reparenting-trickery.patch
