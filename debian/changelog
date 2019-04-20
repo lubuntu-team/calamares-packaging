@@ -1,3 +1,9 @@
+calamares (3.2.5-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 19 Apr 2019 19:18:53 -0500
+
 calamares (3.2.4-0ubuntu3) disco; urgency=medium
 
   * Cherry-pick several beneficial upstream patches:
