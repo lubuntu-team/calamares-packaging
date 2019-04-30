@@ -1,6 +1,7 @@
 calamares (3.2.7-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Remove button update patch that was applied upstream.
 
  -- Dan Simmons <kc2bez@lubuntu.me>  Tue, 30 Apr 2019 19:05:07 -0400
 
