@@ -1,3 +1,16 @@
+calamares (3.2.7-0ubuntu1) eoan; urgency=medium
+
+  * New upstream release.
+  * Remove patches applied in upstream code.
+    - Remove drop re-parenting trickery patch.
+    - Remove avoid heap-wrangling the CreatePartitionDialog patch.
+    - Remove ensure the firmware type is set in the global configuration patch.
+    - Remove restore button updates in partition page patch.
+  * Bump debhelper version to >= 12.
+  * Run wrap-and-sort.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Mon, 27 May 2019 19:51:59 -0400
+
 calamares (3.2.4-0ubuntu3) disco; urgency=medium
 
   * Cherry-pick several beneficial upstream patches:
