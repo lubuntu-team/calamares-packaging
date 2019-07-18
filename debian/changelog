@@ -1,3 +1,13 @@
+calamares (3.2.11-0ubuntu1) eoan; urgency=medium
+
+  * New upstream release.
+  * Proper handling of files and permissions with FDE: (LP: #1835095)
+    - CVE-2019-13178 Set proper umask for luks crypto_keyfile.
+    - CVE-2019-13179 Set proper umask for initramfs.
+  * Bump Standards-version to 4.4.0, no changes needed.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Fri, 12 Jul 2019 19:52:38 -0400
+
 calamares (3.2.7-0ubuntu1) eoan; urgency=medium
 
   * New upstream release.
