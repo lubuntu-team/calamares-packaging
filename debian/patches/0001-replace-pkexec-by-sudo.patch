@@ -6,13 +6,11 @@ Subject: replace pkexec by sudo
  calamares.desktop | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/calamares.desktop b/calamares.desktop
-index f8be5d1..53c2424 100644
 --- a/calamares.desktop
 +++ b/calamares.desktop
 @@ -5,7 +5,7 @@ Name=Install System
  GenericName=System Installer
- Keywords=calamares;system;installer
+ Keywords=calamares;system;installer;
  TryExec=calamares
 -Exec=pkexec /usr/bin/calamares
 +Exec=sudo /usr/bin/calamares
