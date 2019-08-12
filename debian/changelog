@@ -1,3 +1,11 @@
+calamares (3.2.12-0ubuntu1) eoan; urgency=medium
+
+  * New upstream release.
+  * Update debian/compat to 12, no changes needed.
+  * Adjust desktop patch to NotShowIn=LXQt.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 11 Aug 2019 20:46:30 -0400
+
 calamares (3.2.11-0ubuntu1) eoan; urgency=medium
 
   * New upstream release.
