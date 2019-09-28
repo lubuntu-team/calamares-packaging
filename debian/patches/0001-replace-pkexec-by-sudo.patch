@@ -8,7 +8,7 @@ Subject: replace pkexec by sudo
 
 --- a/calamares.desktop
 +++ b/calamares.desktop
-@@ -5,7 +5,7 @@ Name=Install System
+@@ -5,12 +5,13 @@ Name=Install System
  GenericName=System Installer
  Keywords=calamares;system;installer;
  TryExec=calamares
@@ -17,3 +17,9 @@ Subject: replace pkexec by sudo
  Comment=Calamares — System Installer
  Icon=calamares
  Terminal=false
+ StartupNotify=true
+ Categories=Qt;System;
++NotShowIn=LXQt;
+ X-AppStream-Ignore=true
+ 
+ Name[ar]=تثبيت النظام 
