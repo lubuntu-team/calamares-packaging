@@ -2,6 +2,7 @@ calamares (3.2.14-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release. 
   * Update copyright for appdata file. 
+  * Do not build against PythonQt. 
 
  -- Dan Simmons <kc2bez@lubuntu.me>  Thu, 03 Oct 2019 18:59:53 +0000
 
