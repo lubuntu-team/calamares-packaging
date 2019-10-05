@@ -3,6 +3,7 @@ calamares (3.2.14-0ubuntu1) eoan; urgency=medium
   * New upstream release. 
   * Update copyright for appdata file. 
   * Do not build against PythonQt. 
+  * Refresh calamares.desktop patch.
 
  -- Dan Simmons <kc2bez@lubuntu.me>  Thu, 03 Oct 2019 21:27:53 -0400
 
