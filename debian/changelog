@@ -1,3 +1,12 @@
+calamares (3.2.14-0ubuntu1) eoan; urgency=medium
+
+  * New upstream release.
+  * Update copyright information for appdata file.
+  * Do not build against PythonQt.
+  * Update copyright to point to 3rdparty code directory.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Tue, 08 Oct 2019 18:55:30 -0400
+
 calamares (3.2.12-0ubuntu1) eoan; urgency=medium
 
   * New upstream release.
