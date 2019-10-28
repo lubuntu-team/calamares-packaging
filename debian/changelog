@@ -1,3 +1,9 @@
+calamares (3.2.14-0ubuntu3) focal; urgency=medium
+
+  * No-change rebuild against libkpmcore8.
+
+ -- Rik Mills <rikmills@kde.org>  Mon, 28 Oct 2019 09:08:28 +0000
+
 calamares (3.2.14-0ubuntu2) eoan; urgency=medium
 
   * Refresh apport-package-hook.patch for change in log directory
