@@ -2,6 +2,9 @@ calamares (3.2.18-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Update copyright years.
+  * Bump Standards-Version to 4.5.0, no changes needed.
+  * Update debian/control with debhelper-compat (= 12), remove
+    debian/compat.
 
  -- Dan Simmons <kc2bez@lubuntu.me>  Sat, 15 Feb 2020 22:50:34 -0500
 
