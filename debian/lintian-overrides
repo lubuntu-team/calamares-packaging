@@ -8,6 +8,3 @@ calamares: package-name-doesnt-match-sonames
 
 # Debian live media relies on sudo so this message isn't needed
 calamares: desktop-command-not-in-package usr/share/applications/calamares.desktop sudo
-
-# Override false spelling error
-calamares: spelling-error-in-binary usr/bin/calamares WHe When
