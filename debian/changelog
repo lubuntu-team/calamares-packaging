@@ -1,3 +1,9 @@
+calamares (3.2.18-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Sat, 15 Feb 2020 22:50:34 -0500
+
 calamares (3.2.17.1-0ubuntu5) focal; urgency=medium
 
   * No-change rebuild for libkpmcore9.
