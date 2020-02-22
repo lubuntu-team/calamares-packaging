@@ -1,8 +1,9 @@
-calamares (3.2.19-0ubuntu1) UNRELEASED; urgency=medium
+calamares (3.2.19-0ubuntu1) focal; urgency=medium
 
   * New upstream release.
+  * Improved partition handling with kpmcore (LP: #1851188)
 
- -- Dan Simmons <kc2bez@lubuntu.me>  Fri, 21 Feb 2020 20:12:53 -0500
+ -- Dan Simmons <kc2bez@lubuntu.me>  Sat, 22 Feb 2020 08:16:53 -0500
 
 calamares (3.2.18-0ubuntu1) focal; urgency=medium
 
