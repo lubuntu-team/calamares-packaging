@@ -1,13 +1,15 @@
-calamares (3.2.20-0ubuntu1) UNRELEASED; urgency=medium
+calamares (3.2.20-0ubuntu1) focal; urgency=medium
 
   * New upstream release.
+  * Improved debug logging.
+  * Improvements in contextualprocess and partition modules.
 
- -- Dan Simmons <kc2bez@lubuntu.me>  Thu, 27 Feb 2020 17:48:41 -0500
+ -- Dan Simmons <kc2bez@lubuntu.me>  Thu, 27 Feb 2020 17:59:28 -0500
 
 calamares (3.2.19.1-0ubuntu1) focal; urgency=medium
 
-  * New upstream release. 
-  * Update copyright file. 
+  * New upstream release.
+  * Update copyright file.
 
  -- Walter Lapchynski <wxl@ubuntu.com>  Mon, 24 Feb 2020 13:13:33 -0800
 
