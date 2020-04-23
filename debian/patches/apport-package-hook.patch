@@ -52,7 +52,7 @@ Author: Walter Lapchynski <wxl@ubuntu.com>
 +for module in module_names:
 +    installed_modules.append(module_path + module + ".conf")
 +
-+log_file = expanduser("~") + "/.cache/Calamares/session.log"
++log_file = expanduser("~") + "/.cache/calamares/session.log"
 +
 +config_file = "/etc/calamares/settings.conf"
 +

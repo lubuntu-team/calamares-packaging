@@ -5,7 +5,7 @@ Maintainer: Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
 XSBC-Original-Maintainer: Jonathan Carter <jcc@debian.org>
 Build-Depends: cmake,
                cryptsetup,
-               debhelper (>= 12),
+               debhelper-compat (= 12),
                extra-cmake-modules,
                gettext,
                libatasmart-dev,
@@ -22,8 +22,6 @@ Build-Depends: cmake,
                libparted-dev,
                libpolkit-qt5-1-dev,
                libpwquality-dev,
-               libpythonqt-qt5-python3-dev,
-               libpythonqt-qtall-qt5-python3-dev,
                libqt5svg5-dev,
                libqt5webkit5-dev,
                libyaml-cpp-dev,
@@ -40,7 +38,7 @@ Build-Depends: cmake,
                qtdeclarative5-dev,
                qttools5-dev,
                qttools5-dev-tools
-Standards-Version: 4.4.0
+Standards-Version: 4.5.0
 Homepage: https://github.com/calamares/calamares
 Vcs-Browser: https://phab.lubuntu.me/source/calamares/
 Vcs-Git: https://phab.lubuntu.me/source/calamares.git
@@ -57,7 +55,7 @@ Description: distribution-independent installer framework
  It provides a graphical installer that can be used with nearly
  any distribution. This package is suitable for live media on
  Debian-based systems, and won't be of any particular use on
- and already installed system.
+ an already installed system.
  .
  You will likely want to provide your own config files to match
  your distribution, reading the Calamares documentation will guide
