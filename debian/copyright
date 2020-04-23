@@ -3,10 +3,10 @@ Upstream-Name: calamares
 Source: https://github.com/calamares/calamares
 
 Files: *
-Copyright: 2017-2019, Adriaan de Groot <groot@kde.org>
+Copyright: 2017-2020, Adriaan de Groot <groot@kde.org>
            2017-2018, Alf Gaida <agaida@siduction.org>
            2017-2018, Gabriel Craciunescu <crazy@frugalware.org>
-           2018, Philip Müller <philm@manjaro.org>
+           2018-2020, Philip Müller <philm@manjaro.org>
            2018, AlmAck <gluca86@gmail.com>
            2018, Caio Carvalho <caiojcarvalho@gmail.com>
 	   2017, Kyle Robbertze <krobbertze@gmail.com>
@@ -182,7 +182,7 @@ License: LGPL-2.1
  On Debian systems, the complete text of the GNU Lesser General Public
  License can be found in /usr/share/common-licenses/LGPL-2.1.
 
-Files: src/libcalamaresui/widgets/waitingspinnerwidget.*
+Files: 3rdparty/waitingspinnerwidget.*
 Copyright:  2012-2014 Alexander Turkin
             2014 by William Hallatt
             2015 by Jacob Dawid
@@ -204,7 +204,7 @@ License: Expat
  IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Files: src/libcalamares/kdsingleapplicationguard/*
+Files: 3rdparty/kdsingleapplicationguard/*
 Copyright: 2001-2010 Klaralvdalens Datakonsult AB
 License: LGPL-2
  This library is free software: you can redistribute it and/or modify
@@ -225,7 +225,7 @@ License: LGPL-2
 Files: debian/*
 Copyright: 2014 Rohan Garg <rohan@kde.org>
            2016-2017 Jonathan Carter <jcc@debian.org>
-           2018-2019 Simon Quigley <tsimonq2@ubuntu.com>
+           2018-2020 Simon Quigley <tsimonq2@ubuntu.com>
 License: GPL-3+
 
 License: GPL-3+

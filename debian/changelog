@@ -1,13 +1,109 @@
+calamares (3.2.20-0ubuntu1) focal; urgency=medium
+
+  * New upstream release.
+  * Improved debug logging.
+  * Improvements in contextualprocess and partition modules.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Thu, 27 Feb 2020 17:59:28 -0500
+
+calamares (3.2.19.1-0ubuntu1) focal; urgency=medium
+
+  * New upstream release.
+  * Update copyright file.
+
+ -- Walter Lapchynski <wxl@ubuntu.com>  Mon, 24 Feb 2020 13:13:33 -0800
+
+calamares (3.2.19-0ubuntu1) focal; urgency=medium
+
+  * New upstream release.
+  * Improved partition handling with kpmcore (LP: #1851188)
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Sat, 22 Feb 2020 08:16:53 -0500
+
+calamares (3.2.18-0ubuntu1) focal; urgency=medium
+
+  * New upstream release.
+  * Update copyright years.
+  * Bump Standards-Version to 4.5.0, no changes needed.
+  * Update debian/control with debhelper-compat (= 12), remove
+    debian/compat.
+  * Remove cmake-fix-find-boost.patch, code applied upstream.
+  * Remove unneeded lintian override.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Sat, 15 Feb 2020 23:30:04 -0500
+
+calamares (3.2.17.1-0ubuntu5) focal; urgency=medium
+
+  * No-change rebuild for libkpmcore9.
+
+ -- Rik Mills <rikmills@kde.org>  Sun, 09 Feb 2020 21:40:17 +0000
+
+calamares (3.2.17.1-0ubuntu4) focal; urgency=medium
+
+  * Add patch to fix cmake finding boost 1.71. Fixes FTBFS.
+    - debian/patches: cmake-fix-find-boost.patch
+
+ -- Rik Mills <rikmills@kde.org>  Sun, 09 Feb 2020 20:43:08 +0000
+
+calamares (3.2.17.1-0ubuntu3) focal; urgency=medium
+
+  * No change rebuild against new boost1.71 ABI
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Mon, 03 Feb 2020 20:00:58 +0000
+
+calamares (3.2.17.1-0ubuntu2) focal; urgency=medium
+
+  * No-change rebuild to build with python3.8.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 25 Jan 2020 05:40:26 +0000
+
+calamares (3.2.17.1-0ubuntu1) focal; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-version to 4.4.1, no changes needed.
+  * Add lintian override for false-positive spelling error.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Tue, 03 Dec 2019 22:04:34 -0500
+
+calamares (3.2.14-0ubuntu3) focal; urgency=medium
+
+  * No-change rebuild against libkpmcore8.
+
+ -- Rik Mills <rikmills@kde.org>  Mon, 28 Oct 2019 09:08:28 +0000
+
+calamares (3.2.14-0ubuntu2) eoan; urgency=medium
+
+  * Refresh apport-package-hook.patch for change in log directory
+    name.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Wed, 09 Oct 2019 18:04:16 -0400
+
 calamares (3.2.14-0ubuntu1) eoan; urgency=medium
 
   * New upstream release.
-  * Update copyright for appdata file.
+  * Update copyright information for appdata file.
   * Do not build against PythonQt.
-  * Refresh calamares.desktop patch.
-  * Bump Standards-version, no changes needed.
-  * Fix debian/compat to proper debhelper version.
+  * Update copyright to point to 3rdparty code directory.
 
- -- Dan Simmons <kc2bez@lubuntu.me>  Fri, 04 Oct 2019 21:18:35 -0400
+ -- Dan Simmons <kc2bez@lubuntu.me>  Tue, 08 Oct 2019 18:55:30 -0400
+
+calamares (3.2.12-0ubuntu1) eoan; urgency=medium
+
+  * New upstream release.
+  * Update debian/compat to 12, no changes needed.
+  * Adjust desktop patch to NotShowIn=LXQt.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 11 Aug 2019 20:46:30 -0400
+
+calamares (3.2.11-0ubuntu1) eoan; urgency=medium
+
+  * New upstream release.
+  * Proper handling of files and permissions with FDE: (LP: #1835095)
+    - CVE-2019-13178 Set proper umask for luks crypto_keyfile.
+    - CVE-2019-13179 Set proper umask for initramfs.
+  * Bump Standards-version to 4.4.0, no changes needed.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Fri, 12 Jul 2019 19:52:38 -0400
 
 calamares (3.2.7-0ubuntu1) eoan; urgency=medium
 
