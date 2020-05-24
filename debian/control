@@ -5,7 +5,7 @@ Maintainer: Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
 XSBC-Original-Maintainer: Jonathan Carter <jcc@debian.org>
 Build-Depends: cmake,
                cryptsetup,
-               debhelper-compat (= 12),
+               debhelper-compat (= 13),
                extra-cmake-modules,
                gettext,
                libatasmart-dev,
