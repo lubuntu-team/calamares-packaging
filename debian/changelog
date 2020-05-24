@@ -4,6 +4,7 @@ calamares (3.2.24-0ubuntu1) UNRELEASED; urgency=medium
   * Update copyright file.
   * Update debhelper-compat (=13), no changes needed.
   * Declare Rules-Requires-Root: no
+  * Add lintian override for spelling mistake false-positive.
 
  -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 24 May 2020 12:52:49 -0400
 
