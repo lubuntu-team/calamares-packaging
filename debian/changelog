@@ -1,4 +1,4 @@
-calamares (3.2.24-0ubuntu1) UNRELEASED; urgency=medium
+calamares (3.2.24-0ubuntu1) groovy; urgency=medium
 
   * New upstream release.
   * Improved popup warning for ESP flag not set. (LP: #1871884)
@@ -7,7 +7,7 @@ calamares (3.2.24-0ubuntu1) UNRELEASED; urgency=medium
   * Declare Rules-Requires-Root: no
   * Add lintian override for spelling mistake false-positive.
 
- -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 24 May 2020 12:52:49 -0400
+ -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 24 May 2020 13:52:22 -0400
 
 calamares (3.2.20-0ubuntu1) focal; urgency=medium
 
