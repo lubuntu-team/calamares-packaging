@@ -1,6 +1,7 @@
 calamares (3.2.24-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Improved popup warning for ESP flag not set. (LP: #1871884)
   * Update copyright file.
   * Update debhelper-compat (=13), no changes needed.
   * Declare Rules-Requires-Root: no
