@@ -1,3 +1,9 @@
+calamares (3.2.24-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 24 May 2020 12:52:49 -0400
+
 calamares (3.2.20-0ubuntu1) focal; urgency=medium
 
   * New upstream release.
