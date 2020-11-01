@@ -1,3 +1,9 @@
+calamares (3.2.24-0ubuntu2) groovy; urgency=medium
+
+  * Rebuild against new yaml-cpp.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Fri, 29 May 2020 14:19:25 +0200
+
 calamares (3.2.24-0ubuntu1) groovy; urgency=medium
 
   * New upstream release.
