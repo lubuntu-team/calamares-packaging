@@ -1,4 +1,4 @@
-# These are hooks that is incorperated in initramfs and does not need to be executable by itself.
+# These are hooks that is incorporated in initramfs and does not need to be executable by itself.
 calamares: script-not-executable
 
 # Private libraries, so no -dev packages or symbol files
@@ -10,4 +10,4 @@ calamares: package-name-doesnt-match-sonames
 calamares: desktop-command-not-in-package usr/share/applications/calamares.desktop sudo
 
 # False positive
-calamares: spelling-error-in-binary usr/lib/x86_64-linux-gnu/calamares/modules/locale/libcalamares_viewmodule_locale.so WHe When
+calamares: spelling-error-in-binary usr/bin/calamares yUR your
