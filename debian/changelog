@@ -1,6 +1,7 @@
 calamares (3.2.32.1-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Update copyright; remove files no longer shipped.
 
  -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 01 Nov 2020 10:02:40 -0500
 
