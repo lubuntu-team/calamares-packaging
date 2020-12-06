@@ -1,3 +1,9 @@
+calamares (3.2.35-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 06 Dec 2020 16:05:43 -0500
+
 calamares (3.2.32.1-0ubuntu2) hirsute; urgency=medium
 
   * No-change rebuild to build with python3.9 as default.
