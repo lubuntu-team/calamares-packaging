@@ -9,5 +9,5 @@ calamares: package-name-doesnt-match-sonames
 # Debian live media relies on sudo so this message isn't needed
 calamares: desktop-command-not-in-package usr/share/applications/calamares.desktop sudo
 
-# False positive
-calamares: spelling-error-in-binary usr/bin/calamares yUR your
+# False alarm
+calamares: hardening-no-bindnow

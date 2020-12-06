@@ -3,6 +3,8 @@ calamares (3.2.35-0ubuntu1) UNRELEASED; urgency=medium
   * New upstream release.
   * Add DEB_BUILD_MAINT_OPTIONS to debian/rules to make build paths
     reproducible.
+  * Remove false-positive spelling and add false alarm in lintian-
+    overrides.
 
  -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 06 Dec 2020 16:05:43 -0500
 
