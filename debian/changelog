@@ -1,4 +1,4 @@
-calamares (3.2.35-0ubuntu1) UNRELEASED; urgency=medium
+calamares (3.2.35-0ubuntu1) hirsute; urgency=medium
 
   * New upstream release.
   * Add DEB_BUILD_MAINT_OPTIONS to debian/rules to make build paths
@@ -6,7 +6,7 @@ calamares (3.2.35-0ubuntu1) UNRELEASED; urgency=medium
   * Remove false-positive spelling and add false alarm in lintian-
     overrides.
 
- -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 06 Dec 2020 16:05:43 -0500
+ -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 06 Dec 2020 18:26:22 -0500
 
 calamares (3.2.32.1-0ubuntu2) hirsute; urgency=medium
 
