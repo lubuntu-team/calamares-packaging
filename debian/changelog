@@ -1,3 +1,35 @@
+calamares (3.2.35-0ubuntu1) hirsute; urgency=medium
+
+  * New upstream release.
+  * Add DEB_BUILD_MAINT_OPTIONS to debian/rules to make build paths
+    reproducible.
+  * Remove false-positive spelling and add false alarm in lintian-
+    overrides.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 06 Dec 2020 18:26:22 -0500
+
+calamares (3.2.32.1-0ubuntu2) hirsute; urgency=medium
+
+  * No-change rebuild to build with python3.9 as default.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 19 Nov 2020 20:18:01 +0100
+
+calamares (3.2.32.1-0ubuntu1) hirsute; urgency=medium
+
+  * New upstream release.
+  * Update copyright; remove files no longer shipped.
+  * Adjust lintian-overrides.
+    - Fix spelling mistake.
+    - Remove false-positive spelling mistake and add a new one.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 01 Nov 2020 13:46:32 -0500
+
+calamares (3.2.24-0ubuntu2) groovy; urgency=medium
+
+  * Rebuild against new yaml-cpp.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Fri, 29 May 2020 14:19:25 +0200
+
 calamares (3.2.24-0ubuntu1) groovy; urgency=medium
 
   * New upstream release.
