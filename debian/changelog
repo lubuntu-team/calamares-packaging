@@ -1,3 +1,9 @@
+calamares (3.2.35-0ubuntu2) hirsute; urgency=medium
+
+  * No-change rebuild for boost soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 12 Dec 2020 13:03:54 +0100
+
 calamares (3.2.35-0ubuntu1) hirsute; urgency=medium
 
   * New upstream release.
