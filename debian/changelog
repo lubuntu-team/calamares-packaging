@@ -1,10 +1,10 @@
-calamares (3.2.37-0ubuntu1) UNRELEASED; urgency=medium
+calamares (3.2.37-0ubuntu1) hirsute; urgency=medium
 
   * New upstream release.
     - Build against patched kpmcore so EFI installs don't fail.
       (LP: #1916356)
 
- -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 28 Feb 2021 13:42:32 -0500
+ -- Dan Simmons <kc2bez@lubuntu.me>  Sun, 28 Feb 2021 14:01:46 -0500
 
 calamares (3.2.35-0ubuntu2) hirsute; urgency=medium
 
