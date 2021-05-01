@@ -1,3 +1,9 @@
+calamares (3.2.37-0ubuntu2) impish; urgency=medium
+
+  * No-change rebuild against libkpmcore11.
+
+ -- Rik Mills <rikmills@kde.org>  Sat, 01 May 2021 12:31:01 +0100
+
 calamares (3.2.37-0ubuntu1) hirsute; urgency=medium
 
   * New upstream release.
