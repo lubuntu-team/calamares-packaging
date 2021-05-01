@@ -1,3 +1,9 @@
+calamares (3.2.37-0ubuntu3) impish; urgency=medium
+
+  * For now build for arch any.
+
+ -- Rik Mills <rikmills@kde.org>  Sat, 01 May 2021 20:25:52 +0100
+
 calamares (3.2.37-0ubuntu2) impish; urgency=medium
 
   * No-change rebuild against libkpmcore11.
