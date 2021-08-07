@@ -1,3 +1,9 @@
+calamares (3.2.41.1-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Dan Simmons <kc2bez@lubuntu.me>  Sat, 07 Aug 2021 15:08:35 -0400
+
 calamares (3.2.37-0ubuntu3) impish; urgency=medium
 
   * For now build for arch any.
