@@ -1,3 +1,15 @@
+calamares (3.2.41.1-0ubuntu3) jammy; urgency=medium
+
+  * No-change rebuild with Python 3.10 as default version
+
+ -- Graham Inggs <ginggs@ubuntu.com>  Fri, 14 Jan 2022 11:25:54 +0000
+
+calamares (3.2.41.1-0ubuntu2) jammy; urgency=medium
+
+  * Rebuild against new libyaml-cpp0.8.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Thu, 02 Dec 2021 09:46:17 +0100
+
 calamares (3.2.41.1-0ubuntu1) impish; urgency=medium
 
   * New upstream release.
