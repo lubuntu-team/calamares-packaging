@@ -41,8 +41,8 @@ Build-Depends: cmake,
 Standards-Version: 4.6.0
 Rules-Requires-Root: no
 Homepage: https://github.com/calamares/calamares
-Vcs-Browser: https://phab.lubuntu.me/source/calamares/
-Vcs-Git: https://phab.lubuntu.me/source/calamares.git
+Vcs-Browser: https://git.launchpad.net/~ubuntu-qt-code/+git/calamares
+Vcs-Git: https://git.launchpad.net/~ubuntu-qt-code/+git/calamares
 XS-Debian-Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde-extras/calamares
 XS-Debian-Vcs-Git: https://salsa.debian.org/qt-kde-team/kde-extras/calamares.git
 

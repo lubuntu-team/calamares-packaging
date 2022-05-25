@@ -2,6 +2,7 @@ calamares (3.2.58-1ubuntu2) UNRELEASED; urgency=medium
 
   * Backport upstream change fixing tmpfs on /tmp:
     - https://github.com/calamares/calamares/pull/1958
+  * Update packaging Vcs-*.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 25 May 2022 05:29:26 -0500
 
