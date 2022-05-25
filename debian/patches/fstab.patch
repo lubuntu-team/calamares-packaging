@@ -1,0 +1,158 @@
+From 63ee982d36584fd56c8ac096440406facfec2240 Mon Sep 17 00:00:00 2001
+From: abalfoort <arjenbalfoort@hotmail.com>
+Date: Fri, 20 May 2022 11:54:23 +0200
+Subject: [PATCH] [fstab] Configure tmp on tmpfs
+
+Adds a new option / configuration keys to `fstab.conf` to
+configure how /tmp is created. The example shows how /tmp
+is made *tmpfs* on an SSD, or on not-SSD, is just-a-directory.
+
+FIXES #1818
+---
+ src/modules/fstab/fstab.conf        | 23 +++++++++++++++++
+ src/modules/fstab/fstab.schema.yaml | 20 ++++++++++++++-
+ src/modules/fstab/main.py           | 38 ++++++++++++++++++++---------
+ 3 files changed, 69 insertions(+), 12 deletions(-)
+
+diff --git a/src/modules/fstab/fstab.conf b/src/modules/fstab/fstab.conf
+index 560aa0073e..80800c44be 100644
+--- a/src/modules/fstab/fstab.conf
++++ b/src/modules/fstab/fstab.conf
+@@ -61,3 +61,26 @@ ssdExtraMountOptions:
+ crypttabOptions: luks
+ # For Debian and Debian-based distributions, change the above line to:
+ # crypttabOptions: luks,keyscript=/bin/cat
++
++# Options for handling /tmp in /etc/fstab
++# Currently default (required) and ssd are supported
++# The corresponding string can contain the following variables:
++# tmpfs: true or tmpfs: false to either mount /tmp as tmpfs or not
++# options: "<mount options>"
++#
++# Example:
++#tmpOptions:
++#    default:
++#        tmpfs: false
++#        options: ""
++#    ssd:
++#        tmpfs: true
++#        options: "defaults,noatime,mode=1777"
++#
++tmpOptions:
++    default:
++        tmpfs: false
++        options: ""
++    ssd:
++        tmpfs: true
++        options: "defaults,noatime,mode=1777"
+diff --git a/src/modules/fstab/fstab.schema.yaml b/src/modules/fstab/fstab.schema.yaml
+index 087e82cac3..f70d22c42c 100644
+--- a/src/modules/fstab/fstab.schema.yaml
++++ b/src/modules/fstab/fstab.schema.yaml
+@@ -25,4 +25,22 @@ properties:
+             btrfs_swap: { type: string }
+     efiMountOptions: { type: string }
+     crypttabOptions: { type: string }
+-required: [ mountOptions ]
++    tmpOptions:
++        type: object
++        additionalProperties: false
++        properties:
++            default:
++                type: object
++                additionalProperties: false
++                properties:
++                    tmpfs: { type: bool }
++                    options: { type: string }
++            ssd:
++                type: object
++                additionalProperties: false
++                properties:
++                    tmpfs: { type: bool }
++                    options: { type: string }
++required:
++    - mountOptions
++    - tmpOptions: default
+diff --git a/src/modules/fstab/main.py b/src/modules/fstab/main.py
+index 45cac351be..914b766e8e 100755
+--- a/src/modules/fstab/main.py
++++ b/src/modules/fstab/main.py
+@@ -106,14 +106,17 @@ class FstabGenerator(object):
+     :param root_mount_point:
+     :param mount_options:
+     :param ssd_extra_mount_options:
++    :param crypttab_options:
++    :param tmp_options:
+     """
+     def __init__(self, partitions, root_mount_point, mount_options,
+-                 ssd_extra_mount_options, crypttab_options):
++                 ssd_extra_mount_options, crypttab_options, tmp_options):
+         self.partitions = partitions
+         self.root_mount_point = root_mount_point
+         self.mount_options = mount_options
+         self.ssd_extra_mount_options = ssd_extra_mount_options
+         self.crypttab_options = crypttab_options
++        self.tmp_options = tmp_options
+         self.ssd_disks = set()
+         self.root_is_ssd = False
+ 
+@@ -214,21 +217,32 @@ def generate_fstab(self):
+                         mount_entry["subvol"] = s["subvolume"]
+                         dct = self.generate_fstab_line_info(mount_entry)
+                         if dct:
+-                                self.print_fstab_line(dct, file=fstab_file)
++                            self.print_fstab_line(dct, file=fstab_file)
+                 elif partition["fs"] != "zfs":  # zfs partitions don't need an entry in fstab
+                     dct = self.generate_fstab_line_info(partition)
+                     if dct:
+                         self.print_fstab_line(dct, file=fstab_file)
+ 
+             if self.root_is_ssd:
+-                # Mount /tmp on a tmpfs
+-                dct = dict(device="tmpfs",
+-                           mount_point="/tmp",
+-                           fs="tmpfs",
+-                           options="defaults,noatime,mode=1777",
+-                           check=0,
+-                           )
+-                self.print_fstab_line(dct, file=fstab_file)
++                # Old behavior was to mount /tmp as tmpfs
++                # New behavior is to use tmpOptions to decide
++                # if mounting /tmp as tmpfs and which options to use
++                ssd = self.tmp_options.get("ssd", {})
++                if not ssd:
++                    ssd = self.tmp_options.get("default", {})
++                # Default to True to mimic old behavior
++                tmpfs = ssd.get("tmpfs", True)
++
++                if tmpfs:
++                    options = ssd.get("options", "defaults,noatime,mode=1777")
++                    # Mount /tmp on a tmpfs
++                    dct = dict(device="tmpfs",
++                               mount_point="/tmp",
++                               fs="tmpfs",
++                               options=options,
++                               check=0,
++                               )
++                    self.print_fstab_line(dct, file=fstab_file)
+ 
+     def generate_fstab_line_info(self, partition):
+         """
+@@ -411,6 +425,7 @@ def run():
+     mount_options = conf.get("mountOptions", {})
+     ssd_extra_mount_options = conf.get("ssdExtraMountOptions", {})
+     crypttab_options = conf.get("crypttabOptions", "luks")
++    tmp_options = conf.get("tmpOptions", {})
+ 
+     # We rely on mount_options having a default; if there wasn't one,
+     # bail out with a meaningful error.
+@@ -423,7 +438,8 @@ def run():
+                                root_mount_point,
+                                mount_options,
+                                ssd_extra_mount_options,
+-                               crypttab_options)
++                               crypttab_options,
++                               tmp_options)
+ 
+     if swap_choice is not None:
+         libcalamares.job.setprogress(0.2)
