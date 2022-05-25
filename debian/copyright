@@ -3,49 +3,49 @@ Upstream-Name: calamares
 Source: https://github.com/calamares/calamares
 
 Files: *
-Copyright: 2017-2020, Adriaan de Groot <groot@kde.org>
+Copyright: 2017-2021, Adriaan de Groot <groot@kde.org>
            2020, Camilo Higuita <milo.h@aol.com>
            2020, Anke Boersma <demm@kaosx.us>
            2017-2018, Alf Gaida <agaida@siduction.org>
            2017-2018, Gabriel Craciunescu <crazy@frugalware.org>
-           2018-2020, Philip Müller <philm@manjaro.org>
+           2018, Philip Müller <philm@manjaro.org>
            2018, AlmAck <gluca86@gmail.com>
            2018, Caio Carvalho <caiojcarvalho@gmail.com>
-	   2017, Kyle Robbertze <krobbertze@gmail.com>
-	   2016, Artoo <artoo@manjaro.org>
-	   2016, Luca Giambonini <almack@chakraos.org>
-	   2016, Lisa Vitolo <shainer@chakraos.org>
+           2017, Kyle Robbertze <krobbertze@gmail.com>
+           2016, Artoo <artoo@manjaro.org>
+           2016, Luca Giambonini <almack@chakraos.org>
+           2016, Lisa Vitolo <shainer@chakraos.org>
            2016, David McKinney <mckinney@subgraph.com>
-	   2016, Andrius Štikonas <andrius@stikonas.eu>
-	   2015, Sacha Schutz <sacha@labsquare.org>
-	   2015, Anke Boersma <demm@kaosx.us>
-	   2015, Alexandre Arnt <qtgzmanager@gmail.com>
-	   2014-2016, Kevin Kofler <kevin.kofler@chello.at>
+           2016, Andrius Štikonas <andrius@stikonas.eu>
+           2015, Sacha Schutz <sacha@labsquare.org>
+           2015, Anke Boersma <demm@kaosx.us>
+           2015, Alexandre Arnt <qtgzmanager@gmail.com>
+           2014-2016, Kevin Kofler <kevin.kofler@chello.at>
            2014-2016, Teo Mrnjavac <teo@kde.org>
-	   2014-2017, Philip Müller <philm@manjaro.org>
+           2014-2017, Philip Müller <philm@manjaro.org>
            2014-2015, Rohan Garg <rohan@kde.org>
-	   2014, Schutz Sacha <sacha@labsquare.org>
+           2014, Schutz Sacha <sacha@labsquare.org>
            2014, Aurélien Gâteau <agateau@kde.org>
-	   2014, Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
-	   2014, Daniel Hillenbrand <codeworkx@bbqlinux.org>
-	   2014, Benjamin Vaudour <benjamin.vaudour@yahoo.fr>
-	   2013, Kay Sievers
-	   2012, Digia Plc and/or its subsidiary(-ies)
+           2014, Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+           2014, Daniel Hillenbrand <codeworkx@bbqlinux.org>
+           2014, Benjamin Vaudour <benjamin.vaudour@yahoo.fr>
+           2013, Kay Sievers
+           2012, Digia Plc and/or its subsidiary(-ies)
            2011, Lennart Poettering
-	   2011, Nikita Krupen'ko <krnekit@gmail.com>
-	   2011, Kitware, Inc.
-	   2010-2012, Jeff Mitchell <jeff@tomahawk-player.org>
-	   2010-2012, Christian Muehlhaeuser <muesli@tomahawk-player.org>
-	   2010-2011, Leo Franchi <lfranchi@kde.org>
-	   2009, Sebastian Trueg, <trueg@kde.org>
-	   2008-2011, by Volker Lanz
-	   2007, Matthias Kretz <kretz@kde.org>i
-	   2007, Bernhard Loos <nhuh.put@web.de>
-	   2007, Free Software Foundation, Inc. <http:fsf.org/>
-	   2006, by Dominic Battre <dominic@battre.de>
-	   2006, by Martin Pool <mbp@canonical.com>
-	   2006, Allen Winter, <winter@kde.org>
-	   1999, Ian Zepp (icszepp@islc.net)
+           2011, Nikita Krupen'ko <krnekit@gmail.com>
+           2011, Kitware, Inc.
+           2010-2012, Jeff Mitchell <jeff@tomahawk-player.org>
+           2010-2012, Christian Muehlhaeuser <muesli@tomahawk-player.org>
+           2010-2011, Leo Franchi <lfranchi@kde.org>
+           2009, Sebastian Trueg, <trueg@kde.org>
+           2008-2011, by Volker Lanz
+           2007, Matthias Kretz <kretz@kde.org>i
+           2007, Bernhard Loos <nhuh.put@web.de>
+           2007, Free Software Foundation, Inc. <http:fsf.org/>
+           2006, by Dominic Battre <dominic@battre.de>
+           2006, by Martin Pool <mbp@canonical.com>
+           2006, Allen Winter, <winter@kde.org>
+           1999, Ian Zepp (icszepp@islc.net)
 License: GPL-3+
 
 Files: io.calamares.calamares.appdata.xml
@@ -174,7 +174,7 @@ License: CC0-1.0
 Files: src/qml/calamares/slideshow/*qml
 Copyright: 2017, Adriaan de Groot <groot@kde.org>
            2016 The Qt Company Ltd
-	   2012 Digia Plc and/or its subsidiary(-ies)
+           2012 Digia Plc and/or its subsidiary(-ies)
 License: LGPL-2.1
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
@@ -185,8 +185,8 @@ License: LGPL-2.1
  License can be found in /usr/share/common-licenses/LGPL-2.1.
 
 Files: debian/*
-Copyright: 2014 Rohan Garg <rohan@kde.org>
-           2016-2017 Jonathan Carter <jcc@debian.org>
+Copyright: 2016-2021 Jonathan Carter <jcc@debian.org>
+           2014 Rohan Garg <rohan@kde.org>
            2018-2020 Simon Quigley <tsimonq2@ubuntu.com>
 License: GPL-3+
 
