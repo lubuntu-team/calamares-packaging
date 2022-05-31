@@ -1,9 +1,9 @@
-calamares (3.2.59-0ubuntu1) UNRELEASED; urgency=medium
+calamares (3.2.59-0ubuntu1) kinetic; urgency=medium
 
   * New upstream release, last in the 3.2 series.
   * Remove the reverse-applicable tmpfs fix.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 31 May 2022 15:32:56 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 31 May 2022 17:04:46 -0500
 
 calamares (3.2.58-1ubuntu2) kinetic; urgency=medium
 
