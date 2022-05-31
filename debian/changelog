@@ -1,3 +1,9 @@
+calamares (3.2.59-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release, last in the 3.2 series.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 31 May 2022 15:32:56 -0500
+
 calamares (3.2.58-1ubuntu2) kinetic; urgency=medium
 
   * Backport upstream change fixing tmpfs on /tmp:
