@@ -1,3 +1,9 @@
+calamares (3.3.0~git20220610-0ubuntu2) kinetic; urgency=medium
+
+  * Fix UEFI installation bug https://github.com/calamares/calamares/issues/1990
+
+ -- Aaron Rainbolt <arraybolt3@gmail.com>  Thu, 16 Jun 2022 14:06:23 -0500
+
 calamares (3.3.0~git20220610-0ubuntu1) kinetic; urgency=medium
 
   * New upstream snapshot.
