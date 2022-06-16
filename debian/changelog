@@ -1,3 +1,21 @@
+calamares (3.3.0~git20220610-0ubuntu1) kinetic; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 12 Jun 2022 12:50:11 -0400
+
+calamares (3.3.0~git20220608-0ubuntu1) kinetic; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 08 Jun 2022 18:43:01 -0500
+
+calamares (3.3.0~git20220606-0ubuntu1) kinetic; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Mon, 06 Jun 2022 12:33:38 -0500
+
 calamares (3.2.59-0ubuntu1) kinetic; urgency=medium
 
   * New upstream release, last in the 3.2 series.
