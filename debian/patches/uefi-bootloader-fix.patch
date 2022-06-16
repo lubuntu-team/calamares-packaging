@@ -3,7 +3,7 @@ Description: Fix UEFI installation bug
  populated when installing Lubuntu on a UEFI system. This patch reverts the
  change, allowing UEFI installations to work again.
 Author: Aaron Rainbolt <arraybolt3@gmail.com>
-Origin: upstream, https://github.com/calamares/calamares/blob/calamares/src/modules/bootloader/main.py
+Origin: upstream
 Bug: https://github.com/calamares/calamares/issues/1990
 Forwarded: not-needed
 Applied-Upstream: https://github.com/calamares/calamares/pull/1991
