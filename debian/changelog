@@ -1,3 +1,9 @@
+calamares (3.3.0~git20220620-0ubuntu2) kinetic; urgency=medium
+
+  * Yeah, we don't need webengine. Good try though.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 21 Jun 2022 23:44:32 -0500
+
 calamares (3.3.0~git20220620-0ubuntu1) kinetic; urgency=medium
 
   * New upstream snapshot.
