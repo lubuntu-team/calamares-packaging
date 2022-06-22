@@ -1,6 +1,7 @@
 calamares (3.3.0~git20220620-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream snapshot.
+  * Add some additional build dependencies.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 21 Jun 2022 22:08:36 -0500
 
