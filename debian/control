@@ -8,9 +8,11 @@ Build-Depends: cmake,
                debhelper-compat (= 13),
                extra-cmake-modules,
                gettext,
+               libappstreamqt-dev,
                libboost-python-dev,
                libkf5config-dev,
                libkf5coreaddons-dev,
+               libkf5crash-dev,
                libkf5i18n-dev,
                libkf5iconthemes-dev,
                libkf5kio-dev,
@@ -36,8 +38,10 @@ Build-Depends: cmake,
                qml-module-qtquick2,
                qtbase5-dev,
                qtdeclarative5-dev,
+               qtlocation5-dev,
                qttools5-dev,
-               qttools5-dev-tools
+               qttools5-dev-tools,
+               qtwebengine5-dev
 Standards-Version: 4.6.0
 Rules-Requires-Root: no
 Homepage: https://github.com/calamares/calamares
