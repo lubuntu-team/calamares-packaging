@@ -1,3 +1,10 @@
+calamares (3.3.0-alpha1-0ubuntu1) kinetic; urgency=medium
+
+  * New upstream tag.
+    - Update patch.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Mon, 27 Jun 2022 22:34:01 -0500
+
 calamares (3.3.0~git20220620-0ubuntu2) kinetic; urgency=medium
 
   * Yeah, we don't need webengine. Good try though.
