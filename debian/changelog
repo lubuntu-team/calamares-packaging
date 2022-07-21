@@ -1,3 +1,9 @@
+calamares (3.2.60-0ubuntu0.22.04.1) jammy; urgency=medium
+
+  * SRU update for LP: #1980180.
+
+ -- Aaron Rainbolt <arraybolt3@gmail.com>  Thu, 21 Jul 2022 13:09:04 -0500
+
 calamares (3.2.41.1-0ubuntu3) jammy; urgency=medium
 
   * No-change rebuild with Python 3.10 as default version
