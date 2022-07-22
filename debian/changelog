@@ -34,9 +34,9 @@ calamares (3.2.60-0ubuntu0.22.04.1) jammy; urgency=medium
     folders are structured, not a mistake.
   * Added two "exit-in-shared-library" messages to lintian-overrides.
     - Reasoning - The libraries are libcalamares.so and libcalamaresui.so.
-      No other application will use these libraries in the forseeable future,
-      and upstream designed it this way, so it's perfectly acceptable and can
-      be left as-is.
+      No other application will use these libraries in the foreseeable
+      future, and upstream designed it this way, so it's perfectly
+      acceptable and can be left as-is.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Thu, 21 Jul 2022 13:09:04 -0500
 
