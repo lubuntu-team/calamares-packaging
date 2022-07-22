@@ -38,7 +38,7 @@ Build-Depends: cmake,
                qtdeclarative5-dev,
                qttools5-dev,
                qttools5-dev-tools
-Standards-Version: 4.5.0
+Standards-Version: 4.6.1
 Rules-Requires-Root: no
 Homepage: https://github.com/calamares/calamares
 Vcs-Browser: https://phab.lubuntu.me/source/calamares/

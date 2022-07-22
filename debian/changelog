@@ -2,6 +2,7 @@ calamares (3.2.60-0ubuntu0.22.04.1) jammy; urgency=medium
 
   * SRU update for LP: #1980180.
   * Updated copyright file.
+  * Bumped Standards-Version to 4.6.1, no changes necessary.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Thu, 21 Jul 2022 13:09:04 -0500
 
