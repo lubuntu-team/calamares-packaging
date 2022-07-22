@@ -2,7 +2,6 @@ calamares (3.2.60-0ubuntu0.22.04.1) jammy; urgency=medium
 
   * SRU update for LP: #1980180.
   * Updated copyright file.
-  * Bumped Standards-Version to 4.6.1, no changes necessary.
   * Removed obsolete manpage for Calamares.
     - Reasoning - Calamares provides a man page upstream.
   * Removed desktop-command-not-in-package override from lintian-overrides.
