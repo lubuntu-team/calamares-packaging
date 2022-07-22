@@ -2,7 +2,7 @@
 calamares: script-not-executable
 
 # Private libraries, so no -dev packages or symbol files
-calamares: link-to-shared-library-in-wrong-package
+calamares: non-dev-pkg-with-shlib-symlink
 calamares: no-symbols-control-file
 calamares: package-name-doesnt-match-sonames
 
