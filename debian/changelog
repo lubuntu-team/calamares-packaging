@@ -29,6 +29,10 @@ calamares (3.2.60-0ubuntu0.22.04.1) jammy; urgency=medium
   * Overrode "repeated-path-segment calamares
     usr/share/calamares/qml/calamares/" Lintian gripe - this is how the
     folders are structured, not a mistake.
+  * Overrode Lintian gripe "package-does-not-install-examples
+    src/modules/notesqml/examples/".
+    - Reasoning - The examples directory will almost without question remain
+      unused by the end user.
   * Added two "exit-in-shared-library" messages to lintian-overrides.
     - Reasoning - The libraries are libcalamares.so and libcalamaresui.so.
       No other application will use these libraries in the forseeable
