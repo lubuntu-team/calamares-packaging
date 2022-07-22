@@ -24,6 +24,8 @@ calamares (3.2.60-0ubuntu0.22.04.1) jammy; urgency=medium
   * Renamed lintian override "non-dev-pkg-with-shlib-symlink" to
     "link-to-shared-library-in-wrong-package" for compliance with the
     current version of Lintian supplied with Jammy.
+  * Created upstream/signing-key.asc for automatic GPG verification of
+    uscan'd source code archives.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Thu, 21 Jul 2022 13:09:04 -0500
 
