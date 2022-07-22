@@ -9,5 +9,9 @@ calamares: package-name-doesnt-match-sonames
 # This is indeed how the folders are supposed to be structured
 calamares: repeated-path-segment calamares usr/share/calamares/qml/calamares/
 
+# Calamares is the only app that will ever use these libraries, and this is how upstream designed it.
+calamares: exit-in-shared-library usr/lib/x86_64-linux-gnu/libcalamares.so.3.2.60
+calamares: exit-in-shared-library usr/lib/x86_64-linux-gnu/libcalamaresui.so.3.2.60
+
 # False alarm
 calamares: hardening-no-bindnow
