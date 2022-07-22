@@ -1,6 +1,6 @@
 calamares (3.2.60-0ubuntu0.22.04.1) jammy; urgency=medium
 
-  * SRU update for LP: #1980180.
+  * Updated Calamares to version 3.2.60 for SRU LP: #1980180.
   * Updated copyright file.
   * Removed obsolete manpage for Calamares.
     - Reasoning - Calamares provides a man page upstream.
