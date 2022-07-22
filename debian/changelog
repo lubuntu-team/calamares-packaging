@@ -3,15 +3,6 @@ calamares (3.2.60-0ubuntu0.22.04.1) jammy; urgency=medium
   * SRU update for LP: #1980180.
   * Updated copyright file.
   * Bumped Standards-Version to 4.6.1, no changes necessary.
-  * Removed obsolete patch "0001-replace-pkexec-by-sudo.patch".
-    - Reasoning - In Kinetic with Calamares 3.3, we had to fix a Calamares
-      problem by making it start using pkexec (Calamares wasn't starting at
-      all when executed using sudo). If this patch is why Calamares *wasn't*
-      using pkexec, then it is the introducing a bug. Even if the patch is
-      still harmless in this version of Calamares, executing graphical
-      applications with sudo is generally considered a bad idea, and pkexec
-      is the right way to do this anyway, so if for no other reason than
-      following best practices, this patch should still go.
   * Removed obsolete manpage for Calamares.
     - Reasoning - Calamares provides a man page upstream.
   * Removed desktop-command-not-in-package override from lintian-overrides.
