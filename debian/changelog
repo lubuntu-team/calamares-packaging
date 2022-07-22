@@ -28,6 +28,7 @@ calamares (3.2.60-0ubuntu0.22.04.1) jammy; urgency=medium
     uscan'd source code archives.
   * Updated debian/watch to version 4, adding automatic GPG verification
     in the process.
+  * Created debian/upstream/metadata file.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Thu, 21 Jul 2022 13:09:04 -0500
 
