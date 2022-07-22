@@ -1,4 +1,4 @@
-version=3
-opts="filenamemangle=s/(?:.*\/)?v?(\d[\d.]*)\.tar\.gz/calamares-$1.tar.gz/" \
-         https://github.com/calamares/calamares/tags (?:.*/)?v?(\d[\d.]*)\.tar\.gz
-
+version=4
+opts="pgpsigurlmangle=s/$/.asc/, \
+filenamemangle=s/.+\/calamares-(\d\S+)\.tar\.xz/featherpad-$1\.tar\.gz/" \
+  https://github.com/calamares/calamares/releases .*\/calamares-(\d\S+)\.tar\.gz
