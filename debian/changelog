@@ -12,6 +12,11 @@ calamares (3.2.60-0ubuntu0.22.04.1) jammy; urgency=medium
       applications with sudo is generally considered a bad idea, and pkexec
       is the right way to do this anyway, so if for no other reason than
       following best practices, this patch should still go.
+  * Removed obsolete manpage for Calamares.
+    - Reasoning - Calamares provides command-line help via "calamares
+      --help", so having an additional manpage is redundant. We've
+      previously omitted many a manpage from packages that provided
+      documentation in the form of a "--help" switch.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Thu, 21 Jul 2022 13:09:04 -0500
 
