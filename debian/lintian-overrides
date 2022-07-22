@@ -6,8 +6,5 @@ calamares: non-dev-pkg-with-shlib-symlink
 calamares: no-symbols-control-file
 calamares: package-name-doesnt-match-sonames
 
-# Debian live media relies on sudo so this message isn't needed
-calamares: desktop-command-not-in-package usr/share/applications/calamares.desktop sudo
-
 # False alarm
 calamares: hardening-no-bindnow
