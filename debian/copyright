@@ -135,6 +135,7 @@ Files: debian/*
 Copyright: 2014 Rohan Garg <rohan@kde.org>
            2016-2017 Jonathan Carter <jcc@debian.org>
            2018-2020 Simon Quigley <tsimonq2@ubuntu.com>
+           2022 Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
 License: GPL-3+
 
 License: GPL-3+
