@@ -1,0 +1,25 @@
+From: Raul Rodrigo Segura <raurodse@gmail.com>
+Date: Fri, 4 May 2018 13:20:44 +0200
+Subject: replace pkexec by sudo
+
+---
+ calamares.desktop | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/calamares.desktop
++++ b/calamares.desktop
+@@ -5,12 +5,13 @@ Name=Install System
+ GenericName=System Installer
+ Keywords=calamares;system;installer;
+ TryExec=calamares
+-Exec=sh -c "pkexec calamares"
++Exec=sh -c "sudo -E calamares -D6"
+ Comment=Calamares — System Installer
+ Icon=calamares
+ Terminal=false
+ StartupNotify=true
+ Categories=Qt;System;
++NotShowIn=LXQt;
+ X-AppStream-Ignore=true
+ 
+ Name[ar]=تثبيت النظام 
