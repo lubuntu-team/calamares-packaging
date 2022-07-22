@@ -13,8 +13,5 @@ calamares: repeated-path-segment calamares usr/share/calamares/qml/calamares/
 calamares: exit-in-shared-library usr/lib/x86_64-linux-gnu/libcalamares.so.3.2.60
 calamares: exit-in-shared-library usr/lib/x86_64-linux-gnu/libcalamaresui.so.3.2.60
 
-# The end user wil never use these examples.
-calamares source: package-does-not-install-examples src/modules/notesqml/examples/
-
 # False alarm
 calamares: hardening-no-bindnow
