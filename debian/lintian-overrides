@@ -6,8 +6,5 @@ calamares: link-to-shared-library-in-wrong-package
 calamares: no-symbols-control-file
 calamares: package-name-doesnt-match-sonames
 
-# This is indeed how the folders are supposed to be structured
-calamares: repeated-path-segment calamares usr/share/calamares/qml/calamares/
-
 # False alarm
 calamares: hardening-no-bindnow

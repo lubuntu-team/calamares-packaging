@@ -26,9 +26,6 @@ calamares (3.2.60-0ubuntu0.22.04.1) jammy; urgency=medium
   * Updated debian/watch to version 4, adding automatic GPG verification
     in the process.
   * Created debian/upstream/metadata file.
-  * Overrode "repeated-path-segment calamares
-    usr/share/calamares/qml/calamares/" Lintian gripe - this is how the
-    folders are structured, not a mistake.
   * Fixed a flaw in debian/rules.
     - Details - Originally, the rules file exported the
       DEB_BUILD_MAINT_OPTIONS variable twice, once to enable hardening, and
