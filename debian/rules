@@ -1,10 +1,7 @@
 #!/usr/bin/make -f
 
-# Hardening options, see: https://wiki.debian.org/Hardening
-export DEB_BUILD_MAINT_OPTIONS=hardening=+all
-
-# Help make build paths reproducible.
-export DEB_BUILD_MAINT_OPTIONS=buildinfo+path
+# Hardening options, see: https://wiki.debian.org/Hardening, also help make build paths reproducible.
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all buildinfo=+path
 
 %:
 	dh $@ --with kf5
