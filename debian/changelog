@@ -33,11 +33,6 @@ calamares (3.2.60-0ubuntu0.22.04.1) jammy; urgency=medium
     examples directory.
     - Reasoning - The examples directory will almost without question remain
       unused by the end user.
-  * Added two "exit-in-shared-library" messages to lintian-overrides.
-    - Reasoning - The libraries are libcalamares.so and libcalamaresui.so.
-      No other application will use these libraries in the forseeable
-      future, and upstream designed it this way, so it's perfectly
-      acceptable and can be left as-is.
   * Fixed a flaw in debian/rules.
     - Details - Originally, the rules file exported the
       DEB_BUILD_MAINT_OPTIONS variable twice, once to enable hardening, and
