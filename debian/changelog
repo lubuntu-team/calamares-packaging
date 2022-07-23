@@ -1,3 +1,24 @@
+calamares (3.2.60-0ubuntu0.1) jammy; urgency=medium
+
+  * Updated Calamares to version 3.2.60 for SRU (LP: #1980180).
+  * Updated copyright file.
+  * Removed obsolete manpage for Calamares.
+    - Reasoning: Calamares provides a man page upstream.
+  * Imported upstream's signing key into debian/upstream/signing-key.asc.
+  * Updated debian/watch to version 4, adding automatic GPG verification
+    in the process.
+  * Fixed a typo and a variable assignment bug in debian/rules.
+    - Details: Originally, the rules file exported the
+      DEB_BUILD_MAINT_OPTIONS variable twice, once to enable hardening, and
+      once to help make build paths reproducible. I believe this would
+      result in hardening being disabled due to clobbering. Additionally,
+      there was a typo in the second variable export (a missing "=") that
+      caused sbuild to show me a dh warning. Both problems are now resolved -
+      the variable is only exported once, with both options set, and the
+      typo is fixed.
+
+ -- Aaron Rainbolt <arraybolt3@gmail.com>  Thu, 21 Jul 2022 13:09:04 -0500
+
 calamares (3.2.41.1-0ubuntu3) jammy; urgency=medium
 
   * No-change rebuild with Python 3.10 as default version
