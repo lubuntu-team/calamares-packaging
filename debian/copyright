@@ -21,43 +21,43 @@ Copyright: 2017-2022, Adriaan de Groot <groot@kde.org>
            2018-2020, Philip Müller <philm@manjaro.org>
            2018, AlmAck <gluca86@gmail.com>
            2018, Caio Carvalho <caiojcarvalho@gmail.com>
-	   2017, Kyle Robbertze <krobbertze@gmail.com>
-	   2017 Christian Morlok <christianmorlok@gmail.com>
+           2017, Kyle Robbertze <krobbertze@gmail.com>
+           2017 Christian Morlok <christianmorlok@gmail.com>
            2016, Artoo <artoo@manjaro.org>
-	   2016, Luca Giambonini <almack@chakraos.org>
-	   2016, Lisa Vitolo <shainer@chakraos.org>
+           2016, Luca Giambonini <almack@chakraos.org>
+           2016, Lisa Vitolo <shainer@chakraos.org>
            2016 Chantara Tith <tith.chantara@gmail.com>
            2016, David McKinney <mckinney@subgraph.com>
-	   2012-2019, Andrius Štikonas <andrius@stikonas.eu>
-	   2015, Sacha Schutz <sacha@labsquare.org>
-	   2015, Anke Boersma <demm@kaosx.us>
-	   2015, Alexandre Arnt <qtgzmanager@gmail.com>
-	   2014-2016, Kevin Kofler <kevin.kofler@chello.at>
+           2012-2019, Andrius Štikonas <andrius@stikonas.eu>
+           2015, Sacha Schutz <sacha@labsquare.org>
+           2015, Anke Boersma <demm@kaosx.us>
+           2015, Alexandre Arnt <qtgzmanager@gmail.com>
+           2014-2016, Kevin Kofler <kevin.kofler@chello.at>
            2014-2017, Teo Mrnjavac <teo@kde.org>
-	   2014-2017, Philip Müller <philm@manjaro.org>
+           2014-2017, Philip Müller <philm@manjaro.org>
            2014-2015, Rohan Garg <rohan@kde.org>
-	   2014, Schutz Sacha <sacha@labsquare.org>
+           2014, Schutz Sacha <sacha@labsquare.org>
            2014, Aurélien Gâteau <agateau@kde.org>
-	   2014, Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
-	   2014, Daniel Hillenbrand <codeworkx@bbqlinux.org>
-	   2014, Benjamin Vaudour <benjamin.vaudour@yahoo.fr>
-	   2013, Kay Sievers
-	   2012, Digia Plc and/or its subsidiary(-ies)
+           2014, Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+           2014, Daniel Hillenbrand <codeworkx@bbqlinux.org>
+           2014, Benjamin Vaudour <benjamin.vaudour@yahoo.fr>
+           2013, Kay Sievers
+           2012, Digia Plc and/or its subsidiary(-ies)
            2011, Lennart Poettering
-	   2011, Nikita Krupen'ko <krnekit@gmail.com>
-	   2011, Kitware, Inc.
-	   2010-2012, Jeff Mitchell <jeff@tomahawk-player.org>
-	   2010-2012, Christian Muehlhaeuser <muesli@tomahawk-player.org>
-	   2010-2011, Leo Franchi <lfranchi@kde.org>
-	   2009, Sebastian Trueg, <trueg@kde.org>
-	   2008-2011, by Volker Lanz
-	   2007, Matthias Kretz <kretz@kde.org>i
-	   2007, Bernhard Loos <nhuh.put@web.de>
-	   2007, Free Software Foundation, Inc. <http:fsf.org/>
-	   2006, by Dominic Battre <dominic@battre.de>
-	   2006, by Martin Pool <mbp@canonical.com>
-	   2006, Allen Winter, <winter@kde.org>
-	   1999, Ian Zepp (icszepp@islc.net)
+           2011, Nikita Krupen'ko <krnekit@gmail.com>
+           2011, Kitware, Inc.
+           2010-2012, Jeff Mitchell <jeff@tomahawk-player.org>
+           2010-2012, Christian Muehlhaeuser <muesli@tomahawk-player.org>
+           2010-2011, Leo Franchi <lfranchi@kde.org>
+           2009, Sebastian Trueg, <trueg@kde.org>
+           2008-2011, by Volker Lanz
+           2007, Matthias Kretz <kretz@kde.org>i
+           2007, Bernhard Loos <nhuh.put@web.de>
+           2007, Free Software Foundation, Inc. <http:fsf.org/>
+           2006, by Dominic Battre <dominic@battre.de>
+           2006, by Martin Pool <mbp@canonical.com>
+           2006, Allen Winter, <winter@kde.org>
+           1999, Ian Zepp (icszepp@islc.net)
 License: GPL-3+
 
 Files: io.calamares.calamares.appdata.xml
