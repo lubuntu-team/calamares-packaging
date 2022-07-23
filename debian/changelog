@@ -3,12 +3,12 @@ calamares (3.2.60-0ubuntu0.22.04.1) jammy; urgency=medium
   * Updated Calamares to version 3.2.60 for SRU (LP: #1980180).
   * Updated copyright file.
   * Removed obsolete manpage for Calamares.
-    - Reasoning - Calamares provides a man page upstream.
+    - Reasoning: Calamares provides a man page upstream.
   * Imported upstream's signing key into debian/upstream/signing-key.asc.
   * Updated debian/watch to version 4, adding automatic GPG verification
     in the process.
   * Fixed a typo and a variable assignment bug in debian/rules.
-    - Details - Originally, the rules file exported the
+    - Details: Originally, the rules file exported the
       DEB_BUILD_MAINT_OPTIONS variable twice, once to enable hardening, and
       once to help make build paths reproducible. I believe this would
       result in hardening being disabled due to clobbering. Additionally,
