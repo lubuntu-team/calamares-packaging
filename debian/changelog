@@ -4,8 +4,7 @@ calamares (3.2.60-0ubuntu0.22.04.1) jammy; urgency=medium
   * Updated copyright file.
   * Removed obsolete manpage for Calamares.
     - Reasoning - Calamares provides a man page upstream.
-  * Created upstream/signing-key.asc for automatic GPG verification of
-    uscan'd source code archives.
+  * Imported upstream's signing key into debian/upstream/signing-key.asc.
   * Updated debian/watch to version 4, adding automatic GPG verification
     in the process.
   * Fixed a flaw in debian/rules.
