@@ -351,15 +351,6 @@ License: MIT
  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-License: LGPL-2
- This library is free software; you can redistribute it and/or
- modify it under the terms of the GNU Library General Public
- License as published by the Free Software Foundation, version 2.0 of
- the License.
- .
- On Debian systems, the complete text of the GNU Library General Public
- License can be found in /usr/share/common-licenses/LGPL-2.
-
 License: LGPL-3+
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
