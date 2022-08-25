@@ -1,6 +1,7 @@
 calamares (3.3.0-alpha2-0ubuntu1) kinetic; urgency=medium
 
   * New upstream release.
+  * Removed obsolete maintainer manpage.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Thu, 25 Aug 2022 16:17:52 -0500
 
