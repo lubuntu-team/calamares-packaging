@@ -1,3 +1,9 @@
+calamares (3.3.0-alpha2-0ubuntu2) kinetic; urgency=medium
+
+  * No-change rebuild to pick up fixed libboost-python dependencies
+
+ -- Graham Inggs <ginggs@ubuntu.com>  Sat, 03 Sep 2022 13:04:56 +0000
+
 calamares (3.3.0-alpha2-0ubuntu1) kinetic; urgency=medium
 
   * New upstream release.
