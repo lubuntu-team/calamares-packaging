@@ -1,3 +1,9 @@
+calamares (3.3.0-alpha2-0ubuntu5) mantic; urgency=medium
+
+  * Rebuild against new libyaml-cpp0.8.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Sat, 02 Sep 2023 07:18:13 +0200
+
 calamares (3.3.0-alpha2-0ubuntu4) lunar; urgency=medium
 
   * Rebuild against latest icu
