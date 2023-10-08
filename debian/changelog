@@ -1,3 +1,9 @@
+calamares (3.3.0-alpha2-0ubuntu6) mantic; urgency=medium
+
+  * Add support for Netplan backends (LP: #2036999).
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 08 Oct 2023 11:41:22 -0500
+
 calamares (3.3.0-alpha2-0ubuntu5) mantic; urgency=medium
 
   * Rebuild against new libyaml-cpp0.8.
