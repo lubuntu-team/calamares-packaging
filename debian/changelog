@@ -1,6 +1,7 @@
 calamares (3.3.0-alpha4-0ubuntu1) noble; urgency=medium
 
   * New upstream release.
+  * Bump Standards-version to 4.6.2, no changes needed.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 20 Oct 2023 12:33:39 -0500
 

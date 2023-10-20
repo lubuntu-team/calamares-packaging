@@ -41,7 +41,7 @@ Build-Depends: cmake,
                qtlocation5-dev,
                qttools5-dev,
                qttools5-dev-tools
-Standards-Version: 4.6.1
+Standards-Version: 4.6.2
 Rules-Requires-Root: no
 Homepage: https://github.com/calamares/calamares
 Vcs-Browser: https://git.launchpad.net/~ubuntu-qt-code/+git/calamares
