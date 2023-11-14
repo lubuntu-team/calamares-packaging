@@ -1,3 +1,5 @@
 version=4
-opts="pgpsigurlmangle=s/$/.asc/, uversionmangle=s/\..$/-alpha2/" \
-https://github.com/calamares/calamares/releases .*/calamares-([\d\.]+)-alpha([\d]+).tar.gz
+opts="searchmode=plain, \
+pgpsigurlmangle=s/$/.asc/, \
+uversionmangle=s/(\d+\.\d+\.\d+\-[a-zA-Z]*\d+).*/$1/" \
+  https://api.github.com/repos/calamares/@PACKAGE@/releases https:\/\/github.com\/calamares\/calamares\/releases\/download\/v(?:[-_]?(\d[\-+\.:\~\da-zA-Z]*))\/calamares-(?:[-_]?(\d[\-+\.:\~\da-zA-Z]*)).tar.gz
