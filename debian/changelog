@@ -1,3 +1,9 @@
+calamares (3.3.0-alpha4-0ubuntu2) noble; urgency=medium
+
+  * Fixed encrypted installations. (LP: #2043301)
+
+ -- Aaron Rainbolt <arraybolt3@gmail.com>  Tue, 14 Nov 2023 17:32:18 -0600
+
 calamares (3.3.0-alpha4-0ubuntu1) noble; urgency=medium
 
   * New upstream release.
