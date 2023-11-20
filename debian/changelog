@@ -1,3 +1,9 @@
+calamares (3.3.0-alpha4-0ubuntu3) noble; urgency=medium
+
+  * Add util-linux-extra as a runtime dependency to allow hwclock to work.
+
+ -- Aaron Rainbolt <arraybolt3@gmail.com>  Sun, 19 Nov 2023 22:12:06 -0600
+
 calamares (3.3.0-alpha4-0ubuntu2) noble; urgency=medium
 
   * Fixed encrypted installations. (LP: #2043301)
