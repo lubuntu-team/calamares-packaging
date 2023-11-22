@@ -1,3 +1,9 @@
+calamares (3.3.0-alpha6-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 22 Nov 2023 16:09:52 -0600
+
 calamares (3.3.0-alpha4-0ubuntu3) noble; urgency=medium
 
   * Add util-linux-extra as a runtime dependency to allow hwclock to work.
