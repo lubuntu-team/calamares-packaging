@@ -1,6 +1,7 @@
 calamares (3.3.0-alpha6-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Add some missing build dependencies.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 22 Nov 2023 16:09:52 -0600
 
