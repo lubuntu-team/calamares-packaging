@@ -1,9 +1,9 @@
-calamares (3.3.0.0-0ubuntu1) UNRELEASED; urgency=medium
+calamares (3.3.0.0-0ubuntu1) noble; urgency=medium
 
   * New upstream version.
   * Remove reverse-applicable patch.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 12 Dec 2023 07:42:16 -0600
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 12 Dec 2023 08:01:24 -0600
 
 calamares (3.3.0-alpha6-0ubuntu1) noble; urgency=medium
 
