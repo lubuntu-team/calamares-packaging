@@ -1,2 +1,3 @@
 0001-replace-pkexec-by-sudo.patch
 apport-package-hook.patch
+support-appstream-1.0.patch

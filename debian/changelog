@@ -1,3 +1,21 @@
+calamares (3.3.0.0-0ubuntu4) noble; urgency=medium
+
+  * Add d/p/support-appstream-1.0.patch
+
+ -- Rik Mills <rikmills@kde.org>  Mon, 18 Dec 2023 20:15:16 +0000
+
+calamares (3.3.0.0-0ubuntu3) noble; urgency=medium
+
+  * Change appstream build depend to libappstreamqt5-dev (>= 1.0.0~).
+
+ -- Rik Mills <rikmills@kde.org>  Mon, 18 Dec 2023 16:24:24 +0000
+
+calamares (3.3.0.0-0ubuntu2) noble; urgency=medium
+
+  * No-change rebuild against appstream 1.0.
+
+ -- Rik Mills <rikmills@kde.org>  Mon, 18 Dec 2023 13:48:07 +0000
+
 calamares (3.3.0.0-0ubuntu1) noble; urgency=medium
 
   * New upstream version.
