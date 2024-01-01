@@ -1,0 +1,27 @@
+From 709296940c1a3d320bde317966b073167833fad9 Mon Sep 17 00:00:00 2001
+From: Adriaan de Groot <groot@kde.org>
+Date: Sun, 24 Dec 2023 23:01:37 +0100
+Subject: [PATCH] i18n: suppress duplicated languages
+
+The list of translations from Transifex contains "en", and we
+add it explicitly a second time -- instead of fixing those and
+needing to ensure that the source language is returned, or optionally
+adding "en" if it isn't in the list already, just de-duplicate.
+
+FIXES #2257
+---
+ CMakeLists.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 8a26ae6c7f..53e9f494e4 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -513,6 +513,7 @@ if(NOT CALAMARES_RELEASE_MODE)
+     list(APPEND CALAMARES_TRANSLATION_LANGUAGES ${_tx_incomplete})
+ endif()
+ list(SORT CALAMARES_TRANSLATION_LANGUAGES)
++list(REMOVE_DUPLICATES CALAMARES_TRANSLATION_LANGUAGES)
+ 
+ add_subdirectory(lang) # i18n tools
+ 

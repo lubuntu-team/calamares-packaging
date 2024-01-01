@@ -1,3 +1,10 @@
+calamares (3.3.0.0-0ubuntu5) noble; urgency=medium
+
+  * Fix two American English entries (LP: #2045741):
+    - https://github.com/calamares/calamares/issues/2257
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Mon, 01 Jan 2024 13:39:12 -0600
+
 calamares (3.3.0.0-0ubuntu4) noble; urgency=medium
 
   * Add d/p/support-appstream-1.0.patch
