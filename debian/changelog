@@ -1,3 +1,9 @@
+calamares (3.3.1.0-0ubuntu1) noble; urgency=medium
+
+  * New upstream release.
+
+ -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Thu, 18 Jan 2024 20:29:45 +0000
+
 calamares (3.3.0.0-0ubuntu5) noble; urgency=medium
 
   * Fix two American English entries (LP: #2045741):
