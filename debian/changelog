@@ -3,6 +3,8 @@ calamares (3.3.1-0ubuntu1) noble; urgency=medium
   * New upstream release.
   * Fixed debian/watch file.
   * Updated copyright file.
+  * Enabled AppStream and AppData (it is no longer enabled by default upstream
+    but should be enabled by us).
 
  -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Thu, 18 Jan 2024 20:29:45 +0000
 
