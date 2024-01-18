@@ -163,7 +163,7 @@ Files: AUTHORS
        src/modules/welcomeq/welcomeq.conf
        src/modules/zfs/zfs.conf
        src/qml/calamares/slideshow/qmldir
-Copyright: None
+Copyright: Calamares team
 License: CC0-1.0
 
 Files: CalamaresConfig.cmake.in
@@ -222,11 +222,11 @@ Files: CalamaresConfig.cmake.in
        src/modules/zfs/CMakeLists.txt
        src/qml/calamares/CMakeLists.txt
 Copyright: 2014-2016 Teo Mrnjavac <teo@kde.org>
-           2017-2022 Adriaan de Groot <groot@kde.org>
            2014 Aurélien Gâteau <agateau@kde.org>
            2014-2019 Kevin Kofler <kevin.kofler@chello.at>
            2008-2011 Volker Lanz <vl@fidra.de>
            2021 Anke Boersma <demm@kaosx.us>
+           2017-2023 Adriaan de Groot <groot@kde.org>
 License: BSD-2-Clause
 
 Files: 3rdparty/kdsingleapplicationguard/*
@@ -279,8 +279,8 @@ License: LGPL-2.1
 
 Files: debian/*
 Copyright: 2016-2021 Jonathan Carter <jcc@debian.org>
-           2014 Rohan Garg <rohan@kde.org>
-           2022 Aaron Rainbolt <arraybolt3@gmail.com>
+           2014      Rohan Garg <rohan@kde.org>
+           2022-2024 Aaron Rainbolt <arraybolt3@ubuntu.com>
 License: GPL-3+
 
 License: GPL-3+
