@@ -5,6 +5,7 @@ calamares (3.3.1-0ubuntu1) noble; urgency=medium
   * Updated copyright file.
   * Enabled AppStream and AppData (it is no longer enabled by default upstream
     but should be enabled by us).
+  * Dropped lp-2045741.patch, it's included in the latest upstream release.
 
  -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Thu, 18 Jan 2024 20:29:45 +0000
 
