@@ -1,2 +1,5 @@
 0001-replace-pkexec-by-sudo.patch
 apport-package-hook.patch
+enable-optional-part-encryption.patch
+enable-only-present-with-encryption-partitions.patch
+fix-btrfs-luks.patch

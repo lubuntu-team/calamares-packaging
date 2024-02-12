@@ -1,3 +1,22 @@
+calamares (3.3.1-0ubuntu4) noble; urgency=medium
+
+  * Fix BTRFS+LUKS installations with unencrypted /boot.
+
+ -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Mon, 12 Feb 2024 11:51:59 -0600
+
+calamares (3.3.1-0ubuntu3) noble; urgency=medium
+
+  * Allow specifying partitions that must remain unencrypted when using FDE.
+  * Allow specifying partitions that are only created when FDE is enabled.
+
+ -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Mon, 05 Feb 2024 18:12:47 -0600
+
+calamares (3.3.1-0ubuntu2) noble; urgency=medium
+
+  * No-change rebuild with Python 3.12 as default
+
+ -- Graham Inggs <ginggs@ubuntu.com>  Sat, 20 Jan 2024 08:39:43 +0000
+
 calamares (3.3.1-0ubuntu1) noble; urgency=medium
 
   * New upstream release.

@@ -1,0 +1,126 @@
+Description: Allow specifying partitions that are only present when FDE is used.
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Origin: ubuntu
+Forwarded: not-needed
+Last-Update: 2024-02-06
+
+Index: calamares-3.3.1/src/modules/partition/core/PartitionLayout.cpp
+===================================================================
+--- calamares-3.3.1.orig/src/modules/partition/core/PartitionLayout.cpp
++++ calamares-3.3.1/src/modules/partition/core/PartitionLayout.cpp
+@@ -62,6 +62,7 @@ PartitionLayout::PartitionEntry::Partiti
+                                                  const QString& mountPoint,
+                                                  const QString& fs,
+                                                  const bool& noEncrypt,
++                                                 const bool& onlyPresentWithEncryption,
+                                                  const QVariantMap& features,
+                                                  const QString& size,
+                                                  const QString& minSize,
+@@ -78,6 +79,7 @@ PartitionLayout::PartitionEntry::Partiti
+ {
+     PartUtils::canonicalFilesystemName( fs, &partFileSystem );
+     partNoEncrypt = noEncrypt;
++    partOnlyPresentWithEncryption = onlyPresentWithEncryption;
+ }
+ 
+ bool
+@@ -119,6 +121,7 @@ PartitionLayout::init( FileSystem::Type
+                           Calamares::getString( pentry, "mountPoint" ),
+                           Calamares::getString( pentry, "filesystem", "unformatted" ),
+                           Calamares::getBool( pentry, "noEncrypt", false ),
++                          Calamares::getBool( pentry, "onlyPresentWithEncryption", false ),
+                           Calamares::getSubMap( pentry, "features", ok ),
+                           Calamares::getString( pentry, "size", QStringLiteral( "0" ) ),
+                           Calamares::getString( pentry, "minSize", QStringLiteral( "0" ) ),
+@@ -228,6 +231,10 @@ PartitionLayout::createPartitions( Devic
+             cWarning() << "Partition" << entry.partMountPoint << "size is invalid, skipping...";
+             continue;
+         }
++        if ( luksPassphrase.isEmpty() && entry.partOnlyPresentWithEncryption ) {
++            // this partition is being skipped entirely
++            continue;
++        }
+ 
+         // Calculate partition size: Rely on "possibly uninitialized use"
+         // warnings to ensure that all the cases are covered below.
+@@ -252,6 +259,10 @@ PartitionLayout::createPartitions( Devic
+         availableSectors = totalSectors;
+         for ( const auto& entry : qAsConst( m_partLayout ) )
+         {
++            if ( luksPassphrase.isEmpty() && entry.partOnlyPresentWithEncryption ) {
++                // this partition is being skipped entirely
++                continue;
++            }
+             qint64 sectors = partSectorsMap.value( &entry );
+             if ( entry.partMinSize.isValid() )
+             {
+@@ -265,6 +276,10 @@ PartitionLayout::createPartitions( Devic
+     // Assign sectors for percentage-defined partitions.
+     for ( const auto& entry : qAsConst( m_partLayout ) )
+     {
++        if ( luksPassphrase.isEmpty() && entry.partOnlyPresentWithEncryption ) {
++            // this partition is being skipped entirely
++            continue;
++        }
+         if ( entry.partSize.unit() == Calamares::Partition::SizeUnit::Percent )
+         {
+             qint64 sectors
+@@ -288,6 +303,10 @@ PartitionLayout::createPartitions( Devic
+     availableSectors = totalSectors;
+     for ( const auto& entry : qAsConst( m_partLayout ) )
+     {
++        if ( luksPassphrase.isEmpty() && entry.partOnlyPresentWithEncryption ) {
++            // this partition is being skipped entirely
++            continue;
++        }
+         // Adjust partition size based on available space.
+         qint64 sectors = partSectorsMap.value( &entry );
+         sectors = std::min( sectors, availableSectors );
+Index: calamares-3.3.1/src/modules/partition/core/PartitionLayout.h
+===================================================================
+--- calamares-3.3.1.orig/src/modules/partition/core/PartitionLayout.h
++++ calamares-3.3.1/src/modules/partition/core/PartitionLayout.h
+@@ -38,6 +38,7 @@ public:
+         QString partMountPoint;
+         FileSystem::Type partFileSystem = FileSystem::Unknown;
+         bool partNoEncrypt;
++        bool partOnlyPresentWithEncryption;
+         QVariantMap partFeatures;
+         Calamares::Partition::PartitionSize partSize;
+         Calamares::Partition::PartitionSize partMinSize;
+@@ -63,6 +64,7 @@ public:
+                         const QString& mountPoint,
+                         const QString& fs,
+                         const bool& noEncrypt,
++                        const bool& onlyPresentWithEncryption,
+                         const QVariantMap& features,
+                         const QString& size,
+                         const QString& minSize = QString(),
+Index: calamares-3.3.1/src/modules/partition/partition.conf
+===================================================================
+--- calamares-3.3.1.orig/src/modules/partition/partition.conf
++++ calamares-3.3.1/src/modules/partition/partition.conf
+@@ -259,6 +259,7 @@ defaultFileSystemType:  "ext4"
+ #       type: "4f68bce3-e8cd-4db1-96e7-fbcaf984b709"
+ #       filesystem: "ext4"
+ #       noEncrypt: false
++#       onlyPresentWithEncryption: false
+ #       mountPoint: "/"
+ #       size: 20%
+ #       minSize: 500M
+@@ -268,6 +269,7 @@ defaultFileSystemType:  "ext4"
+ #       type: "933ac7e1-2eb4-4f13-b844-0e14e2aef915"
+ #       filesystem: "ext4"
+ #       noEncrypt: false
++#       onlyPresentWithEncryption: false
+ #       mountPoint: "/home"
+ #       size: 3G
+ #       minSize: 1.5G
+@@ -296,6 +298,7 @@ defaultFileSystemType:  "ext4"
+ #         default filesystem type, or the user's choice, will be applied instead
+ #         of "unknown" (e.g. the user might pick ext4, or xfs).
+ #   - noEncrypt: whether this partition is exempt from encryption if enabled (optional parameter; default is false)
++#   - onlyPresentWithEncryption: whether this partition is only created when encryption is enabled (optional parameter; default is false; ONLY SUPPORTED IN UBUNTU)
+ #   - mountPoint: partition mount point (optional parameter; not mounted if unset)
+ #   - size: partition size in bytes (append 'K', 'M' or 'G' for KiB, MiB or GiB)
+ #           or
