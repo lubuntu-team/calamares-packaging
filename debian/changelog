@@ -1,6 +1,9 @@
 calamares (3.3.2-0ubuntu1) noble; urgency=medium
 
   * New upstream release.
+  * Drop unneeded patches.
+    - enable-optional-part-encryption.patch (merged upstream)
+    - fix-btrfs-luks.patch (merged upstream)
 
  -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Tue, 20 Feb 2024 13:37:43 -0600
 
