@@ -3,7 +3,7 @@ Upstream-Name: calamares
 Source: https://github.com/calamares/calamares
 
 Files: *
-Copyright: 2017-2022 Adriaan de Groot <groot@kde.org>
+Copyright: 2017-2024 Adriaan de Groot <groot@kde.org>
            2018 Matthias Klumpp <matthias@tenstral.net>
            2013-2017 Teo Mrnjavac <teo@kde.org>
            2020 Gaël PORTAY <gael.portay@gmail.com>
@@ -162,7 +162,8 @@ Files: AUTHORS
        src/modules/welcome/tests/*
        src/modules/welcomeq/welcomeq.conf
        src/modules/zfs/zfs.conf
-       src/qml/calamares/slideshow/qmldir
+       src/qml/calamares-qt5/slideshow/qmldir
+       src/qml/calamares-qt6/slideshow/qmldir
 Copyright: Calamares team
 License: CC0-1.0
 
@@ -220,7 +221,7 @@ Files: CalamaresConfig.cmake.in
        src/modules/welcome/CMakeLists.txt
        src/modules/welcomeq/CMakeLists.txt
        src/modules/zfs/CMakeLists.txt
-       src/qml/calamares/CMakeLists.txt
+       src/qml/CMakeLists.txt
 Copyright: 2014-2016 Teo Mrnjavac <teo@kde.org>
            2014 Aurélien Gâteau <agateau@kde.org>
            2014-2019 Kevin Kofler <kevin.kofler@chello.at>
@@ -270,8 +271,10 @@ Files: src/modules/finishedq/seedling.svg
 Copyright: 2020-2021 FontAwesome <hello@fontawesome.com>
 License: CC-BY-4.0
 
-Files: src/qml/calamares/slideshow/Presentation.qml
-       src/qml/calamares/slideshow/Slide.qml
+Files: src/qml/calamares-qt5/slideshow/Presentation.qml
+       src/qml/calamares-qt5/slideshow/Slide.qml
+       src/qml/calamares-qt6/slideshow/Presentation.qml
+       src/qml/calamares-qt6/slideshow/Slide.qml
 Copyright: 2017 Adriaan de Groot <groot@kde.org>
            2016 The Qt Company Ltd.
            2012 Digia Plc and/or its subsidiary(-ies)
