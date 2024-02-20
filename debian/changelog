@@ -1,3 +1,9 @@
+calamares (3.3.2-0ubuntu1) noble; urgency=medium
+
+  * New upstream release.
+
+ -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Tue, 20 Feb 2024 13:37:43 -0600
+
 calamares (3.3.1-0ubuntu4) noble; urgency=medium
 
   * Fix BTRFS+LUKS installations with unencrypted /boot.
