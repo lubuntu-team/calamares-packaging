@@ -1,6 +1,7 @@
 calamares (3.3.3-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Copyright update.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 25 Feb 2024 15:57:39 -0600
 
