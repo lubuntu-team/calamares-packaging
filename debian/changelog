@@ -1,3 +1,10 @@
+calamares (3.3.4-0ubuntu1) noble; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Mon, 26 Feb 2024 19:04:30 -0600
+
 calamares (3.3.3-0ubuntu1) noble; urgency=medium
 
   * New upstream release.

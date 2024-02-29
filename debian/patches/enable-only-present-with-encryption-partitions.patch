@@ -2,12 +2,10 @@ Description: Allow specifying partitions that are only present when FDE is used.
 Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
 Origin: ubuntu
 Forwarded: not-needed
-Last-Update: 2024-02-06
+Last-Update: 2024-02-26
 
-Index: calamares-3.3.1/src/modules/partition/core/PartitionLayout.cpp
-===================================================================
---- calamares-3.3.1.orig/src/modules/partition/core/PartitionLayout.cpp
-+++ calamares-3.3.1/src/modules/partition/core/PartitionLayout.cpp
+--- a/src/modules/partition/core/PartitionLayout.cpp
++++ b/src/modules/partition/core/PartitionLayout.cpp
 @@ -62,6 +62,7 @@ PartitionLayout::PartitionEntry::Partiti
                                                   const QString& mountPoint,
                                                   const QString& fs,
@@ -16,14 +14,14 @@ Index: calamares-3.3.1/src/modules/partition/core/PartitionLayout.cpp
                                                   const QVariantMap& features,
                                                   const QString& size,
                                                   const QString& minSize,
-@@ -78,6 +79,7 @@ PartitionLayout::PartitionEntry::Partiti
- {
-     PartUtils::canonicalFilesystemName( fs, &partFileSystem );
-     partNoEncrypt = noEncrypt;
-+    partOnlyPresentWithEncryption = onlyPresentWithEncryption;
- }
- 
- bool
+@@ -72,6 +73,7 @@ PartitionLayout::PartitionEntry::Partiti
+     , partAttributes( attributes )
+     , partMountPoint( mountPoint )
+     , partNoEncrypt( noEncrypt )
++    , partOnlyPresentWithEncryption ( onlyPresentWithEncryption )
+     , partFeatures( features )
+     , partSize( size )
+     , partMinSize( minSize )
 @@ -119,6 +121,7 @@ PartitionLayout::init( FileSystem::Type
                            Calamares::getString( pentry, "mountPoint" ),
                            Calamares::getString( pentry, "filesystem", "unformatted" ),
@@ -76,14 +74,12 @@ Index: calamares-3.3.1/src/modules/partition/core/PartitionLayout.cpp
          // Adjust partition size based on available space.
          qint64 sectors = partSectorsMap.value( &entry );
          sectors = std::min( sectors, availableSectors );
-Index: calamares-3.3.1/src/modules/partition/core/PartitionLayout.h
-===================================================================
---- calamares-3.3.1.orig/src/modules/partition/core/PartitionLayout.h
-+++ calamares-3.3.1/src/modules/partition/core/PartitionLayout.h
+--- a/src/modules/partition/core/PartitionLayout.h
++++ b/src/modules/partition/core/PartitionLayout.h
 @@ -38,6 +38,7 @@ public:
          QString partMountPoint;
          FileSystem::Type partFileSystem = FileSystem::Unknown;
-         bool partNoEncrypt;
+         bool partNoEncrypt = false;
 +        bool partOnlyPresentWithEncryption;
          QVariantMap partFeatures;
          Calamares::Partition::PartitionSize partSize;
@@ -96,10 +92,8 @@ Index: calamares-3.3.1/src/modules/partition/core/PartitionLayout.h
                          const QVariantMap& features,
                          const QString& size,
                          const QString& minSize = QString(),
-Index: calamares-3.3.1/src/modules/partition/partition.conf
-===================================================================
---- calamares-3.3.1.orig/src/modules/partition/partition.conf
-+++ calamares-3.3.1/src/modules/partition/partition.conf
+--- a/src/modules/partition/partition.conf
++++ b/src/modules/partition/partition.conf
 @@ -259,6 +259,7 @@ defaultFileSystemType:  "ext4"
  #       type: "4f68bce3-e8cd-4db1-96e7-fbcaf984b709"
  #       filesystem: "ext4"
