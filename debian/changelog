@@ -1,3 +1,10 @@
+calamares (3.3.4-0ubuntu2~1) noble; urgency=medium
+
+  * Add Active Directory support.
+  * needs one more bugfix iteration
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 29 Feb 2024 17:28:08 -0600
+
 calamares (3.3.4-0ubuntu1) noble; urgency=medium
 
   * New upstream release.

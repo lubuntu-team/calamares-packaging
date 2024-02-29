@@ -1,0 +1,422 @@
+--- a/src/modules/users/Config.cpp
++++ b/src/modules/users/Config.cpp
+@@ -9,6 +9,7 @@
+ 
+ #include "Config.h"
+ 
++#include "ActiveDirectoryJob.h"
+ #include "CreateUserJob.h"
+ #include "MiscJobs.h"
+ #include "SetHostNameJob.h"
+@@ -656,6 +657,59 @@ Config::setRootPasswordSecondary( const
+     }
+ }
+ 
++void
++Config::setActiveDirectoryUsed( bool used )
++{
++    m_activeDirectoryUsed = used;
++}
++
++bool
++Config::getActiveDirectoryEnabled() const
++{
++    return m_activeDirectory;
++}
++
++bool
++Config::getActiveDirectoryUsed() const
++{
++    return m_activeDirectoryUsed && m_activeDirectory;
++}
++
++void
++Config::setActiveDirectoryAdminUsername( const QString & s )
++{
++    m_activeDirectoryUsername = s;
++}
++
++void
++Config::setActiveDirectoryAdminPassword( const QString & s )
++{
++    m_activeDirectoryPassword = s;
++}
++
++void
++Config::setActiveDirectoryDomain( const QString & s )
++{
++    m_activeDirectoryDomain = s;
++}
++
++void
++Config::setActiveDirectoryIP( const QString & s )
++{
++    m_activeDirectoryIP = s;
++}
++
++const QStringList&
++Config::getActiveDirectory() const
++{
++    QStringList activeDirectory;
++    activeDirectory << m_activeDirectoryUsername
++                    << m_activeDirectoryPassword
++                    << m_activeDirectoryDomain
++                    << m_activeDirectoryIP;
++    return activeDirectory;
++}
++
+ QString
+ Config::rootPassword() const
+ {
+@@ -913,6 +967,9 @@ Config::setConfigurationMap( const QVari
+     m_sudoStyle = Calamares::getBool( configurationMap, "sudoersConfigureWithGroup", false ) ? SudoStyle::UserAndGroup
+                                                                                              : SudoStyle::UserOnly;
+ 
++    // Handle Active Directory enablement
++    m_activeDirectory = Calamares::getBool( configurationMap, "allowActiveDirectory", false );
++
+     // Handle *hostname* key and subkeys and legacy settings
+     {
+         bool ok = false;  // Ignored
+@@ -990,6 +1047,9 @@ Config::createJobs() const
+         jobs.append( Calamares::job_ptr( j ) );
+     }
+ 
++    j = new ActiveDirectoryJob( getActiveDirectory() );
++    jobs.append( Calamares::job_ptr( j ) );
++
+     j = new SetupGroupsJob( this );
+     jobs.append( Calamares::job_ptr( j ) );
+ 
+--- a/src/modules/users/Config.h
++++ b/src/modules/users/Config.h
+@@ -226,6 +226,12 @@ public:
+     bool permitWeakPasswords() const { return m_permitWeakPasswords; }
+     /// Current setting for "require strong password"?
+     bool requireStrongPasswords() const { return m_requireStrongPasswords; }
++    /// Is Active Directory enabled?
++    bool getActiveDirectoryEnabled() const;
++    /// Is it both enabled and activated?
++    bool getActiveDirectoryUsed() const;
++    /// Config for Active Directory
++    const QStringList& getActiveDirectory() const;
+ 
+     const QList< GroupDescription >& defaultGroups() const { return m_defaultGroups; }
+     /** @brief the names of all the groups for the current user
+@@ -292,6 +298,12 @@ public Q_SLOTS:
+     void setRootPassword( const QString& );
+     void setRootPasswordSecondary( const QString& );
+ 
++    void setActiveDirectoryUsed( bool used );
++    void setActiveDirectoryAdminUsername( const QString& );
++    void setActiveDirectoryAdminPassword( const QString& );
++    void setActiveDirectoryDomain( const QString& );
++    void setActiveDirectoryIP( const QString& );
++
+ signals:
+     void userShellChanged( const QString& );
+     void autoLoginGroupChanged( const QString& );
+@@ -343,6 +355,13 @@ private:
+ 
+     bool m_isReady = false;  ///< Used to reduce readyChanged signals
+ 
++    bool m_activeDirectory = false;
++    bool m_activeDirectoryUsed = false;
++    QString m_activeDirectoryUsername;
++    QString m_activeDirectoryPassword;
++    QString m_activeDirectoryDomain;
++    QString m_activeDirectoryIP;
++
+     HostNameAction m_hostnameAction = HostNameAction::EtcHostname;
+     bool m_writeEtcHosts = false;
+     QString m_hostnameTemplate;
+--- a/src/modules/users/page_usersetup.ui
++++ b/src/modules/users/page_usersetup.ui
+@@ -604,6 +604,93 @@ SPDX-License-Identifier: GPL-3.0-or-late
+     </layout>
+    </item>
+    <item>
++    <spacer name="verticalSpacer_3">
++     <property name="orientation">
++      <enum>Qt::Vertical</enum>
++     </property>
++     <property name="sizeType">
++      <enum>QSizePolicy::Fixed</enum>
++     </property>
++     <property name="sizeHint" stdset="0">
++      <size>
++       <width>20</width>
++       <height>6</height>
++      </size>
++     </property>
++    </spacer>
++   </item>
++   <item>
++    <layout class="QVBoxLayout" name="verticalLayout">
++     <item>
++      <widget class="QCheckBox" name="useADCheckbox">
++       <property name="text">
++        <string>Use Active Directory</string>
++       </property>
++      </widget>
++     </item>
++     <item>
++      <layout class="QVBoxLayout" name="verticalLayout_3">
++       <item>
++        <layout class="QHBoxLayout" name="horizontalLayout_2">
++         <item>
++          <widget class="QLabel" name="domainLabel">
++           <property name="text">
++            <string>Domain:</string>
++           </property>
++          </widget>
++         </item>
++         <item>
++          <widget class="QLineEdit" name="domainField"/>
++         </item>
++        </layout>
++       </item>
++       <item>
++        <layout class="QHBoxLayout" name="horizontalLayout">
++         <item>
++          <widget class="QLabel" name="domainAdminLabel">
++           <property name="text">
++            <string>Domain Administrator:</string>
++           </property>
++          </widget>
++         </item>
++         <item>
++          <widget class="QLineEdit" name="domainAdminField"/>
++         </item>
++         <item>
++          <widget class="QLabel" name="domainPasswordLabel">
++           <property name="text">
++            <string>Password:</string>
++           </property>
++          </widget>
++         </item>
++         <item>
++          <widget class="QLineEdit" name="domainPasswordField">
++           <property name="echoMode">
++            <enum>QLineEdit::Password</enum>
++           </property>
++          </widget>
++         </item>
++        </layout>
++       </item>
++       <item>
++        <layout class="QHBoxLayout" name="horizontalLayout_3">
++         <item>
++          <widget class="QLabel" name="ipAddressLabel">
++           <property name="text">
++            <string>IP Address (optional):</string>
++           </property>
++          </widget>
++         </item>
++         <item>
++          <widget class="QLineEdit" name="ipAddressField"/>
++         </item>
++        </layout>
++       </item>
++      </layout>
++     </item>
++    </layout>
++   </item>
++   <item>
+     <spacer name="verticalSpacer_7">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+--- a/src/modules/users/users.conf
++++ b/src/modules/users/users.conf
+@@ -265,6 +265,12 @@ hostname:
+   template: "derp-${cpu}"
+   forbidden_names: [ localhost ]
+ 
++# Enable Active Directory enrollment support (opt-in)
++#
++# This uses realmd to enroll the machine in an Active Directory server
++# It requires realmd as a runtime dependency of Calamares, if enabled
++allowActiveDirectory: false
++
+ presets:
+     fullName:
+         # value: "OEM User"
+--- a/src/modules/users/users.schema.yaml
++++ b/src/modules/users/users.schema.yaml
+@@ -52,6 +52,7 @@ properties:
+             writeHostsFile: { type: boolean, default: true }
+             template: { type: string, default: "${first}-${product}" }
+             forbidden_names: { type: array, items: { type: string } }
++    allowActiveDirectory: { type: boolean, default: false }
+ 
+     # Presets
+     #
+--- a/src/modules/users/UsersPage.cpp
++++ b/src/modules/users/UsersPage.cpp
+@@ -162,6 +162,34 @@ UsersPage::UsersPage( Config* config, QW
+             config, &Config::requireStrongPasswordsChanged, ui->checkBoxRequireStrongPassword, &QCheckBox::setChecked );
+     }
+ 
++    // Active Directory is not checked or enabled by default
++    ui->useADCheckbox->setVisible(m_config->getActiveDirectoryEnabled());
++    ui->domainLabel->setVisible(false);
++    ui->domainField->setVisible(false);
++    ui->domainAdminLabel->setVisible(false);
++    ui->domainAdminField->setVisible(false);
++    ui->domainPasswordField->setVisible(false);
++    ui->domainPasswordLabel->setVisible(false);
++    ui->ipAddressField->setVisible(false);
++    ui->ipAddressLabel->setVisible(false);
++
++    connect(ui->useADCheckbox, &QCheckBox::toggled, [=](bool checked){
++        ui->domainLabel->setVisible(checked);
++        ui->domainField->setVisible(checked);
++        ui->domainAdminLabel->setVisible(checked);
++        ui->domainAdminField->setVisible(checked);
++        ui->domainPasswordField->setVisible(checked);
++        ui->domainPasswordLabel->setVisible(checked);
++        ui->ipAddressField->setVisible(checked);
++        ui->ipAddressLabel->setVisible(checked);
++    });
++
++    connect( ui->domainField, &QLineEdit::textChanged, config, &Config::setActiveDirectoryDomain );
++    connect( ui->domainAdminField, &QLineEdit::textChanged, config, &Config::setActiveDirectoryAdminUsername );
++    connect( ui->domainPasswordField, &QLineEdit::textChanged, config, &Config::setActiveDirectoryAdminPassword );
++    connect( ui->ipAddressField, &QLineEdit::textChanged, config, &Config::setActiveDirectoryIP );
++    connect( ui->useADCheckbox, &QCheckBox::toggled, config, &Config::setActiveDirectoryUsed );
++
+     CALAMARES_RETRANSLATE_SLOT( &UsersPage::retranslate );
+ 
+     onReuseUserPasswordChanged( m_config->reuseUserPasswordForRoot() );
+--- /dev/null
++++ b/src/modules/users/ActiveDirectoryJob.cpp
+@@ -0,0 +1,87 @@
++/* === This file is part of Calamares - <https://calamares.io> ===
++ *
++ *   SPDX-FileCopyrightText: 2024 Simon Quigley <tsimonq2@ubuntu.com>
++ *   SPDX-License-Identifier: GPL-3.0-or-later
++ */
++
++#include "ActiveDirectoryJob.h"
++
++#include "Config.h"
++
++#include "GlobalStorage.h"
++#include "JobQueue.h"
++#include "utils/Logger.h"
++#include "utils/Permissions.h"
++#include "utils/System.h"
++
++#include <QDateTime>
++#include <QDir>
++#include <QFile>
++#include <QFileInfo>
++#include <QTextStream>
++#include <QProcess>
++
++ActiveDirectoryJob::ActiveDirectoryJob(const QStringList& activeDirectoryInfo)
++    : Calamares::Job()
++    , m_activeDirectoryInfo(activeDirectoryInfo)
++{
++}
++
++QString
++ActiveDirectoryJob::prettyName() const
++{
++    return tr( "Enroll system in Active Directory" );
++}
++
++QString
++ActiveDirectoryJob::prettyDescription() const
++{
++    return tr( "Enroll system in Active Directory" );
++}
++
++QString
++ActiveDirectoryJob::prettyStatusMessage() const
++{
++    return tr( "Enrolling system in Active Directory" );
++}
++
++Calamares::JobResult
++ActiveDirectoryJob::exec()
++{
++    const QStringList& adInfo = m_activeDirectoryInfo;
++
++    QString username = adInfo.value(0);
++    QString password = adInfo.value(1);
++    QString domain = adInfo.value(2);
++    //QString ip = adInfo.value(3);
++
++    QStringList args;
++    args << "join" << "--user" << username << "--verbose" << domain;
++
++    QDir destDir;
++    Calamares::GlobalStorage* gs = Calamares::JobQueue::instance()->globalStorage();
++    QString rootMountPoint = gs->value("rootMountPoint").toString();
++    destDir = QDir(rootMountPoint);
++
++    QString command = "chroot " + destDir.path() + " realm " + args.join(" ");
++
++    QProcess process;
++    process.setStandardInputFile("/dev/stdin");
++    process.start(command, QStringList(), QIODevice::WriteOnly);
++
++    // Write the password to the standard input of the process
++    process.write((password + "\n").toUtf8());
++    process.write("\n"); // Ensure a newline after the password
++    process.write("\n"); // Ensure an extra newline to confirm the end of the input
++    process.closeWriteChannel(); // Close the write channel to indicate end of input
++
++    // Wait for the process to finish
++    process.waitForFinished(-1);
++
++    auto exitCode = process.exitCode();
++    if (exitCode == 0) {
++        return Calamares::JobResult::ok();
++    } else {
++        return Calamares::JobResult::error("Failed to join realm.");
++    }
++}
+--- /dev/null
++++ b/src/modules/users/ActiveDirectoryJob.h
+@@ -0,0 +1,29 @@
++/* === This file is part of Calamares - <https://calamares.io> ===
++ *
++ *   SPDX-FileCopyrightText: 2014-2015 Teo Mrnjavac <teo@kde.org>
++ *   SPDX-License-Identifier: GPL-3.0-or-later
++ *
++ *   Calamares is Free Software: see the License-Identifier above.
++ *
++ */
++
++#ifndef ACTIVEDIRECTORYJOB_H
++#define ACTIVEDIRECTORYJOB_H
++
++#include "Job.h"
++
++class ActiveDirectoryJob : public Calamares::Job
++{
++    Q_OBJECT
++public:
++    ActiveDirectoryJob( const QStringList& activeDirectoryInfo );
++    QString prettyName() const override;
++    QString prettyDescription() const override;
++    QString prettyStatusMessage() const override;
++    Calamares::JobResult exec() override;
++
++private:
++    QStringList m_activeDirectoryInfo;
++};
++
++#endif /* ACTIVEDIRECTORYJOB_H */
+--- a/src/modules/users/CMakeLists.txt
++++ b/src/modules/users/CMakeLists.txt
+@@ -55,6 +55,7 @@ include_directories(${PROJECT_BINARY_DIR
+ 
+ set(_users_src
+     # Jobs
++    ActiveDirectoryJob.cpp
+     CreateUserJob.cpp
+     MiscJobs.cpp
+     SetPasswordJob.cpp
