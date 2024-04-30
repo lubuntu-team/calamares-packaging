@@ -1,4 +1,5 @@
 0001-replace-pkexec-by-sudo.patch
 apport-package-hook.patch
 enable-only-present-with-encryption-partitions.patch
-active-directory.patch
+#active-directory.patch
+grub-debconf-config.patch

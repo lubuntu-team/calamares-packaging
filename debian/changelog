@@ -1,9 +1,34 @@
-calamares (3.3.4-0ubuntu2~1) noble; urgency=medium
+calamares (3.3.5-0ubuntu4) noble; urgency=medium
 
-  * Add Active Directory support.
-  * needs one more bugfix iteration
+  * Populate grub-{efi,pc}/install_devices debconf config (LP: #2063354).
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 29 Feb 2024 17:28:08 -0600
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 24 Apr 2024 15:28:29 -0500
+
+calamares (3.3.5-0ubuntu3) noble; urgency=medium
+
+  * No-change rebuild for CVE-2024-3094
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sun, 31 Mar 2024 08:44:36 +0000
+
+calamares (3.3.5-0ubuntu2) noble; urgency=medium
+
+  * No-change rebuild against libqt5core5t64
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Fri, 15 Mar 2024 04:00:12 +0000
+
+calamares (3.3.5-0ubuntu1) noble; urgency=medium
+
+  * New upstream release.
+  * Fully finish Active Directory prototype, leave the patch commented out for
+    now.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 07 Mar 2024 15:32:51 -0600
+
+calamares (3.3.4-0ubuntu2) noble; urgency=medium
+
+  * No-change rebuild for python3.12 t64.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 02 Mar 2024 21:08:26 +0100
 
 calamares (3.3.4-0ubuntu1) noble; urgency=medium
 

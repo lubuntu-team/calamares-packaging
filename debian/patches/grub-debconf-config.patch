@@ -1,0 +1,82 @@
+Description: Populate grub-{efi,pc}/install_devices debconf config
+Author: Simon Quigley <tsimonq2@ubuntu.com>
+Origin: vendor
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/calamares/+bug/2063354
+Last-Update: 2024-04-24
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/src/modules/bootloader/main.py
++++ b/src/modules/bootloader/main.py
+@@ -25,6 +25,7 @@ import os
+ import re
+ import shutil
+ import subprocess
++import tempfile
+ 
+ import libcalamares
+ 
+@@ -581,6 +582,46 @@ def get_grub_efi_parameters():
+     return None
+ 
+ 
++def get_disk_id(device_name, efi):
++    by_id_path = "/dev/disk/by-id"
++
++    if efi:
++        partitions = libcalamares.globalstorage.value("partitions")
++        device_name = None
++
++        for partition in partitions:
++            if "/boot/efi" in partition["mountPoint"]:
++                device_name = partition["device"]
++                break
++
++    device_path = os.path.realpath(device_name)
++
++    for entry in os.listdir(by_id_path):
++        full_entry_path = os.path.join(by_id_path, entry)
++        if os.path.realpath(full_entry_path) == device_path:
++            return full_entry_path
++
++    return None
++
++
++def set_grub_debconf_config(device_name, efi=False):
++    dev_id_path = get_disk_id(device_name, efi=efi)
++
++    if not dev_id_path:
++        return None
++
++    temp_dir = libcalamares.globalstorage.value("rootMountPoint") + "/tmp/"
++    with tempfile.NamedTemporaryFile(mode="w", delete=False, dir=temp_dir) as tmpfile:
++        debconf_target = "grub-efi" if efi else "grub-pc"
++
++        tmpfile.write(f"grub-pc {debconf_target}/install_devices multiselect {dev_id_path}\n")
++        tmpfile_path = tmpfile.name
++
++    debconf_config = "/tmp/" + os.path.basename(tmpfile_path)
++    check_target_env_call(["/usr/bin/debconf-set-selections", debconf_config])
++    os.remove(tmpfile_path)
++
++
+ def run_grub_mkconfig(partitions, output_file):
+     """
+     Runs grub-mkconfig in the target environment
+@@ -631,6 +672,8 @@ def run_grub_install(fw_type, partitions
+                                    "--efi-directory=" + efi_directory,
+                                    "--bootloader-id=" + efi_bootloader_id,
+                                    "--force"])
++
++        set_grub_debconf_config(efi_target, efi=True)
+     else:
+         assert efi_directory is None
+         if libcalamares.globalstorage.value("bootLoader") is None:
+@@ -652,6 +695,8 @@ def run_grub_install(fw_type, partitions
+                                    "--force",
+                                    boot_loader["installPath"]])
+ 
++        set_grub_debconf_config(boot_loader["installPath"])
++
+ 
+ def install_grub(efi_directory, fw_type):
+     """

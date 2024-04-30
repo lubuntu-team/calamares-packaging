@@ -54,15 +54,15 @@
 +    m_activeDirectoryIP = s;
 +}
 +
-+const QStringList&
++QStringList&
 +Config::getActiveDirectory() const
 +{
-+    QStringList activeDirectory;
-+    activeDirectory << m_activeDirectoryUsername
-+                    << m_activeDirectoryPassword
-+                    << m_activeDirectoryDomain
-+                    << m_activeDirectoryIP;
-+    return activeDirectory;
++    m_activeDirectorySettings.clear();
++    m_activeDirectorySettings << m_activeDirectoryUsername
++                              << m_activeDirectoryPassword
++                              << m_activeDirectoryDomain
++                              << m_activeDirectoryIP;
++    return m_activeDirectorySettings;
 +}
 +
  QString
@@ -99,7 +99,7 @@
 +    /// Is it both enabled and activated?
 +    bool getActiveDirectoryUsed() const;
 +    /// Config for Active Directory
-+    const QStringList& getActiveDirectory() const;
++    QStringList& getActiveDirectory() const;
  
      const QList< GroupDescription >& defaultGroups() const { return m_defaultGroups; }
      /** @brief the names of all the groups for the current user
@@ -116,10 +116,11 @@
  signals:
      void userShellChanged( const QString& );
      void autoLoginGroupChanged( const QString& );
-@@ -343,6 +355,13 @@ private:
+@@ -343,6 +355,14 @@ private:
  
      bool m_isReady = false;  ///< Used to reduce readyChanged signals
  
++    mutable QStringList m_activeDirectorySettings;
 +    bool m_activeDirectory = false;
 +    bool m_activeDirectoryUsed = false;
 +    QString m_activeDirectoryUsername;
@@ -290,7 +291,7 @@
      onReuseUserPasswordChanged( m_config->reuseUserPasswordForRoot() );
 --- /dev/null
 +++ b/src/modules/users/ActiveDirectoryJob.cpp
-@@ -0,0 +1,87 @@
+@@ -0,0 +1,91 @@
 +/* === This file is part of Calamares - <https://calamares.io> ===
 + *
 + *   SPDX-FileCopyrightText: 2024 Simon Quigley <tsimonq2@ubuntu.com>
@@ -314,7 +315,7 @@
 +#include <QTextStream>
 +#include <QProcess>
 +
-+ActiveDirectoryJob::ActiveDirectoryJob(const QStringList& activeDirectoryInfo)
++ActiveDirectoryJob::ActiveDirectoryJob(QStringList& activeDirectoryInfo)
 +    : Calamares::Job()
 +    , m_activeDirectoryInfo(activeDirectoryInfo)
 +{
@@ -341,41 +342,45 @@
 +Calamares::JobResult
 +ActiveDirectoryJob::exec()
 +{
-+    const QStringList& adInfo = m_activeDirectoryInfo;
++    QString username = m_activeDirectoryInfo.value(0);
++    QString password = m_activeDirectoryInfo.value(1);
++    QString domain = m_activeDirectoryInfo.value(2);
++    QString ip = m_activeDirectoryInfo.value(3);
 +
-+    QString username = adInfo.value(0);
-+    QString password = adInfo.value(1);
-+    QString domain = adInfo.value(2);
-+    //QString ip = adInfo.value(3);
-+
-+    QStringList args;
-+    args << "join" << "--user" << username << "--verbose" << domain;
-+
-+    QDir destDir;
 +    Calamares::GlobalStorage* gs = Calamares::JobQueue::instance()->globalStorage();
-+    QString rootMountPoint = gs->value("rootMountPoint").toString();
-+    destDir = QDir(rootMountPoint);
++    QString rootMountPoint = gs ? gs->value("rootMountPoint").toString() : QString();
 +
-+    QString command = "chroot " + destDir.path() + " realm " + args.join(" ");
++    if (!ip.isEmpty()) {
++        QString hostsFilePath = !rootMountPoint.isEmpty() ? rootMountPoint + "/etc/hosts" : "/etc/hosts";
++        QFile hostsFile(hostsFilePath);
++        if (hostsFile.open(QIODevice::Append | QIODevice::Text)) {
++            QTextStream out(&hostsFile);
++            out << ip << " " << domain << "\n";
++            hostsFile.close();
++        } else {
++            return Calamares::JobResult::error("Failed to open /etc/hosts for writing.");
++        }
++    }
++
++    QString installPath = !rootMountPoint.isEmpty() ? rootMountPoint : "/";
++    QStringList args = {"join", domain, "-U", username, "--install=" + installPath, "--verbose"};
 +
 +    QProcess process;
-+    process.setStandardInputFile("/dev/stdin");
-+    process.start(command, QStringList(), QIODevice::WriteOnly);
++    process.start("realm", args);
++    process.waitForStarted();
 +
-+    // Write the password to the standard input of the process
-+    process.write((password + "\n").toUtf8());
-+    process.write("\n"); // Ensure a newline after the password
-+    process.write("\n"); // Ensure an extra newline to confirm the end of the input
-+    process.closeWriteChannel(); // Close the write channel to indicate end of input
++    if (!password.isEmpty()) {
++        process.write((password + "\n").toUtf8());
++        process.closeWriteChannel();
++    }
 +
-+    // Wait for the process to finish
 +    process.waitForFinished(-1);
 +
-+    auto exitCode = process.exitCode();
-+    if (exitCode == 0) {
++    if (process.exitCode() == 0) {
 +        return Calamares::JobResult::ok();
 +    } else {
-+        return Calamares::JobResult::error("Failed to join realm.");
++        QString errorOutput = process.readAllStandardError();
++        return Calamares::JobResult::error(QString("Failed to join realm: %1").arg(errorOutput));
 +    }
 +}
 --- /dev/null
@@ -399,7 +404,7 @@
 +{
 +    Q_OBJECT
 +public:
-+    ActiveDirectoryJob( const QStringList& activeDirectoryInfo );
++    ActiveDirectoryJob( QStringList& activeDirectoryInfo );
 +    QString prettyName() const override;
 +    QString prettyDescription() const override;
 +    QString prettyStatusMessage() const override;
