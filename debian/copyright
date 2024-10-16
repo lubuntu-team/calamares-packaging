@@ -71,7 +71,6 @@ Files: AUTHORS
        data/config-appimage/settings.conf
        data/config-appimage/modules/*
        data/example-root/*
-       lang/calamares_i18n.qrc.in
        src/libcalamares/CalamaresVersion.h.in
        src/libcalamares/locale/CountryData_p.cpp
        src/libcalamares/CalamaresVersionX.h.in
@@ -230,7 +229,7 @@ Copyright: 2014-2016 Teo Mrnjavac <teo@kde.org>
            2017-2023 Adriaan de Groot <groot@kde.org>
 License: BSD-2-Clause
 
-Files: 3rdparty/kdsingleapplicationguard/*
+Files: 3rdparty/kdsingleapplication/*
 Copyright: 2019-2021 Klaralvdalens Datakonsult AB. <info@kdab.com>
 License: MIT
 
@@ -267,7 +266,6 @@ Copyright: 2014 Uri Herrera <uri_herrera@nitrux.in> and others
 License: LGPL-3+
 
 Files: src/modules/finishedq/seedling.svg
-       src/modules/localeq/img/chevron-left-solid.svg
 Copyright: 2020-2021 FontAwesome <hello@fontawesome.com>
 License: CC-BY-4.0
 
