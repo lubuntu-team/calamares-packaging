@@ -15,7 +15,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  
  import libcalamares
  
-@@ -581,6 +582,46 @@ def get_grub_efi_parameters():
+@@ -586,6 +587,46 @@ def get_grub_efi_parameters():
      return None
  
  
@@ -62,7 +62,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  def run_grub_mkconfig(partitions, output_file):
      """
      Runs grub-mkconfig in the target environment
-@@ -631,6 +672,8 @@ def run_grub_install(fw_type, partitions
+@@ -636,6 +677,8 @@ def run_grub_install(fw_type, partitions
                                     "--efi-directory=" + efi_directory,
                                     "--bootloader-id=" + efi_bootloader_id,
                                     "--force"])
@@ -71,7 +71,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
      else:
          assert efi_directory is None
          if libcalamares.globalstorage.value("bootLoader") is None:
-@@ -652,6 +695,8 @@ def run_grub_install(fw_type, partitions
+@@ -657,6 +700,8 @@ def run_grub_install(fw_type, partitions
                                     "--force",
                                     boot_loader["installPath"]])
  

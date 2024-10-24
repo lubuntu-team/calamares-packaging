@@ -2,3 +2,4 @@
 apport-package-hook.patch
 enable-only-present-with-encryption-partitions.patch
 grub-debconf-config.patch
+fix-presentation-qml-syntax.patch
