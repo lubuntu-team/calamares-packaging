@@ -1,3 +1,9 @@
+calamares (3.3.9-0ubuntu2) plucky; urgency=medium
+
+  * Do not build with QtWebEngine on architectures that do not support it.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 29 Oct 2024 19:01:21 -0500
+
 calamares (3.3.9-0ubuntu1) plucky; urgency=medium
 
   * New upstream release.

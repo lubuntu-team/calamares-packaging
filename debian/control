@@ -41,7 +41,7 @@ Build-Depends: cmake,
                qt6-location-dev,
                qt6-svg-dev,
                qt6-tools-dev,
-               qt6-webengine-dev
+               qt6-webengine-dev <amd64 arm64 armhf>
 Standards-Version: 4.7.0
 Rules-Requires-Root: no
 Homepage: https://github.com/calamares/calamares
