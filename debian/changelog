@@ -1,3 +1,9 @@
+calamares (3.3.10-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 30 Oct 2024 20:44:58 -0500
+
 calamares (3.3.9-0ubuntu2) plucky; urgency=medium
 
   * Do not build with QtWebEngine on architectures that do not support it.
