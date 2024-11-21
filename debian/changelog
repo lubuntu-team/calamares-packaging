@@ -1,8 +1,8 @@
-calamares (3.3.11-0ubuntu1) UNRELEASED; urgency=medium
+calamares (3.3.11-0ubuntu1) plucky; urgency=medium
 
   * New upstream release.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 30 Oct 2024 20:44:58 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 20 Nov 2024 20:34:29 -0600
 
 calamares (3.3.9-0ubuntu2) plucky; urgency=medium
 
