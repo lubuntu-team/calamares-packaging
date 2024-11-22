@@ -1,6 +1,7 @@
 calamares (3.3.12-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * [dracut] Add an options setting for additional Dracut parameters.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 22 Nov 2024 16:48:30 -0600
 
