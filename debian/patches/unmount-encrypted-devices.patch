@@ -1,0 +1,119 @@
+From 739679ad5ab6f7a3fe1edc960fb136d557499781 Mon Sep 17 00:00:00 2001
+From: Simon Quigley <simon@tsimonq2.net>
+Date: Fri, 22 Nov 2024 19:36:43 -0600
+Subject: [PATCH 1/2] [libcalamares] Add a closeCryptsetup function to properly
+ close LUKS partitions
+
+---
+ src/libcalamares/partition/Mount.cpp | 9 +++++++++
+ src/libcalamares/partition/Mount.h   | 7 +++++++
+ 2 files changed, 16 insertions(+)
+
+diff --git a/src/libcalamares/partition/Mount.cpp b/src/libcalamares/partition/Mount.cpp
+index 03b776f4be..e4c3d06b94 100644
+--- a/src/libcalamares/partition/Mount.cpp
++++ b/src/libcalamares/partition/Mount.cpp
+@@ -84,6 +84,15 @@ unmount( const QString& path, const QStringList& options )
+     return r.getExitCode();
+ }
+ 
++int
++closeCryptsetup( const QString& luksMapperName )
++{
++    QStringList args = { "cryptsetup", "close", luksMapperName };
++    auto r = Calamares::System::runCommand( QStringList { "cryptsetup", "close", luksMapperName } , std::chrono::seconds( 10 ) );
++    sync();
++    return r.getExitCode();
++}
++
+ struct TemporaryMount::Private
+ {
+     QString m_devicePath;
+diff --git a/src/libcalamares/partition/Mount.h b/src/libcalamares/partition/Mount.h
+index 3781c4feb2..e197594a1d 100644
+--- a/src/libcalamares/partition/Mount.h
++++ b/src/libcalamares/partition/Mount.h
+@@ -51,6 +51,13 @@ DLLEXPORT int mount( const QString& devicePath,
+  */
+ DLLEXPORT int unmount( const QString& path, const QStringList& options = QStringList() );
+ 
++/** @brief Use cryptsetup to close the given @p LUKS mapper name.
++ *
++ * Runs cryptsetup(8) in the host system.
++ *
++ * @returns the program's exit code
++ */
++DLLEXPORT int closeCryptsetup( const QString& luksMapperName );
+ 
+ /** @brief Mount and automatically unmount a device
+  *
+
+From f6fc0d19493afbb084f57f81e451c9f0d0844281 Mon Sep 17 00:00:00 2001
+From: Simon Quigley <simon@tsimonq2.net>
+Date: Fri, 22 Nov 2024 19:38:15 -0600
+Subject: [PATCH 2/2] [umount] After unmounting partitions, close any encrypted
+ partitions that are still open
+
+---
+ src/modules/umount/UmountJob.cpp | 41 ++++++++++++++++++++++++++++++++
+ 1 file changed, 41 insertions(+)
+
+diff --git a/src/modules/umount/UmountJob.cpp b/src/modules/umount/UmountJob.cpp
+index 1e207d9eae..8cc8796ac9 100644
+--- a/src/modules/umount/UmountJob.cpp
++++ b/src/modules/umount/UmountJob.cpp
+@@ -93,6 +93,38 @@ unmountTargetMounts( const QString& rootMountPoint )
+     return Calamares::JobResult::ok();
+ }
+ 
++static Calamares::JobResult
++unmountEncryptedPartitions( const QList<QVariant>& partitions )
++{
++    // Iterate on each partition in global storage
++    for ( const auto& partition : partitions )
++    {
++        // If this partition does not have LUKS information, skip it
++        QVariantMap partitionMap = partition.toMap();
++        if ( !partitionMap.contains("luksMapperName") ) {
++            continue;
++        }
++
++        // Define the mount point and ensure it exists
++        QString luksMapperName = partitionMap.value("luksMapperName").toString();
++        QFile deviceFile(QString("/dev/mapper/%1").arg(luksMapperName));
++        if ( !deviceFile.exists() ) {
++            continue;
++        }
++
++        // Close the device
++        if ( Calamares::Partition::closeCryptsetup( luksMapperName ) )
++        {
++            return Calamares::JobResult::error(
++                QCoreApplication::translate( UmountJob::staticMetaObject.className(),
++                                             "Could not close encrypted partition on the target system." )
++            );
++        }
++    }
++
++    return Calamares::JobResult::ok();
++}
++
+ static Calamares::JobResult
+ exportZFSPools()
+ {
+@@ -152,6 +184,15 @@ UmountJob::exec()
+         }
+     }
+ 
++    // For encrypted systems, close the partitions
++    {
++        auto r = unmountEncryptedPartitions( gs->value("partitions").toList() );
++        if ( !r )
++        {
++            return r;
++        }
++    }
++
+     // For ZFS systems, export the pools
+     {
+         auto r = exportZFSPools();
