@@ -43,7 +43,7 @@ Last-Update: 2024-02-26
          // warnings to ensure that all the cases are covered below.
 @@ -252,6 +259,10 @@ PartitionLayout::createPartitions( Devic
          availableSectors = totalSectors;
-         for ( const auto& entry : qAsConst( m_partLayout ) )
+         for ( const auto& entry : std::as_const( m_partLayout ) )
          {
 +            if ( luksPassphrase.isEmpty() && entry.partOnlyPresentWithEncryption ) {
 +                // this partition is being skipped entirely
@@ -54,7 +54,7 @@ Last-Update: 2024-02-26
              {
 @@ -265,6 +276,10 @@ PartitionLayout::createPartitions( Devic
      // Assign sectors for percentage-defined partitions.
-     for ( const auto& entry : qAsConst( m_partLayout ) )
+     for ( const auto& entry : std::as_const( m_partLayout ) )
      {
 +        if ( luksPassphrase.isEmpty() && entry.partOnlyPresentWithEncryption ) {
 +            // this partition is being skipped entirely
@@ -65,7 +65,7 @@ Last-Update: 2024-02-26
              qint64 sectors
 @@ -288,6 +303,10 @@ PartitionLayout::createPartitions( Devic
      availableSectors = totalSectors;
-     for ( const auto& entry : qAsConst( m_partLayout ) )
+     for ( const auto& entry : std::as_const( m_partLayout ) )
      {
 +        if ( luksPassphrase.isEmpty() && entry.partOnlyPresentWithEncryption ) {
 +            // this partition is being skipped entirely
@@ -94,7 +94,7 @@ Last-Update: 2024-02-26
                          const QString& minSize = QString(),
 --- a/src/modules/partition/partition.conf
 +++ b/src/modules/partition/partition.conf
-@@ -266,6 +266,7 @@ defaultFileSystemType:  "ext4"
+@@ -316,6 +316,7 @@ lvm:
  #       type: "4f68bce3-e8cd-4db1-96e7-fbcaf984b709"
  #       filesystem: "ext4"
  #       noEncrypt: false
@@ -102,7 +102,7 @@ Last-Update: 2024-02-26
  #       mountPoint: "/"
  #       size: 20%
  #       minSize: 500M
-@@ -275,6 +276,7 @@ defaultFileSystemType:  "ext4"
+@@ -325,6 +326,7 @@ lvm:
  #       type: "933ac7e1-2eb4-4f13-b844-0e14e2aef915"
  #       filesystem: "ext4"
  #       noEncrypt: false
@@ -110,7 +110,7 @@ Last-Update: 2024-02-26
  #       mountPoint: "/home"
  #       size: 3G
  #       minSize: 1.5G
-@@ -303,6 +305,7 @@ defaultFileSystemType:  "ext4"
+@@ -353,6 +355,7 @@ lvm:
  #         default filesystem type, or the user's choice, will be applied instead
  #         of "unknown" (e.g. the user might pick ext4, or xfs).
  #   - noEncrypt: whether this partition is exempt from encryption if enabled (optional parameter; default is false)
