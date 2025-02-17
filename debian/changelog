@@ -1,3 +1,15 @@
+calamares (3.3.13-0ubuntu3) plucky; urgency=medium
+
+  * No-change rebuild for icu soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 07 Jan 2025 14:13:36 +0100
+
+calamares (3.3.13-0ubuntu2) plucky; urgency=medium
+
+  * No-change rebuild for Python 3.13 as the default.
+
+ -- Matthias Klose <doko@ubuntu.com>  Fri, 03 Jan 2025 14:44:18 +0100
+
 calamares (3.3.13-0ubuntu1) plucky; urgency=medium
 
   * New upstream release.
