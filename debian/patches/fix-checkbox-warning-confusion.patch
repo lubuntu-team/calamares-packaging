@@ -1,0 +1,14 @@
+diff --git a/src/modules/users/Config.cpp b/src/modules/users/Config.cpp
+index be754774b..380ed293e 100644
+--- a/src/modules/users/Config.cpp
++++ b/src/modules/users/Config.cpp
+@@ -1026,8 +1026,7 @@ Config::setConfigurationMap( const QVariantMap& configurationMap )
+     m_reuseUserPasswordForRoot = Calamares::getBool( configurationMap, "doReusePassword", false );
+ 
+     m_permitWeakPasswords = Calamares::getBool( configurationMap, "allowWeakPasswords", false );
+-    m_requireStrongPasswords
+-        = !m_permitWeakPasswords || !Calamares::getBool( configurationMap, "allowWeakPasswordsDefault", false );
++    m_requireStrongPasswords = Calamares::getBool( configurationMap, "allowWeakPasswordsDefault", false );
+ 
+     // If the value doesn't exist, or isn't a map, this gives an empty map -- no problem
+     auto pr_checks( configurationMap.value( "passwordRequirements" ).toMap() );

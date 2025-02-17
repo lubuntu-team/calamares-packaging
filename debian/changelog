@@ -1,3 +1,10 @@
+calamares (3.3.13-0ubuntu4) plucky; urgency=medium
+
+  * Fix some of the confusion around the weak password checkbox and its
+    visibility.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 16 Feb 2025 17:50:18 -0600
+
 calamares (3.3.13-0ubuntu3) plucky; urgency=medium
 
   * No-change rebuild for icu soname change.
