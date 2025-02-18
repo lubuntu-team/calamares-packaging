@@ -1,3 +1,9 @@
+calamares (3.3.13-0ubuntu5) plucky; urgency=medium
+
+  * Add ${qml6:Depends} to ensure we don't miss any QML 6 depends.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 18 Feb 2025 00:03:24 -0600
+
 calamares (3.3.13-0ubuntu4) plucky; urgency=medium
 
   * Fix some of the confusion around the weak password checkbox and its

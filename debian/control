@@ -6,6 +6,7 @@ XSBC-Original-Maintainer: Jonathan Carter <jcc@debian.org>
 Build-Depends: cmake,
                cryptsetup <!nocheck>,
                debhelper-compat (= 13),
+               dh-sequence-qmldeps,
                gettext,
                libappstreamqt-dev,
                libatasmart-dev,
@@ -52,7 +53,7 @@ XS-Debian-Vcs-Git: https://salsa.debian.org/qt-kde-team/kde-extras/calamares.git
 
 Package: calamares
 Architecture: linux-any
-Depends: os-prober, util-linux-extra, ${misc:Depends}, ${shlibs:Depends}
+Depends: os-prober, util-linux-extra, ${qml6:Depends}, ${misc:Depends}, ${shlibs:Depends}
 Recommends: btrfs-progs, squashfs-tools
 Description: distribution-independent installer framework
  Calamares is a distribution-independent installer framework.
