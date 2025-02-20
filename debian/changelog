@@ -1,3 +1,9 @@
+calamares (3.3.14-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 20 Feb 2025 14:13:56 -0600
+
 calamares (3.3.13-0ubuntu5) plucky; urgency=medium
 
   * Add ${qml6:Depends} to ensure we don't miss any QML 6 depends.
