@@ -1,1 +1,2 @@
-calamares.py usr/share/apport/package-hooks
+usr/bin/calamares
+usr/lib/${DEB_HOST_MULTIARCH}/calamares/modules/

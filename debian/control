@@ -3,46 +3,47 @@ Section: utils
 Priority: optional
 Maintainer: Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
 XSBC-Original-Maintainer: Jonathan Carter <jcc@debian.org>
-Build-Depends: cmake,
-               cryptsetup <!nocheck>,
-               debhelper-compat (= 13),
+Build-Depends: debhelper-compat (= 13),
+               dh-sequence-kf6,
                dh-sequence-qmldeps,
+               cmake (>= 3.16),
+               cryptsetup <!nocheck>,
+               extra-cmake-modules (>= 5.240),
                gettext,
                libappstreamqt-dev,
                libatasmart-dev,
-               libboost-python-dev,
+               libboost-python-dev (>= 1.72.0),
                libicu-dev,
-               extra-cmake-modules,
-               libkf6config-dev,
-               libkf6coreaddons-dev,
-               libkf6crash-dev,
-               libkf6dbusaddons-dev,
-               libkf6i18n-dev,
-               libkf6iconthemes-dev,
-               libkf6kio-dev,
-               libkf6package-dev,
-               libkf6parts-dev,
-               libkf6service-dev,
-               libkf6solid-dev,
+               libkf6config-dev (>= 5.240),
+               libkf6coreaddons-dev (>= 5.240),
+               libkf6crash-dev (>= 5.240),
+               libkf6dbusaddons-dev (>= 5.240),
+               libkf6i18n-dev (>= 5.240),
+               libkf6iconthemes-dev (>= 5.240),
+               libkf6kio-dev (>= 5.240),
+               libkf6package-dev (>= 5.240),
+               libkf6parts-dev (>= 5.240),
+               libkf6service-dev (>= 5.240),
+               libkf6solid-dev (>= 5.240),
                libkpmcore-dev (>= 24.08),
                libparted-dev,
                libplasma-dev,
                libpolkit-qt6-1-dev,
                libpwquality-dev,
-               libyaml-cpp-dev,
+               libyaml-cpp-dev (>= 0.5.1),
                os-prober,
-               pkgconf,
-               pkg-kde-tools,
                pkexec,
-               python3-all-dev,
-               python3-yaml,
+               pkg-kde-tools,
+               pkgconf,
+               python3-all-dev (>= 3.6),
                python3-jsonschema,
-               qt6-base-dev,
-               qt6-declarative-dev,
-               qt6-location-dev,
-               qt6-svg-dev,
-               qt6-tools-dev,
-               qt6-webengine-dev [amd64 arm64 armhf]
+               python3-yaml,
+               qt6-base-dev (>= 6.5.0),
+               qt6-declarative-dev (>= 6.5.0),
+               qt6-location-dev (>= 6.5.0),
+               qt6-svg-dev (>= 6.5.0),
+               qt6-tools-dev (>= 6.5.0),
+               qt6-webengine-dev (>= 6.5.0) [amd64 arm64 armhf]
 Standards-Version: 4.7.0
 Rules-Requires-Root: no
 Homepage: https://github.com/calamares/calamares
@@ -53,7 +54,13 @@ XS-Debian-Vcs-Git: https://salsa.debian.org/qt-kde-team/kde-extras/calamares.git
 
 Package: calamares
 Architecture: linux-any
-Depends: os-prober, util-linux-extra, ${qml6:Depends}, ${misc:Depends}, ${shlibs:Depends}
+Depends: calamares-data (= ${binary:Version}),
+         libcalamares3.3 (= ${binary:Version}),
+         libcalamaresui3.3 (= ${binary:Version}),
+         os-prober,
+         util-linux-extra,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Recommends: btrfs-progs, squashfs-tools
 Description: distribution-independent installer framework
  Calamares is a distribution-independent installer framework.
@@ -66,3 +73,75 @@ Description: distribution-independent installer framework
  You will likely want to provide your own config files to match
  your distribution, reading the Calamares documentation will guide
  you through that process.
+
+Package: calamares-data
+Architecture: all
+Depends: ${misc:Depends}, ${qml6:Depends}
+Description: data for Calamares
+ Calamares is a distribution-independent installer framework.
+ .
+ It provides a graphical installer that can be used with nearly
+ any distribution. This package is suitable for live media on
+ Debian-based systems, and won't be of any particular use on
+ an already installed system.
+ .
+ You will likely want to provide your own config files to match
+ your distribution, reading the Calamares documentation will guide
+ you through that process.
+ .
+ Data files for Calamares.
+
+Package: libcalamares-dev
+Architecture: linux-any
+Depends: libcalamares3.3 (= ${binary:Version}),
+         libcalamaresui3.3 (= ${binary:Version}),
+         ${misc:Depends}
+Description: Development files for Calamares
+ Calamares is a distribution-independent installer framework.
+ .
+ It provides a graphical installer that can be used with nearly
+ any distribution. This package is suitable for live media on
+ Debian-based systems, and won't be of any particular use on
+ an already installed system.
+ .
+ You will likely want to provide your own config files to match
+ your distribution, reading the Calamares documentation will guide
+ you through that process.
+ .
+ Development files for Calamares.
+
+Package: libcalamares3.3
+Architecture: linux-any
+Provides: libcalamares
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Shared object files for Calamares
+ Calamares is a distribution-independent installer framework.
+ .
+ It provides a graphical installer that can be used with nearly
+ any distribution. This package is suitable for live media on
+ Debian-based systems, and won't be of any particular use on
+ an already installed system.
+ .
+ You will likely want to provide your own config files to match
+ your distribution, reading the Calamares documentation will guide
+ you through that process.
+ .
+ Shared object files for Calamares.
+
+Package: libcalamaresui3.3
+Architecture: linux-any
+Provides: libcalamaresui
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: UI shared object files for Calamares
+ Calamares is a distribution-independent installer framework.
+ .
+ It provides a graphical installer that can be used with nearly
+ any distribution. This package is suitable for live media on
+ Debian-based systems, and won't be of any particular use on
+ an already installed system.
+ .
+ You will likely want to provide your own config files to match
+ your distribution, reading the Calamares documentation will guide
+ you through that process.
+ .
+ UI shared object files for Calamares.

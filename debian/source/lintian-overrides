@@ -1,0 +1,10 @@
+# We have a strong relationship with upstream; it is policy to forward patches
+calamares source: patch-not-forwarded-upstream [debian/patches/*.patch]
+
+# This is expected to be forwarded upstream in Q cycle
+calamares source: quilt-patch-missing-description [debian/patches/fix-checkbox-warning-confusion.patch]
+
+# This is expected/okay
+calamares source: very-long-line-length-in-source-file * > * [data/example-root/usr/share/zoneinfo/*:*]
+calamares source: very-long-line-length-in-source-file * > * [lang/*.ts:*]
+calamares source: package-does-not-install-examples [src/modules/notesqml/examples/]

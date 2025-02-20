@@ -1,0 +1,7 @@
+calamares.py usr/share/apport/package-hooks
+usr/share/applications/calamares.desktop
+usr/share/bash-completion/completions/calamares
+usr/share/calamares/
+usr/share/icons/hicolor/scalable/apps/calamares.svg
+usr/share/locale/
+usr/share/polkit-1/actions/com.github.calamares.calamares.policy

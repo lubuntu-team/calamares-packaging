@@ -1,0 +1,8 @@
+# Generally speaking, the exit code will not be useful or relevant to the user
+calamares: exit-in-shared-library [usr/lib/x86_64-linux-gnu/*.so.*]
+
+# This is okay, it's where Calamares expects it to be
+calamares: repeated-path-segment calamares [usr/share/calamares/qml/calamares/]
+
+# False positive
+calamares: spelling-error-in-binary MoR More [usr/bin/calamares]
