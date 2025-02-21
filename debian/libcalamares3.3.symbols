@@ -1,10 +1,11 @@
-# SymbolsHelper-Confirmed: 3.3.14 amd64
+# SymbolsHelper-Confirmed: 3.3.14 amd64 arm64 armhf ppc64el riscv64 s390x
 libcalamares.so.3.3 libcalamares3.3 #MINVER#
 * Build-Depends-Package: libcalamares-dev
  PyInit_libcalamares@Base 3.3.13
  _ZGVZN9QMetaType21registerConverterImplI5QListI4QUrlE9QIterableI13QMetaSequenceEEEbSt8functionIFbPKvPvEES_S_E10unregister@Base 3.3.13
  _ZGVZN9QMetaType23registerMutableViewImplI5QListI4QUrlE9QIterableI13QMetaSequenceEEEbSt8functionIFbPvS8_EES_S_E10unregister@Base 3.3.13
  _ZN13QMetaSequence12MetaSequenceI5QListI4QUrlEE5valueE@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN14PartitionTable8childrenEv@Base 3.3.14
  _ZN15CalamaresPython19variantFromPyObjectERKN5boost6python3api6objectE@Base 3.3.14
  _ZN15CalamaresPython20variantMapFromPyDictERKN5boost6python4dictE@Base 3.3.14
  _ZN15CalamaresPython21variantHashFromPyDictERKN5boost6python4dictE@Base 3.3.14
@@ -26,6 +27,26 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN22CalamaresPluginFactoryD0Ev@Base 3.3.13
  _ZN22CalamaresPluginFactoryD1Ev@Base 3.3.13
  _ZN22CalamaresPluginFactoryD2Ev@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML11InvalidNodeC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML11InvalidNodeC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x|subst)_ZN4YAML12BadSubscriptC1I{size_t}EERKNS_4MarkERKT_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x|subst)_ZN4YAML12BadSubscriptC2I{size_t}EERKNS_4MarkERKT_@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML13BadConversionC1ERKNS_4MarkE@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML13BadConversionC2ERKNS_4MarkE@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML4NodeC1IPKcEERKT_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML4NodeC2IPKcEERKT_@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML4NodeD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML4NodeD2Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML4NodeixIA10_cEES0_RKT_@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML4NodeixIA15_cEES0_RKT_@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML4NodeixIA9_cEES0_RKT_@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML6detail9node_data3getIA10_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE@Base 3.3.14
+ (arch=riscv64)_ZN4YAML9Exception10build_whatERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML9ExceptionC1ERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML9ExceptionC2ERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN5boost6detail15sp_counted_base7destroyEv@Base 3.3.14
  _ZN6Logger12ContinuationE@Base 3.3.13
  _ZN6Logger12RedactedNameC1EPKcRK7QString@Base 3.3.13
  _ZN6Logger12RedactedNameC1ERK7QStringS3_@Base 3.3.13
@@ -46,12 +67,17 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN6Logger8logLevelEv@Base 3.3.13
  _ZN6Logger8toStringERK8QVariant@Base 3.3.13
  _ZN6LoggerlsER6QDebugRKNS_15RedactedCommandE@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN6QDebuglsEPKc@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN6QMutexD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN6QMutexD2Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN7QStringD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN7QStringD2Ev@Base 3.3.14
  _ZN9Calamares10ProcessJob11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.14
  _ZN9Calamares10ProcessJob11qt_metacastEPKc@Base 3.3.14
  _ZN9Calamares10ProcessJob16staticMetaObjectE@Base 3.3.14
  _ZN9Calamares10ProcessJob4execEv@Base 3.3.14
- _ZN9Calamares10ProcessJobC1ERK7QStringS3_bNSt6chrono8durationIlSt5ratioILl1ELl1EEEEP7QObject@Base 3.3.13
- _ZN9Calamares10ProcessJobC2ERK7QStringS3_bNSt6chrono8durationIlSt5ratioILl1ELl1EEEEP7QObject@Base 3.3.13
+ (subst)_ZN9Calamares10ProcessJobC1ERK7QStringS3_bNSt6chrono8durationI{int64_t}St5ratioIL{int64_t}1EL{int64_t}1EEEEP7QObject@Base 3.3.13
+ (subst)_ZN9Calamares10ProcessJobC2ERK7QStringS3_bNSt6chrono8durationI{int64_t}St5ratioIL{int64_t}1EL{int64_t}1EEEEP7QObject@Base 3.3.13
  _ZN9Calamares10ProcessJobD0Ev@Base 3.3.14
  _ZN9Calamares10ProcessJobD1Ev@Base 3.3.14
  _ZN9Calamares10ProcessJobD2Ev@Base 3.3.14
@@ -63,10 +89,10 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares11CommandLineC2ERK4QMapI7QString8QVariantE@Base 3.3.13
  _ZN9Calamares11CommandList13updateVerboseEb@Base 3.3.13
  _ZN9Calamares11CommandList3runEv@Base 3.3.13
- _ZN9Calamares11CommandListC1ERK8QVariantbNSt6chrono8durationIlSt5ratioILl1ELl1EEEE@Base 3.3.13
- _ZN9Calamares11CommandListC1EbNSt6chrono8durationIlSt5ratioILl1ELl1EEEE@Base 3.3.13
- _ZN9Calamares11CommandListC2ERK8QVariantbNSt6chrono8durationIlSt5ratioILl1ELl1EEEE@Base 3.3.13
- _ZN9Calamares11CommandListC2EbNSt6chrono8durationIlSt5ratioILl1ELl1EEEE@Base 3.3.13
+ (subst)_ZN9Calamares11CommandListC1ERK8QVariantbNSt6chrono8durationI{int64_t}St5ratioIL{int64_t}1EL{int64_t}1EEEE@Base 3.3.13
+ (subst)_ZN9Calamares11CommandListC1EbNSt6chrono8durationI{int64_t}St5ratioIL{int64_t}1EL{int64_t}1EEEE@Base 3.3.13
+ (subst)_ZN9Calamares11CommandListC2ERK8QVariantbNSt6chrono8durationI{int64_t}St5ratioIL{int64_t}1EL{int64_t}1EEEE@Base 3.3.13
+ (subst)_ZN9Calamares11CommandListC2EbNSt6chrono8durationI{int64_t}St5ratioIL{int64_t}1EL{int64_t}1EEEE@Base 3.3.13
  _ZN9Calamares11Permissions16parsePermissionsERK7QString@Base 3.3.13
  _ZN9Calamares11Permissions5applyERK7QStringRKS0_@Base 3.3.13
  _ZN9Calamares11Permissions5applyERK7QStringi@Base 3.3.13
@@ -78,7 +104,10 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares12ModuleSystem10Descriptor18fromDescriptorDataERK4QMapI7QString8QVariantERKS3_@Base 3.3.13
  _ZN9Calamares12ModuleSystem10DescriptorC1Ev@Base 3.3.13
  _ZN9Calamares12ModuleSystem10DescriptorC2Ev@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares12ModuleSystem10DescriptorD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares12ModuleSystem10DescriptorD2Ev@Base 3.3.14
  _ZN9Calamares12ModuleSystem11InstanceKey10fromStringERK7QString@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares12ModuleSystem11InstanceKey8validateEv@Base 3.3.14
  _ZN9Calamares12ModuleSystem14interfaceNamesEv@Base 3.3.13
  _ZN9Calamares12ModuleSystem6Config11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.13
  _ZN9Calamares12ModuleSystem6Config11qt_metacastEPKc@Base 3.3.13
@@ -104,6 +133,9 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares12Retranslator8instanceEv@Base 3.3.13
  _ZN9Calamares12RetranslatorC1EP7QObject@Base 3.3.13
  _ZN9Calamares12RetranslatorC2EP7QObject@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares12RetranslatorD0Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares12RetranslatorD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares12RetranslatorD2Ev@Base 3.3.14
  _ZN9Calamares12systemLibDirEv@Base 3.3.13
  _ZN9Calamares13GlobalStorage11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.13
  _ZN9Calamares13GlobalStorage11qt_metacastEPKc@Base 3.3.13
@@ -114,9 +146,14 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares13GlobalStorage7changedEv@Base 3.3.13
  _ZN9Calamares13GlobalStorage8loadJsonERK7QString@Base 3.3.13
  _ZN9Calamares13GlobalStorage8loadYamlERK7QString@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares13GlobalStorage9WriteLockD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares13GlobalStorage9WriteLockD2Ev@Base 3.3.14
  _ZN9Calamares13GlobalStorageC1EP7QObject@Base 3.3.13
  _ZN9Calamares13GlobalStorageC2EP7QObject@Base 3.3.13
- _ZN9Calamares13ProcessResult14explainProcessEiRK7QStringS3_NSt6chrono8durationIlSt5ratioILl1ELl1EEEE@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares13GlobalStorageD0Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares13GlobalStorageD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares13GlobalStorageD2Ev@Base 3.3.14
+ (subst)_ZN9Calamares13ProcessResult14explainProcessEiRK7QStringS3_NSt6chrono8durationI{int64_t}St5ratioIL{int64_t}1EL{int64_t}1EEEE@Base 3.3.13
  _ZN9Calamares13extraDataDirsEv@Base 3.3.13
  _ZN9Calamares13getStringListERK4QMapI7QString8QVariantERKS1_RK5QListIS1_E@Base 3.3.13
  _ZN9Calamares13haveExtraDirsEv@Base 3.3.13
@@ -142,12 +179,17 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares17RequirementsModel25satisfiedMandatoryChangedEb@Base 3.3.13
  _ZN9Calamares17RequirementsModel28satisfiedRequirementsChangedEb@Base 3.3.13
  _ZN9Calamares17RequirementsModel5clearEv@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares17RequirementsModelD0Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares17RequirementsModelD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares17RequirementsModelD2Ev@Base 3.3.14
  _ZN9Calamares17installTranslatorERKNS_6Locale11Translation2IdERK7QString@Base 3.3.13
  _ZN9Calamares17installTranslatorEv@Base 3.3.13
  _ZN9Calamares18getUnsignedIntegerERK4QMapI7QString8QVariantERKS1_y@Base 3.3.13
  _ZN9Calamares19InstanceDescription12fromSettingsERK4QMapI7QString8QVariantE@Base 3.3.13
  _ZN9Calamares19InstanceDescriptionC1ERKNS_12ModuleSystem11InstanceKeyE@Base 3.3.13
  _ZN9Calamares19InstanceDescriptionC2ERKNS_12ModuleSystem11InstanceKeyE@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares19InstanceDescriptionD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares19InstanceDescriptionD2Ev@Base 3.3.14
  _ZN9Calamares19RequirementsChecker11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.13
  _ZN9Calamares19RequirementsChecker11qt_metacastEPKc@Base 3.3.13
  _ZN9Calamares19RequirementsChecker14reportProgressEv@Base 3.3.13
@@ -241,6 +283,9 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares6Locale11TranslationC1ERKNS1_2IdENS1_11LabelFormatEP7QObject@Base 3.3.13
  _ZN9Calamares6Locale11TranslationC2EP7QObject@Base 3.3.13
  _ZN9Calamares6Locale11TranslationC2ERKNS1_2IdENS1_11LabelFormatEP7QObject@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares6Locale11TranslationD0Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares6Locale11TranslationD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares6Locale11TranslationD2Ev@Base 3.3.14
  _ZN9Calamares6Locale11countryDataERK7QString@Base 3.3.13
  _ZN9Calamares6Locale12RegionsModel11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.13
  _ZN9Calamares6Locale12RegionsModel11qt_metacastEPKc@Base 3.3.13
@@ -255,6 +300,9 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares6Locale12TimeZoneData16staticMetaObjectE@Base 3.3.13
  _ZN9Calamares6Locale12TimeZoneDataC1ERK7QStringS4_S4_dd@Base 3.3.13
  _ZN9Calamares6Locale12TimeZoneDataC2ERK7QStringS4_S4_dd@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares6Locale12TimeZoneDataD0Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares6Locale12TimeZoneDataD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares6Locale12TimeZoneDataD2Ev@Base 3.3.14
  _ZN9Calamares6Locale13countryLocaleERK7QString@Base 3.3.13
  _ZN9Calamares6Locale14countryForCodeERK7QString@Base 3.3.13
  _ZN9Calamares6Locale16TranslatedStringC1ERK4QMapI7QString8QVariantERKS3_PKc@Base 3.3.13
@@ -316,7 +364,7 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares6String18DictionaryExpanderD1Ev@Base 3.3.13
  _ZN9Calamares6String18DictionaryExpanderD2Ev@Base 3.3.13
  _ZN9Calamares6String7obscureERK7QString@Base 3.3.13
- _ZN9Calamares6System10runCommandENS0_11RunLocationERK5QListI7QStringERKS3_S8_NSt6chrono8durationIlSt5ratioILl1ELl1EEEE@Base 3.3.13
+ (subst)_ZN9Calamares6System10runCommandENS0_11RunLocationERK5QListI7QStringERKS3_S8_NSt6chrono8durationI{int64_t}St5ratioIL{int64_t}1EL{int64_t}1EEEE@Base 3.3.13
  _ZN9Calamares6System10s_instanceE@Base 3.3.13
  _ZN9Calamares6System11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.13
  _ZN9Calamares6System11qt_metacastEPKc@Base 3.3.13
@@ -332,10 +380,16 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares7FailJob11qt_metacastEPKc@Base 3.3.13
  _ZN9Calamares7FailJob16staticMetaObjectE@Base 3.3.13
  _ZN9Calamares7FailJob4execEv@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares7FailJobD0Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares7FailJobD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares7FailJobD2Ev@Base 3.3.14
  _ZN9Calamares7GoodJob11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.13
  _ZN9Calamares7GoodJob11qt_metacastEPKc@Base 3.3.13
  _ZN9Calamares7GoodJob16staticMetaObjectE@Base 3.3.13
  _ZN9Calamares7GoodJob4execEv@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares7GoodJobD0Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares7GoodJobD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares7GoodJobD2Ev@Base 3.3.14
  _ZN9Calamares7Network7Manager11hasInternetEv@Base 3.3.13
  _ZN9Calamares7Network7Manager11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.13
  _ZN9Calamares7Network7Manager11qt_metacastEPKc@Base 3.3.13
@@ -361,6 +415,9 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares7Network7Manager7Private8instanceEv@Base 3.3.13
  _ZN9Calamares7Network7Manager7PrivateC1Ev@Base 3.3.13
  _ZN9Calamares7Network7Manager7PrivateC2Ev@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares7Network7Manager7PrivateD0Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares7Network7Manager7PrivateD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares7Network7Manager7PrivateD2Ev@Base 3.3.14
  _ZN9Calamares7Network7ManagerC1Ev@Base 3.3.13
  _ZN9Calamares7Network7ManagerC2Ev@Base 3.3.13
  _ZN9Calamares7Network7ManagerD0Ev@Base 3.3.13
@@ -404,6 +461,9 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares8SettingsC1Eb@Base 3.3.13
  _ZN9Calamares8SettingsC2ERK7QStringb@Base 3.3.13
  _ZN9Calamares8SettingsC2Eb@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares8SettingsD0Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares8SettingsD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares8SettingsD2Ev@Base 3.3.14
  _ZN9Calamares8setUMaskEj@Base 3.3.13
  _ZN9Calamares9JobResult10setDetailsERK7QString@Base 3.3.13
  _ZN9Calamares9JobResult10setMessageERK7QString@Base 3.3.13
@@ -414,6 +474,9 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares9JobResultC1ERK7QStringS3_i@Base 3.3.13
  _ZN9Calamares9JobResultC2EOS0_@Base 3.3.13
  _ZN9Calamares9JobResultC2ERK7QStringS3_i@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares9JobResultD0Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares9JobResultD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares9JobResultD2Ev@Base 3.3.14
  _ZN9Calamares9Partition10KPMManagerC1Ev@Base 3.3.13
  _ZN9Calamares9Partition10KPMManagerC2Ev@Base 3.3.13
  _ZN9Calamares9Partition10KPMManagerD1Ev@Base 3.3.13
@@ -465,8 +528,22 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares9getDoubleERK4QMapI7QString8QVariantERKS1_d@Base 3.3.13
  _ZN9Calamares9getStringERK4QMapI7QString8QVariantERKS1_S7_@Base 3.3.13
  _ZN9Calamares9getSubMapERK4QMapI7QString8QVariantERKS1_RbS5_@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Partition6parentEv@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Partition8childrenEv@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZN9QtPrivate15ResultStoreBase5clearI7QStringEEvR4QMapIiNS_10ResultItemEE@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZN9QtPrivate15ResultStoreBase5clearIN9Calamares5GeoIP14RegionZonePairEEEvR4QMapIiNS_10ResultItemEE@Base 3.3.14
+ (arch=riscv64)_ZN9__gnu_cxx24__concurrence_lock_errorD0Ev@Base 3.3.14
+ (arch=riscv64)_ZN9__gnu_cxx24__concurrence_lock_errorD1Ev@Base 3.3.14
+ (arch=riscv64)_ZN9__gnu_cxx24__concurrence_lock_errorD2Ev@Base 3.3.14
+ (arch=riscv64)_ZN9__gnu_cxx26__concurrence_unlock_errorD0Ev@Base 3.3.14
+ (arch=riscv64)_ZN9__gnu_cxx26__concurrence_unlock_errorD1Ev@Base 3.3.14
+ (arch=riscv64)_ZN9__gnu_cxx26__concurrence_unlock_errorD2Ev@Base 3.3.14
  _ZNK15CalamaresPython6Helper10metaObjectEv@Base 3.3.14
  _ZNK22CalamaresPluginFactory10metaObjectEv@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZNK4YAML4Node16EnsureNodeExistsEv@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNK4YAML4Node2asINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEET_v@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZNK4YAML4Node4MarkEv@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNK4YAML4NodeixIPKcEEKS0_RKT_@Base 3.3.14
  _ZNK6Logger12RedactedNamecv7QStringEv@Base 3.3.13
  _ZNK9Calamares10ProcessJob10metaObjectEv@Base 3.3.14
  _ZNK9Calamares10ProcessJob10prettyNameEv@Base 3.3.14
@@ -588,10 +665,59 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZNK9Calamares9PythonJob10prettyNameEv@Base 3.3.14
  _ZNK9Calamares9PythonJob14getDescriptionEv@Base 3.3.14
  _ZNK9Calamares9PythonJob19prettyStatusMessageEv@Base 3.3.14
+ (arch=riscv64)_ZNK9__gnu_cxx24__concurrence_lock_error4whatEv@Base 3.3.14
+ (arch=riscv64)_ZNK9__gnu_cxx26__concurrence_unlock_error4whatEv@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNKSt5ctypeIcE8do_widenEc@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNKSt8_Rb_treeI7QStringSt4pairIKS0_8QVariantESt10_Select1stIS4_ESt4lessIS0_ESaIS4_EE4findERS2_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNKSt8_Rb_treeI7QStringSt4pairIKS0_S0_ESt10_Select1stIS3_ESt4lessIS0_ESaIS3_EE4findERS2_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt10shared_ptrIvEC1IvN5boost6python9converter18shared_ptr_deleterEvEEPT_T0_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt10shared_ptrIvEC2IvN5boost6python9converter18shared_ptr_deleterEvEEPT_T0_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt10unique_ptrIN9Calamares5GeoIP9InterfaceESt14default_deleteIS2_EED1Ev@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt10unique_ptrIN9Calamares5GeoIP9InterfaceESt14default_deleteIS2_EED2Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt14_Function_baseD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt14_Function_baseD2Ev@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EE10_M_destroyEv@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EE10_M_disposeEv@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EE14_M_get_deleterERKSt9type_info@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EED0Ev@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EED1Ev@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EED2Ev@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EED0Ev@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EED1Ev@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EED2Ev@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EE10_M_destroyEv@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EE10_M_disposeEv@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EE14_M_get_deleterERKSt9type_info@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EED0Ev@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EED1Ev@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EED2Ev@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EED0Ev@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EED1Ev@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EED2Ev@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE10_M_releaseEv@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv@Base 3.3.14
  (optional=templinst)_ZNSt17_Function_handlerIFbPKvPvEZN9QMetaType17registerConverterI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate33QSequentialIterableConvertFunctorIS8_EEEEbT1_EUlS1_S2_E_E10_M_managerERSt9_Any_dataRKSI_St18_Manager_operation@Base 3.3.13
  (optional=templinst)_ZNSt17_Function_handlerIFbPKvPvEZN9QMetaType17registerConverterI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate33QSequentialIterableConvertFunctorIS8_EEEEbT1_EUlS1_S2_E_E9_M_invokeERKSt9_Any_dataOS1_OS2_@Base 3.3.13
  (optional=templinst)_ZNSt17_Function_handlerIFbPvS0_EZN9QMetaType19registerMutableViewI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate37QSequentialIterableMutableViewFunctorIS6_EEEEbT1_EUlS0_S0_E_E10_M_managerERSt9_Any_dataRKSG_St18_Manager_operation@Base 3.3.13
  (optional=templinst)_ZNSt17_Function_handlerIFbPvS0_EZN9QMetaType19registerMutableViewI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate37QSequentialIterableMutableViewFunctorIS6_EEEEbT1_EUlS0_S0_E_E9_M_invokeERKSt9_Any_dataOS0_SJ_@Base 3.3.13
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1IS3_EEPKcRKS3_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED1Ev@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED2Ev@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_8QVariantESt10_Select1stIS4_ESt4lessIS0_ESaIS4_EE11equal_rangeERS2_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_8QVariantESt10_Select1stIS4_ESt4lessIS0_ESaIS4_EE16_M_insert_uniqueIS4_EES1_ISt17_Rb_tree_iteratorIS4_EbEOT_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_8QVariantESt10_Select1stIS4_ESt4lessIS0_ESaIS4_EE24_M_get_insert_unique_posERS2_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_8QVariantESt10_Select1stIS4_ESt4lessIS0_ESaIS4_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS4_ERS2_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_8QVariantESt10_Select1stIS4_ESt4lessIS0_ESaIS4_EE5eraseERS2_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_S0_ESt10_Select1stIS3_ESt4lessIS0_ESaIS3_EE16_M_insert_uniqueIS3_EES1_ISt17_Rb_tree_iteratorIS3_EbEOT_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt8seed_seq8generateIPjEEvT_S2_@Base 3.3.14
  _ZTI22CalamaresPluginFactory@Base 3.3.13
  _ZTI6QDebug@Base 3.3.13
  _ZTIFvvE@Base 3.3.14
@@ -627,10 +753,19 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZTIN9Calamares8SettingsE@Base 3.3.13
  _ZTIN9Calamares9JobResultE@Base 3.3.13
  _ZTIN9Calamares9PythonJobE@Base 3.3.14
+ (arch=riscv64)_ZTIN9__gnu_cxx24__concurrence_lock_errorE@Base 3.3.14
+ (arch=riscv64)_ZTIN9__gnu_cxx26__concurrence_unlock_errorE@Base 3.3.14
+ (arch=riscv64)_ZTIN9__gnu_cxx7__mutexE@Base 3.3.14
  _ZTIPFvvE@Base 3.3.14
- _ZTISt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
- _ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
- _ZTISt19_Sp_make_shared_tag@Base 3.3.13
+ (arch=riscv64)_ZTISt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=!riscv64)_ZTISt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=riscv64)_ZTISt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=armhf)_ZTISt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=riscv64)_ZTISt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=armhf)_ZTISt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=riscv64)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=!riscv64)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=!riscv64)_ZTISt19_Sp_make_shared_tag@Base 3.3.14
  _ZTIZN9QMetaType17registerConverterI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate33QSequentialIterableConvertFunctorIS3_EEEEbT1_EUlPKvPvE_@Base 3.3.13
  _ZTIZN9QMetaType19registerMutableViewI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate37QSequentialIterableMutableViewFunctorIS3_EEEEbT1_EUlPvSB_E_@Base 3.3.13
  _ZTS22CalamaresPluginFactory@Base 3.3.13
@@ -668,14 +803,21 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZTSN9Calamares8SettingsE@Base 3.3.13
  _ZTSN9Calamares9JobResultE@Base 3.3.13
  _ZTSN9Calamares9PythonJobE@Base 3.3.14
+ (arch=riscv64)_ZTSN9__gnu_cxx24__concurrence_lock_errorE@Base 3.3.14
+ (arch=riscv64)_ZTSN9__gnu_cxx26__concurrence_unlock_errorE@Base 3.3.14
+ (arch=riscv64)_ZTSN9__gnu_cxx7__mutexE@Base 3.3.14
  _ZTSNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 3.3.13
  _ZTSPFvvE@Base 3.3.14
  _ZTSPN9Calamares13GlobalStorageE@Base 3.3.14
  _ZTSPN9Calamares9PythonJobE@Base 3.3.14
- _ZTSSt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
- _ZTSSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
- _ZTSSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
- _ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
+ (arch=riscv64)_ZTSSt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=!riscv64)_ZTSSt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=riscv64)_ZTSSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=!riscv64)_ZTSSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=riscv64)_ZTSSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=!riscv64)_ZTSSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=riscv64)_ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=!riscv64)_ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
  _ZTSSt19_Sp_make_shared_tag@Base 3.3.13
  _ZTSZN9QMetaType17registerConverterI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate33QSequentialIterableConvertFunctorIS3_EEEEbT1_EUlPKvPvE_@Base 3.3.13
  _ZTSZN9QMetaType19registerMutableViewI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate37QSequentialIterableMutableViewFunctorIS3_EEEEbT1_EUlPvSB_E_@Base 3.3.13
@@ -711,8 +853,15 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZTVN9Calamares8SettingsE@Base 3.3.13
  _ZTVN9Calamares9JobResultE@Base 3.3.13
  _ZTVN9Calamares9PythonJobE@Base 3.3.14
+ (arch=riscv64)_ZTVN9__gnu_cxx24__concurrence_lock_errorE@Base 3.3.14
+ (arch=riscv64)_ZTVN9__gnu_cxx26__concurrence_unlock_errorE@Base 3.3.14
+ (arch=riscv64)_ZTVSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=armhf)_ZTVSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=riscv64)_ZTVSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=armhf)_ZTVSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
  (optional=templinst)_ZZN9QMetaType21registerConverterImplI5QListI4QUrlE9QIterableI13QMetaSequenceEEEbSt8functionIFbPKvPvEES_S_E10unregister@Base 3.3.13
  (optional=templinst)_ZZN9QMetaType23registerMutableViewImplI5QListI4QUrlE9QIterableI13QMetaSequenceEEEbSt8functionIFbPvS8_EES_S_E10unregister@Base 3.3.13
  _ZZNSt19_Sp_make_shared_tag5_S_tiEvE5__tag@Base 3.3.13
  _ZrsRKN4YAML4NodeER5QListI7QStringE@Base 3.3.13
  (c++)"non-virtual thunk to Calamares::Locale::TimeZoneData::translated() const@Base" 3.3.13
+ (c++|arch=!amd64 !arm64 !ppc64el !s390x)"non-virtual thunk to Calamares::Locale::TimeZoneData::~TimeZoneData()@Base" 3.3.14

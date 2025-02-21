@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 3.3.14 amd64
+# SymbolsHelper-Confirmed: 3.3.14 amd64 arm64 armhf ppc64el riscv64 s390x
 libcalamaresui.so.3.3 libcalamaresui3.3 #MINVER#
 * Build-Depends-Package: libcalamares-dev
  _ZN13ImageRegistry10putInCacheERK7QStringRK5QSizeN9Calamares9ImageModeERK7QPixmap@Base 3.3.13
@@ -40,6 +40,9 @@ libcalamaresui.so.3.3 libcalamaresui3.3 #MINVER#
  _ZN20WaitingSpinnerWidgetC1EP7QWidgetbb@Base 3.3.13
  _ZN20WaitingSpinnerWidgetC2EN2Qt14WindowModalityEP7QWidgetbb@Base 3.3.13
  _ZN20WaitingSpinnerWidgetC2EP7QWidgetbb@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN20WaitingSpinnerWidgetD0Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN20WaitingSpinnerWidgetD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN20WaitingSpinnerWidgetD2Ev@Base 3.3.14
  _ZN21FixedAspectRatioLabel11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.13
  _ZN21FixedAspectRatioLabel11qt_metacastEPKc@Base 3.3.13
  _ZN21FixedAspectRatioLabel11resizeEventEP12QResizeEvent@Base 3.3.13
@@ -53,17 +56,42 @@ libcalamaresui.so.3.3 libcalamaresui3.3 #MINVER#
  _ZN22CountdownWaitingWidget11changeEventEP6QEvent@Base 3.3.13
  _ZN22CountdownWaitingWidget11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.13
  _ZN22CountdownWaitingWidget11qt_metacastEPKc@Base 3.3.13
- _ZN22CountdownWaitingWidget11setIntervalENSt6chrono8durationIlSt5ratioILl1ELl1EEEE@Base 3.3.13
+ (subst)_ZN22CountdownWaitingWidget11setIntervalENSt6chrono8durationI{int64_t}St5ratioIL{int64_t}1EL{int64_t}1EEEE@Base 3.3.13
  _ZN22CountdownWaitingWidget16staticMetaObjectE@Base 3.3.13
  _ZN22CountdownWaitingWidget4stopEv@Base 3.3.13
  _ZN22CountdownWaitingWidget4tickEv@Base 3.3.13
  _ZN22CountdownWaitingWidget5startEv@Base 3.3.13
  _ZN22CountdownWaitingWidget7timeoutEv@Base 3.3.13
- _ZN22CountdownWaitingWidgetC1ENSt6chrono8durationIlSt5ratioILl1ELl1EEEEP7QWidget@Base 3.3.13
- _ZN22CountdownWaitingWidgetC2ENSt6chrono8durationIlSt5ratioILl1ELl1EEEEP7QWidget@Base 3.3.13
+ (subst)_ZN22CountdownWaitingWidgetC1ENSt6chrono8durationI{int64_t}St5ratioIL{int64_t}1EL{int64_t}1EEEEP7QWidget@Base 3.3.13
+ (subst)_ZN22CountdownWaitingWidgetC2ENSt6chrono8durationI{int64_t}St5ratioIL{int64_t}1EL{int64_t}1EEEEP7QWidget@Base 3.3.13
  _ZN22CountdownWaitingWidgetD0Ev@Base 3.3.13
  _ZN22CountdownWaitingWidgetD1Ev@Base 3.3.13
  _ZN22CountdownWaitingWidgetD2Ev@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML11InvalidNodeC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML11InvalidNodeC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZN4YAML11KeyNotFoundC1INSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERKNS_4MarkERKT_@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZN4YAML11KeyNotFoundC2INSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERKNS_4MarkERKT_@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML12BadSubscriptC1IA13_cEERKNS_4MarkERKT_@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZN4YAML12BadSubscriptC1INSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERKNS_4MarkERKT_@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML12BadSubscriptC2IA13_cEERKNS_4MarkERKT_@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZN4YAML12BadSubscriptC2INSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERKNS_4MarkERKT_@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML13BadConversionC1ERKNS_4MarkE@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML13BadConversionC2ERKNS_4MarkE@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML4NodeC1IPKcEERKT_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML4NodeC2IPKcEERKT_@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML4NodeD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML4NodeD2Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML4NodeixIA13_cEES0_RKT_@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML4NodeixIA14_cEES0_RKT_@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML6detail9node_data3getIA13_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML6detail9node_data3getIA14_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE@Base 3.3.14
+ (arch=riscv64)_ZN4YAML9Exception10build_whatERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML9ExceptionC1ERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN4YAML9ExceptionC2ERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN6QDebuglsEPKc@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN6QDebuglsERK7QString@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN7QStringC1EPKc@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN7QStringC2EPKc@Base 3.3.14
  _ZN9Calamares10ViewModule17checkRequirementsEv@Base 3.3.13
  _ZN9Calamares10ViewModule8initFromERKNS_12ModuleSystem10DescriptorE@Base 3.3.13
  _ZN9Calamares10ViewModule8loadSelfEv@Base 3.3.13
@@ -186,6 +214,9 @@ libcalamaresui.so.3.3 libcalamaresui3.3 #MINVER#
  _ZN9Calamares17ExecutionViewStep9toggleLogEv@Base 3.3.13
  _ZN9Calamares17ExecutionViewStepC1EP7QObject@Base 3.3.13
  _ZN9Calamares17ExecutionViewStepC2EP7QObject@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares17ExecutionViewStepD0Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares17ExecutionViewStepD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares17ExecutionViewStepD2Ev@Base 3.3.14
  _ZN9Calamares17defaultFontHeightEv@Base 3.3.13
  _ZN9Calamares17initQmlModulesDirEv@Base 3.3.13
  _ZN9Calamares17registerQmlModelsEv@Base 3.3.13
@@ -219,6 +250,9 @@ libcalamaresui.so.3.3 libcalamaresui3.3 #MINVER#
  _ZN9Calamares7Widgets17PrettyRadioButton7setTextERK7QString@Base 3.3.13
  _ZN9Calamares7Widgets17PrettyRadioButtonC1EP7QWidget@Base 3.3.13
  _ZN9Calamares7Widgets17PrettyRadioButtonC2EP7QWidget@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares7Widgets17PrettyRadioButtonD0Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares7Widgets17PrettyRadioButtonD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares7Widgets17PrettyRadioButtonD2Ev@Base 3.3.14
  _ZN9Calamares8Branding10s_instanceE@Base 3.3.13
  _ZN9Calamares8Branding11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.13
  _ZN9Calamares8Branding11qt_metacastEPKc@Base 3.3.13
@@ -232,6 +266,9 @@ libcalamaresui.so.3.3 libcalamaresui3.3 #MINVER#
  _ZN9Calamares8Branding8instanceEv@Base 3.3.13
  _ZN9Calamares8BrandingC1ERK7QStringP7QObjectd@Base 3.3.13
  _ZN9Calamares8BrandingC2ERK7QStringP7QObjectd@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares8BrandingD0Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares8BrandingD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZN9Calamares8BrandingD2Ev@Base 3.3.14
  _ZN9Calamares8ViewStep10onActivateEv@Base 3.3.13
  _ZN9Calamares8ViewStep11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.13
  _ZN9Calamares8ViewStep11qt_metacastEPKc@Base 3.3.13
@@ -266,6 +303,15 @@ libcalamaresui.so.3.3 libcalamaresui3.3 #MINVER#
  _ZNK20WaitingSpinnerWidget9textColorEv@Base 3.3.13
  _ZNK21FixedAspectRatioLabel10metaObjectEv@Base 3.3.13
  _ZNK22CountdownWaitingWidget10metaObjectEv@Base 3.3.13
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZNK4YAML4Node16EnsureNodeExistsEv@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNK4YAML4Node2asINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEET_v@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZNK4YAML4Node4MarkEv@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZNK4YAML4Node4TypeEv@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZNK4YAML4NodeixIA13_cEEKS0_RKT_@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZNK4YAML4NodeixIA21_cEEKS0_RKT_@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZNK4YAML4NodeixIA22_cEEKS0_RKT_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNK4YAML4NodeixINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEKS0_RKT_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNK4YAML4NodeixIPKcEEKS0_RKT_@Base 3.3.14
  _ZNK9Calamares10ViewModule4jobsEv@Base 3.3.13
  _ZNK9Calamares10ViewModule4typeEv@Base 3.3.13
  _ZNK9Calamares10ViewModule9interfaceEv@Base 3.3.13
@@ -336,7 +382,47 @@ libcalamaresui.so.3.3 libcalamaresui3.3 #MINVER#
  _ZNK9Calamares8ViewStep10metaObjectEv@Base 3.3.13
  _ZNK9Calamares8ViewStep12prettyStatusEv@Base 3.3.13
  _ZNK9Calamares8ViewStep19createSummaryWidgetEv@Base 3.3.13
- _ZSt19piecewise_construct@Base 3.3.13
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNKSt8_Rb_treeI7QStringSt4pairIKS0_S0_ESt10_Select1stIS3_ESt4lessIS0_ESaIS3_EE4findERS2_@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt14_Function_baseD1Ev@Base 3.3.14
+ (arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt14_Function_baseD2Ev@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EE10_M_destroyEv@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EE10_M_disposeEv@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EE14_M_get_deleterERKSt9type_info@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EED0Ev@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EED1Ev@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EED2Ev@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EED0Ev@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EED1Ev@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EED2Ev@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EE10_M_destroyEv@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EE10_M_disposeEv@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EE14_M_get_deleterERKSt9type_info@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EED0Ev@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EED1Ev@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EED2Ev@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EED0Ev@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EED1Ev@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EED2Ev@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE10_M_releaseEv@Base 3.3.14
+ (optional=templinst|arch=riscv64)_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE15_M_add_ref_copyEv@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv@Base 3.3.14
+ (optional=templinst|arch=armhf)_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE15_M_add_ref_copyEv@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1IS3_EEPKcRKS3_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED1Ev@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEED2Ev@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_8QVariantESt10_Select1stIS4_ESt4lessIS0_ESaIS4_EE24_M_get_insert_unique_posERS2_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_8QVariantESt10_Select1stIS4_ESt4lessIS0_ESaIS4_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS4_ERS2_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_S0_ESt10_Select1stIS3_ESt4lessIS0_ESaIS3_EE24_M_get_insert_unique_posERS2_@Base 3.3.14
+ (optional=templinst|arch=!amd64 !arm64 !ppc64el !s390x)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_S0_ESt10_Select1stIS3_ESt4lessIS0_ESaIS3_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS3_ERS2_@Base 3.3.14
+ (arch=amd64 arm64 ppc64el s390x)_ZSt19piecewise_construct@Base 3.3.14
  _ZTI13WaitingWidget@Base 3.3.13
  _ZTI20WaitingSpinnerWidget@Base 3.3.13
  _ZTI21FixedAspectRatioLabel@Base 3.3.13
@@ -353,8 +439,15 @@ libcalamaresui.so.3.3 libcalamaresui3.3 #MINVER#
  _ZTIN9Calamares7Widgets17PrettyRadioButtonE@Base 3.3.13
  _ZTIN9Calamares8BrandingE@Base 3.3.13
  _ZTIN9Calamares8ViewStepE@Base 3.3.13
- _ZTISt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
- _ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
+ (arch=riscv64)_ZTIN9__gnu_cxx7__mutexE@Base 3.3.14
+ (arch=riscv64)_ZTISt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=!riscv64)_ZTISt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=riscv64)_ZTISt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=armhf)_ZTISt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=riscv64)_ZTISt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=armhf)_ZTISt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=riscv64)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=!riscv64)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
  _ZTS13WaitingWidget@Base 3.3.13
  _ZTS20WaitingSpinnerWidget@Base 3.3.13
  _ZTS21FixedAspectRatioLabel@Base 3.3.13
@@ -371,10 +464,15 @@ libcalamaresui.so.3.3 libcalamaresui3.3 #MINVER#
  _ZTSN9Calamares7Widgets17PrettyRadioButtonE@Base 3.3.13
  _ZTSN9Calamares8BrandingE@Base 3.3.13
  _ZTSN9Calamares8ViewStepE@Base 3.3.13
- _ZTSSt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
- _ZTSSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
- _ZTSSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
- _ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
+ (arch=riscv64)_ZTSN9__gnu_cxx7__mutexE@Base 3.3.14
+ (arch=riscv64)_ZTSSt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=!riscv64)_ZTSSt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=riscv64)_ZTSSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=!riscv64)_ZTSSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=riscv64)_ZTSSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=!riscv64)_ZTSSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=riscv64)_ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=!riscv64)_ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
  _ZTV13WaitingWidget@Base 3.3.13
  _ZTV20WaitingSpinnerWidget@Base 3.3.13
  _ZTV21FixedAspectRatioLabel@Base 3.3.13
@@ -391,7 +489,13 @@ libcalamaresui.so.3.3 libcalamaresui3.3 #MINVER#
  _ZTVN9Calamares7Widgets17PrettyRadioButtonE@Base 3.3.13
  _ZTVN9Calamares8BrandingE@Base 3.3.13
  _ZTVN9Calamares8ViewStepE@Base 3.3.13
+ (arch=riscv64)_ZTVSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=armhf)_ZTVSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
+ (arch=riscv64)_ZTVSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE1EE@Base 3.3.14
+ (arch=armhf)_ZTVSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.14
  (c++)"non-virtual thunk to Calamares::Widgets::ClickableLabel::~ClickableLabel()@Base" 3.3.13
+ (c++|arch=!amd64 !arm64 !ppc64el !s390x)"non-virtual thunk to Calamares::Widgets::PrettyRadioButton::~PrettyRadioButton()@Base" 3.3.14
  (c++)"non-virtual thunk to CountdownWaitingWidget::~CountdownWaitingWidget()@Base" 3.3.13
  (c++)"non-virtual thunk to FixedAspectRatioLabel::~FixedAspectRatioLabel()@Base" 3.3.13
+ (c++|arch=!amd64 !arm64 !ppc64el !s390x)"non-virtual thunk to WaitingSpinnerWidget::~WaitingSpinnerWidget()@Base" 3.3.14
  (c++)"non-virtual thunk to WaitingWidget::~WaitingWidget()@Base" 3.3.13
