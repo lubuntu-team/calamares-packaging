@@ -4,6 +4,7 @@ calamares (3.3.14-0ubuntu1) UNRELEASED; urgency=medium
   * Fix many Lintian errors and do some package splits.
   * Update symbols from amd64 build logs.
   * Update Vcs-* fields for Launchpad move.
+  * Add a functional autopkgtest, disable three tests for now.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 20 Feb 2025 14:13:56 -0600
 
