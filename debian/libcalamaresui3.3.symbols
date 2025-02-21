@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 3.3.13 amd64
+# SymbolsHelper-Confirmed: 3.3.14 amd64
 libcalamaresui.so.3.3 libcalamaresui3.3 #MINVER#
  _ZN13ImageRegistry10putInCacheERK7QStringRK5QSizeN9Calamares9ImageModeERK7QPixmap@Base 3.3.13
  _ZN13ImageRegistry4iconERK7QStringN9Calamares9ImageModeE@Base 3.3.13
@@ -243,6 +243,7 @@ libcalamaresui.so.3.3 libcalamaresui3.3 #MINVER#
  _ZN9Calamares8ViewStep4backEv@Base 3.3.13
  _ZN9Calamares8ViewStep4nextEv@Base 3.3.13
  _ZN9Calamares8ViewStep7onLeaveEv@Base 3.3.13
+ _ZN9Calamares8ViewStep8onCancelEv@Base 3.3.14
  _ZN9Calamares8ViewStepC1EP7QObject@Base 3.3.13
  _ZN9Calamares8ViewStepC2EP7QObject@Base 3.3.13
  _ZN9Calamares8ViewStepD0Ev@Base 3.3.13

@@ -1,9 +1,24 @@
-# SymbolsHelper-Confirmed: 3.3.13 amd64
+# SymbolsHelper-Confirmed: 3.3.14 amd64
 libcalamares.so.3.3 libcalamares3.3 #MINVER#
  PyInit_libcalamares@Base 3.3.13
  _ZGVZN9QMetaType21registerConverterImplI5QListI4QUrlE9QIterableI13QMetaSequenceEEEbSt8functionIFbPKvPvEES_S_E10unregister@Base 3.3.13
  _ZGVZN9QMetaType23registerMutableViewImplI5QListI4QUrlE9QIterableI13QMetaSequenceEEEbSt8functionIFbPvS8_EES_S_E10unregister@Base 3.3.13
  _ZN13QMetaSequence12MetaSequenceI5QListI4QUrlEE5valueE@Base 3.3.13
+ _ZN15CalamaresPython19variantFromPyObjectERKN5boost6python3api6objectE@Base 3.3.14
+ _ZN15CalamaresPython20variantMapFromPyDictERKN5boost6python4dictE@Base 3.3.14
+ _ZN15CalamaresPython21variantHashFromPyDictERKN5boost6python4dictE@Base 3.3.14
+ _ZN15CalamaresPython21variantListFromPyListERKN5boost6python4listE@Base 3.3.14
+ _ZN15CalamaresPython6Helper11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.14
+ _ZN15CalamaresPython6Helper11qt_metacastEPKc@Base 3.3.14
+ _ZN15CalamaresPython6Helper15handleLastErrorEv@Base 3.3.14
+ _ZN15CalamaresPython6Helper16staticMetaObjectE@Base 3.3.14
+ _ZN15CalamaresPython6Helper20createCleanNamespaceEv@Base 3.3.14
+ _ZN15CalamaresPython6Helper8instanceEv@Base 3.3.14
+ _ZN15CalamaresPython6HelperC1Ev@Base 3.3.14
+ _ZN15CalamaresPython6HelperC2Ev@Base 3.3.14
+ _ZN15CalamaresPython6HelperD0Ev@Base 3.3.14
+ _ZN15CalamaresPython6HelperD1Ev@Base 3.3.14
+ _ZN15CalamaresPython6HelperD2Ev@Base 3.3.14
  _ZN22CalamaresPluginFactory11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.13
  _ZN22CalamaresPluginFactory11qt_metacastEPKc@Base 3.3.13
  _ZN22CalamaresPluginFactory16staticMetaObjectE@Base 3.3.13
@@ -30,8 +45,15 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN6Logger8logLevelEv@Base 3.3.13
  _ZN6Logger8toStringERK8QVariant@Base 3.3.13
  _ZN6LoggerlsER6QDebugRKNS_15RedactedCommandE@Base 3.3.13
+ _ZN9Calamares10ProcessJob11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.14
+ _ZN9Calamares10ProcessJob11qt_metacastEPKc@Base 3.3.14
+ _ZN9Calamares10ProcessJob16staticMetaObjectE@Base 3.3.14
+ _ZN9Calamares10ProcessJob4execEv@Base 3.3.14
  _ZN9Calamares10ProcessJobC1ERK7QStringS3_bNSt6chrono8durationIlSt5ratioILl1ELl1EEEEP7QObject@Base 3.3.13
  _ZN9Calamares10ProcessJobC2ERK7QStringS3_bNSt6chrono8durationIlSt5ratioILl1ELl1EEEEP7QObject@Base 3.3.13
+ _ZN9Calamares10ProcessJobD0Ev@Base 3.3.14
+ _ZN9Calamares10ProcessJobD1Ev@Base 3.3.14
+ _ZN9Calamares10ProcessJobD2Ev@Base 3.3.14
  _ZN9Calamares10appDataDirEv@Base 3.3.13
  _ZN9Calamares10getEntropyEiR10QByteArray@Base 3.3.13
  _ZN9Calamares10getIntegerERK4QMapI7QString8QVariantERKS1_x@Base 3.3.13
@@ -277,9 +299,6 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares6ModuleD0Ev@Base 3.3.13
  _ZN9Calamares6ModuleD1Ev@Base 3.3.13
  _ZN9Calamares6ModuleD2Ev@Base 3.3.13
- _ZN9Calamares6Python3Job20setInjectedPreScriptEPKc@Base 3.3.13
- _ZN9Calamares6Python3JobC1ERK7QStringS4_RK4QMapIS2_8QVariantEP7QObject@Base 3.3.13
- _ZN9Calamares6Python3JobC2ERK7QStringS4_RK4QMapIS2_8QVariantEP7QObject@Base 3.3.13
  _ZN9Calamares6String13removeLeadingER7QString5QChar@Base 3.3.13
  _ZN9Calamares6String14removeTrailingER7QString5QChar@Base 3.3.13
  _ZN9Calamares6String16removeDiacriticsERK7QString@Base 3.3.13
@@ -429,12 +448,28 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZN9Calamares9Partition5mountERK7QStringS3_S3_S3_@Base 3.3.13
  _ZN9Calamares9Partition7unmountERK7QStringRK5QListIS1_E@Base 3.3.13
  _ZN9Calamares9Partition8MtabInfo24fromMtabFilteredByPrefixERK7QStringS4_@Base 3.3.13
+ _ZN9Calamares9PythonJob11qt_metacallEN11QMetaObject4CallEiPPv@Base 3.3.14
+ _ZN9Calamares9PythonJob11qt_metacastEPKc@Base 3.3.14
+ _ZN9Calamares9PythonJob12emitProgressEd@Base 3.3.14
+ _ZN9Calamares9PythonJob14setDescriptionERK7QString@Base 3.3.14
+ _ZN9Calamares9PythonJob16staticMetaObjectE@Base 3.3.14
+ _ZN9Calamares9PythonJob20setInjectedPreScriptEPKc@Base 3.3.14
+ _ZN9Calamares9PythonJob4execEv@Base 3.3.14
+ _ZN9Calamares9PythonJobC1ERK7QStringS3_RK4QMapIS1_8QVariantEP7QObject@Base 3.3.14
+ _ZN9Calamares9PythonJobC2ERK7QStringS3_RK4QMapIS1_8QVariantEP7QObject@Base 3.3.14
+ _ZN9Calamares9PythonJobD0Ev@Base 3.3.14
+ _ZN9Calamares9PythonJobD1Ev@Base 3.3.14
+ _ZN9Calamares9PythonJobD2Ev@Base 3.3.14
  _ZN9Calamares9appLogDirEv@Base 3.3.13
  _ZN9Calamares9getDoubleERK4QMapI7QString8QVariantERKS1_d@Base 3.3.13
  _ZN9Calamares9getStringERK4QMapI7QString8QVariantERKS1_S7_@Base 3.3.13
  _ZN9Calamares9getSubMapERK4QMapI7QString8QVariantERKS1_RbS5_@Base 3.3.13
+ _ZNK15CalamaresPython6Helper10metaObjectEv@Base 3.3.14
  _ZNK22CalamaresPluginFactory10metaObjectEv@Base 3.3.13
  _ZNK6Logger12RedactedNamecv7QStringEv@Base 3.3.13
+ _ZNK9Calamares10ProcessJob10metaObjectEv@Base 3.3.14
+ _ZNK9Calamares10ProcessJob10prettyNameEv@Base 3.3.14
+ _ZNK9Calamares10ProcessJob19prettyStatusMessageEv@Base 3.3.14
  _ZNK9Calamares11CommandLine6expandER18KMacroExpanderBase@Base 3.3.13
  _ZNK9Calamares11CommandLine6expandEv@Base 3.3.13
  _ZNK9Calamares11CommandList6expandER18KMacroExpanderBase@Base 3.3.13
@@ -548,16 +583,21 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZNK9Calamares9Partition17PartitionIteratordeEv@Base 3.3.13
  _ZNK9Calamares9Partition17PartitionIteratoreqERKS1_@Base 3.3.13
  _ZNK9Calamares9Partition17PartitionIteratorneERKS1_@Base 3.3.13
+ _ZNK9Calamares9PythonJob10metaObjectEv@Base 3.3.14
+ _ZNK9Calamares9PythonJob10prettyNameEv@Base 3.3.14
+ _ZNK9Calamares9PythonJob14getDescriptionEv@Base 3.3.14
+ _ZNK9Calamares9PythonJob19prettyStatusMessageEv@Base 3.3.14
  (optional=templinst)_ZNSt17_Function_handlerIFbPKvPvEZN9QMetaType17registerConverterI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate33QSequentialIterableConvertFunctorIS8_EEEEbT1_EUlS1_S2_E_E10_M_managerERSt9_Any_dataRKSI_St18_Manager_operation@Base 3.3.13
  (optional=templinst)_ZNSt17_Function_handlerIFbPKvPvEZN9QMetaType17registerConverterI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate33QSequentialIterableConvertFunctorIS8_EEEEbT1_EUlS1_S2_E_E9_M_invokeERKSt9_Any_dataOS1_OS2_@Base 3.3.13
  (optional=templinst)_ZNSt17_Function_handlerIFbPvS0_EZN9QMetaType19registerMutableViewI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate37QSequentialIterableMutableViewFunctorIS6_EEEEbT1_EUlS0_S0_E_E10_M_managerERSt9_Any_dataRKSG_St18_Manager_operation@Base 3.3.13
  (optional=templinst)_ZNSt17_Function_handlerIFbPvS0_EZN9QMetaType19registerMutableViewI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate37QSequentialIterableMutableViewFunctorIS6_EEEEbT1_EUlS0_S0_E_E9_M_invokeERKSt9_Any_dataOS0_SJ_@Base 3.3.13
  _ZTI22CalamaresPluginFactory@Base 3.3.13
  _ZTI6QDebug@Base 3.3.13
- _ZTIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS4_E@Base 3.3.13
- _ZTIFiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_S6_S6_E@Base 3.3.13
- _ZTIFvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE@Base 3.3.13
+ _ZTIFvvE@Base 3.3.14
+ _ZTIN15CalamaresPython6HelperE@Base 3.3.14
+ _ZTIN5boost6detail15sp_counted_baseE@Base 3.3.14
  _ZTIN6Logger6CDebugE@Base 3.3.13
+ _ZTIN9Calamares10ProcessJobE@Base 3.3.14
  _ZTIN9Calamares12ModuleSystem6ConfigE@Base 3.3.13
  _ZTIN9Calamares12RetranslatorE@Base 3.3.13
  _ZTIN9Calamares13GlobalStorageE@Base 3.3.13
@@ -585,9 +625,8 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZTIN9Calamares8NamedJobE@Base 3.3.13
  _ZTIN9Calamares8SettingsE@Base 3.3.13
  _ZTIN9Calamares9JobResultE@Base 3.3.13
- _ZTIPFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS4_E@Base 3.3.13
- _ZTIPFiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_S6_S6_E@Base 3.3.13
- _ZTIPFvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE@Base 3.3.13
+ _ZTIN9Calamares9PythonJobE@Base 3.3.14
+ _ZTIPFvvE@Base 3.3.14
  _ZTISt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
  _ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
  _ZTISt19_Sp_make_shared_tag@Base 3.3.13
@@ -595,10 +634,11 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZTIZN9QMetaType19registerMutableViewI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate37QSequentialIterableMutableViewFunctorIS3_EEEEbT1_EUlPvSB_E_@Base 3.3.13
  _ZTS22CalamaresPluginFactory@Base 3.3.13
  _ZTS6QDebug@Base 3.3.13
- _ZTSFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS4_E@Base 3.3.13
- _ZTSFiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_S6_S6_E@Base 3.3.13
- _ZTSFvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE@Base 3.3.13
+ _ZTSFvvE@Base 3.3.14
+ _ZTSN15CalamaresPython6HelperE@Base 3.3.14
+ _ZTSN5boost6detail15sp_counted_baseE@Base 3.3.14
  _ZTSN6Logger6CDebugE@Base 3.3.13
+ _ZTSN9Calamares10ProcessJobE@Base 3.3.14
  _ZTSN9Calamares12ModuleSystem6ConfigE@Base 3.3.13
  _ZTSN9Calamares12RetranslatorE@Base 3.3.13
  _ZTSN9Calamares13GlobalStorageE@Base 3.3.13
@@ -626,10 +666,11 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZTSN9Calamares8NamedJobE@Base 3.3.13
  _ZTSN9Calamares8SettingsE@Base 3.3.13
  _ZTSN9Calamares9JobResultE@Base 3.3.13
+ _ZTSN9Calamares9PythonJobE@Base 3.3.14
  _ZTSNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 3.3.13
- _ZTSPFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS4_E@Base 3.3.13
- _ZTSPFiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_S6_S6_E@Base 3.3.13
- _ZTSPFvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE@Base 3.3.13
+ _ZTSPFvvE@Base 3.3.14
+ _ZTSPN9Calamares13GlobalStorageE@Base 3.3.14
+ _ZTSPN9Calamares9PythonJobE@Base 3.3.14
  _ZTSSt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
  _ZTSSt15_Sp_counted_ptrIPN4YAML6detail13memory_holderELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
  _ZTSSt15_Sp_counted_ptrIPN4YAML6detail6memoryELN9__gnu_cxx12_Lock_policyE2EE@Base 3.3.13
@@ -638,7 +679,9 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZTSZN9QMetaType17registerConverterI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate33QSequentialIterableConvertFunctorIS3_EEEEbT1_EUlPKvPvE_@Base 3.3.13
  _ZTSZN9QMetaType19registerMutableViewI5QListI4QUrlE9QIterableI13QMetaSequenceEN9QtPrivate37QSequentialIterableMutableViewFunctorIS3_EEEEbT1_EUlPvSB_E_@Base 3.3.13
  _ZTV22CalamaresPluginFactory@Base 3.3.13
+ _ZTVN15CalamaresPython6HelperE@Base 3.3.14
  _ZTVN6Logger6CDebugE@Base 3.3.13
+ _ZTVN9Calamares10ProcessJobE@Base 3.3.14
  _ZTVN9Calamares12ModuleSystem6ConfigE@Base 3.3.13
  _ZTVN9Calamares12RetranslatorE@Base 3.3.13
  _ZTVN9Calamares13GlobalStorageE@Base 3.3.13
@@ -666,6 +709,7 @@ libcalamares.so.3.3 libcalamares3.3 #MINVER#
  _ZTVN9Calamares8NamedJobE@Base 3.3.13
  _ZTVN9Calamares8SettingsE@Base 3.3.13
  _ZTVN9Calamares9JobResultE@Base 3.3.13
+ _ZTVN9Calamares9PythonJobE@Base 3.3.14
  (optional=templinst)_ZZN9QMetaType21registerConverterImplI5QListI4QUrlE9QIterableI13QMetaSequenceEEEbSt8functionIFbPKvPvEES_S_E10unregister@Base 3.3.13
  (optional=templinst)_ZZN9QMetaType23registerMutableViewImplI5QListI4QUrlE9QIterableI13QMetaSequenceEEEbSt8functionIFbPvS8_EES_S_E10unregister@Base 3.3.13
  _ZZNSt19_Sp_make_shared_tag5_S_tiEvE5__tag@Base 3.3.13

@@ -5,6 +5,7 @@ Maintainer: Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
 XSBC-Original-Maintainer: Jonathan Carter <jcc@debian.org>
 Build-Depends: debhelper-compat (= 13),
                dh-sequence-kf6,
+               dh-sequence-pkgkde-symbolshelper,
                dh-sequence-qmldeps,
                cmake (>= 3.16),
                cryptsetup <!nocheck>,
