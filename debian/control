@@ -93,10 +93,12 @@ Description: data for Calamares
  Data files for Calamares.
 
 Package: libcalamares-dev
+Section: libdevel
 Architecture: linux-any
 Depends: libcalamares3.3 (= ${binary:Version}),
          libcalamaresui3.3 (= ${binary:Version}),
-         ${misc:Depends}
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: Development files for Calamares
  Calamares is a distribution-independent installer framework.
  .
@@ -112,6 +114,7 @@ Description: Development files for Calamares
  Development files for Calamares.
 
 Package: libcalamares3.3
+Section: libs
 Architecture: linux-any
 Provides: libcalamares
 Depends: ${misc:Depends}, ${shlibs:Depends}
@@ -130,6 +133,7 @@ Description: Shared object files for Calamares
  Shared object files for Calamares.
 
 Package: libcalamaresui3.3
+Section: libs
 Architecture: linux-any
 Provides: libcalamaresui
 Depends: ${misc:Depends}, ${shlibs:Depends}

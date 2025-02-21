@@ -1,5 +1,6 @@
 # SymbolsHelper-Confirmed: 3.3.14 amd64
 libcalamaresui.so.3.3 libcalamaresui3.3 #MINVER#
+* Build-Depends-Package: libcalamares-dev
  _ZN13ImageRegistry10putInCacheERK7QStringRK5QSizeN9Calamares9ImageModeERK7QPixmap@Base 3.3.13
  _ZN13ImageRegistry4iconERK7QStringN9Calamares9ImageModeE@Base 3.3.13
  _ZN13ImageRegistry6pixmapERK7QStringRK5QSizeN9Calamares9ImageModeE@Base 3.3.13

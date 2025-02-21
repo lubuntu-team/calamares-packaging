@@ -1,5 +1,6 @@
 # SymbolsHelper-Confirmed: 3.3.14 amd64
 libcalamares.so.3.3 libcalamares3.3 #MINVER#
+* Build-Depends-Package: libcalamares-dev
  PyInit_libcalamares@Base 3.3.13
  _ZGVZN9QMetaType21registerConverterImplI5QListI4QUrlE9QIterableI13QMetaSequenceEEEbSt8functionIFbPKvPvEES_S_E10unregister@Base 3.3.13
  _ZGVZN9QMetaType23registerMutableViewImplI5QListI4QUrlE9QIterableI13QMetaSequenceEEEbSt8functionIFbPvS8_EES_S_E10unregister@Base 3.3.13
