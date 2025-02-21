@@ -1,1 +1,1 @@
-/usr/lib/x86_64-linux-gnu/libcalamares.so.*
+/usr/lib/${DEB_HOST_MULTIARCH}/libcalamares.so.*
