@@ -1,4 +1,4 @@
-calamares (3.3.14-0ubuntu1) UNRELEASED; urgency=medium
+calamares (3.3.14-0ubuntu1) plucky; urgency=medium
 
   * New upstream release.
   * Fix many Lintian errors and do some package splits.
@@ -6,7 +6,7 @@ calamares (3.3.14-0ubuntu1) UNRELEASED; urgency=medium
   * Update Vcs-* fields for Launchpad move.
   * Add a functional autopkgtest, disable three tests for now.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 20 Feb 2025 14:13:56 -0600
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 21 Feb 2025 19:47:50 -0600
 
 calamares (3.3.13-0ubuntu5) plucky; urgency=medium
 
