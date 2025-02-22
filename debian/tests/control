@@ -1,3 +1,3 @@
 Tests: main
 Depends: @builddeps@
-Restrictions: isolation-machine, allow-stderr
+Restrictions: isolation-container, allow-stderr

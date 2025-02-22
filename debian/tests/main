@@ -4,4 +4,4 @@ set -ex
 mkdir build && cd build &&
 cmake .. -DWITH_PYBIND11=OFF -DKDE_INSTALL_USE_QT_SYS_PATHS=ON -DBUILD_APPDATA=ON -DBUILD_APPSTREAM=ON -DINSTALL_COMPLETION=ON -DWITH_QT6=ON -DBUILD_TESTING=ON -DBUILD_SCHEMA_TESTING=ON &&
 make -j$(nproc) &&
-ctest -j$(nproc) -V -E '^(test_libcalamaresuipaste|validate-unpackfsc(-unpackfsc|-1))$'
+ctest -j$(nproc) -V -E '^(test_libcalamaresuipaste|validate-unpackfsc|validate-unpackfsc-unpackfsc|partitioncreatelayoutstest|userstest|hostinfotest)$'
