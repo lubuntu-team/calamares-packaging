@@ -1,3 +1,9 @@
+calamares (3.3.14-0ubuntu3) plucky; urgency=medium
+
+  * Add validate-unpackfsc-1 to the XFAIL list.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 22 Feb 2025 13:11:52 -0600
+
 calamares (3.3.14-0ubuntu2) plucky; urgency=medium
 
   * Add some Breaks/Replaces for the odd case where Calamares is already
