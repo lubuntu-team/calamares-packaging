@@ -62,8 +62,8 @@ Depends: calamares-data (= ${binary:Version}),
          util-linux-extra,
          ${misc:Depends},
          ${shlibs:Depends}
-Breaks: calamares (<< 3.3.14-0ubuntu1)
-Replaces: calamares (<< 3.3.14-0ubuntu1)
+Breaks: calamares (<< 3.3.14-0ubuntu4)
+Replaces: calamares (<< 3.3.14-0ubuntu4)
 Recommends: btrfs-progs, squashfs-tools
 Description: distribution-independent installer framework
  Calamares is a distribution-independent installer framework.
@@ -80,8 +80,8 @@ Description: distribution-independent installer framework
 Package: calamares-data
 Architecture: all
 Depends: ${misc:Depends}, ${qml6:Depends}
-Breaks: calamares (<< 3.3.14-0ubuntu1)
-Replaces: calamares (<< 3.3.14-0ubuntu1)
+Breaks: calamares (<< 3.3.14-0ubuntu4)
+Replaces: calamares (<< 3.3.14-0ubuntu4)
 Description: data for Calamares
  Calamares is a distribution-independent installer framework.
  .
@@ -103,8 +103,8 @@ Depends: libcalamares3.3 (= ${binary:Version}),
          libcalamaresui3.3 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Breaks: calamares (<< 3.3.14-0ubuntu1)
-Replaces: calamares (<< 3.3.14-0ubuntu1)
+Breaks: calamares (<< 3.3.14-0ubuntu4)
+Replaces: calamares (<< 3.3.14-0ubuntu4)
 Description: Development files for Calamares
  Calamares is a distribution-independent installer framework.
  .
@@ -124,8 +124,8 @@ Section: libs
 Architecture: linux-any
 Provides: libcalamares
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Breaks: calamares (<< 3.3.14-0ubuntu1)
-Replaces: calamares (<< 3.3.14-0ubuntu1)
+Breaks: calamares (<< 3.3.14-0ubuntu4)
+Replaces: calamares (<< 3.3.14-0ubuntu4)
 Description: Shared object files for Calamares
  Calamares is a distribution-independent installer framework.
  .
@@ -145,8 +145,8 @@ Section: libs
 Architecture: linux-any
 Provides: libcalamaresui
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Breaks: calamares (<< 3.3.14-0ubuntu1)
-Replaces: calamares (<< 3.3.14-0ubuntu1)
+Breaks: calamares (<< 3.3.14-0ubuntu4)
+Replaces: calamares (<< 3.3.14-0ubuntu4)
 Description: UI shared object files for Calamares
  Calamares is a distribution-independent installer framework.
  .

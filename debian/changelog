@@ -1,3 +1,9 @@
+calamares (3.3.14-0ubuntu4) plucky; urgency=medium
+
+  * Move the unversioned .so files to the individual libraries (LP: #2099870).
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Mon, 24 Feb 2025 03:30:01 -0600
+
 calamares (3.3.14-0ubuntu3) plucky; urgency=medium
 
   * Add validate-unpackfsc-1 to the XFAIL list.
