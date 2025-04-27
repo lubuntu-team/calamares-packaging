@@ -1,3 +1,9 @@
+calamares (3.3.14-0ubuntu6) plucky; urgency=medium
+
+  * No-change rebuild with Python 3.13 only
+
+ -- Graham Inggs <ginggs@ubuntu.com>  Tue, 04 Mar 2025 16:59:58 +0000
+
 calamares (3.3.14-0ubuntu4) plucky; urgency=medium
 
   * Move the unversioned .so files to the individual libraries (LP: #2099870).
