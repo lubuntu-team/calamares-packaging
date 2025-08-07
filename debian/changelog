@@ -1,3 +1,10 @@
+calamares (3.3.14-0ubuntu10) questing; urgency=medium
+
+  * d/rules: Silence GCS linker warning on arm64 to prevent FTBFS with
+    GCC 15.
+
+ -- Rik Mills <rikmills@kde.org>  Thu, 07 Aug 2025 18:41:41 +0100
+
 calamares (3.3.14-0ubuntu9) questing; urgency=medium
 
   * No-change rebuild for GCC 15.

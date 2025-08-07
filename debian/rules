@@ -2,6 +2,12 @@
 
 export DEB_BUILD_MAINT_OPTIONS=hardening=+all,buildinfo=+path
 
+include /usr/share/dpkg/architecture.mk
+
+ifeq ($(DEB_HOST_ARCH),arm64)
+export DEB_LDFLAGS_MAINT_APPEND=-Wl,-z,gcs-report-dynamic=none
+endif
+
 %:
 	dh $@
 
