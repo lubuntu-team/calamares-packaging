@@ -1,3 +1,33 @@
+calamares (3.3.14-0ubuntu18) resolute; urgency=medium
+
+  * Rebuild for Release.
+
+ -- Rik Mills <rikmills@kde.org>  Thu, 12 Feb 2026 17:03:26 +0000
+
+calamares (3.3.14-0ubuntu17) resolute; urgency=medium
+
+  * No-chance rebuild against Python 3.14.
+
+ -- Rik Mills <rikmills@kde.org>  Thu, 05 Feb 2026 19:05:45 +0000
+
+calamares (3.3.14-0ubuntu15) resolute; urgency=medium
+
+  * No-change rebuild for kf6-kio 6.22.1.
+
+ -- Rik Mills <rikmills@kde.org>  Thu, 22 Jan 2026 21:30:21 +0000
+
+calamares (3.3.14-0ubuntu14) resolute; urgency=medium
+
+  * Rebuild for release.
+
+ -- Rik Mills <rikmills@kde.org>  Sat, 17 Jan 2026 12:00:36 +0000
+
+calamares (3.3.14-0ubuntu13) resolute; urgency=medium
+
+  * No-change rebuild for icu soname.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 04 Dec 2025 19:00:47 +0100
+
 calamares (3.3.14-0ubuntu12) questing; urgency=medium
 
   * Another no-change rebuild for boost 1.88 due to LP publisher
