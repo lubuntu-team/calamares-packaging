@@ -1,3 +1,15 @@
+calamares (3.3.14-0ubuntu12) questing; urgency=medium
+
+  * Another no-change rebuild for boost 1.88 due to LP publisher
+
+ -- Graham Inggs <ginggs@ubuntu.com>  Sat, 20 Sep 2025 16:12:25 +0000
+
+calamares (3.3.14-0ubuntu11) questing; urgency=medium
+
+  * No-change rebuild for boost 1.88.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 11 Aug 2025 08:26:50 +0200
+
 calamares (3.3.14-0ubuntu10) questing; urgency=medium
 
   * d/rules: Silence GCS linker warning on arm64 to prevent FTBFS with
