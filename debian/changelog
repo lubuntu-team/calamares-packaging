@@ -1,3 +1,15 @@
+calamares (3.3.14-0ubuntu20) resolute; urgency=medium
+
+  * Add manual depend on python3-defaults >= 3.14
+
+ -- Rik Mills <rikmills@kde.org>  Sun, 01 Mar 2026 16:01:25 +0000
+
+calamares (3.3.14-0ubuntu19) resolute; urgency=medium
+
+  * No-change rebuild with Python 3.14 as default
+
+ -- Graham Inggs <ginggs@ubuntu.com>  Sun, 01 Mar 2026 15:21:14 +0000
+
 calamares (3.3.14-0ubuntu18) resolute; urgency=medium
 
   * Rebuild for Release.

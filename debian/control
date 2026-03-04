@@ -123,7 +123,7 @@ Package: libcalamares3.3
 Section: libs
 Architecture: linux-any
 Provides: libcalamares
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: python3 (>= 3.14~), ${misc:Depends}, ${shlibs:Depends}
 Breaks: calamares (<< 3.3.14-0ubuntu4)
 Replaces: calamares (<< 3.3.14-0ubuntu4)
 Description: Shared object files for Calamares
