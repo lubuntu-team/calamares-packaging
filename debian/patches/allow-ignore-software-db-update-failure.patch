@@ -1,0 +1,116 @@
+--- a/src/modules/packages/main.py
++++ b/src/modules/packages/main.py
+@@ -252,7 +252,7 @@ class PMApk(PackageManager):
+             check_target_env_call(["apk", "del", pkg])
+ 
+     def update_db(self):
+-        check_target_env_call(["apk", "update"])
++        target_env_process_output(["apk", "update"])
+ 
+     def update_system(self):
+         check_target_env_call(["apk", "upgrade", "--available"])
+@@ -271,7 +271,7 @@ class PMApt(PackageManager):
+                                "autoremove"])
+ 
+     def update_db(self):
+-        check_target_env_call(["apt-get", "update"])
++        target_env_process_output(["apt-get", "update"])
+ 
+     def update_system(self):
+         # Doesn't need to update the system explicitly
+@@ -360,7 +360,7 @@ class PMEntropy(PackageManager):
+         check_target_env_call(["equo", "rm"] + pkgs)
+ 
+     def update_db(self):
+-        check_target_env_call(["equo", "update"])
++        target_env_process_output(["equo", "update"])
+ 
+     def update_system(self):
+         # Doesn't need to update the system explicitly
+@@ -411,7 +411,7 @@ class PMPackageKit(PackageManager):
+             check_target_env_call(["pkcon", "-py", "remove", pkg])
+ 
+     def update_db(self):
+-        check_target_env_call(["pkcon", "refresh"])
++        target_env_process_output(["pkcon", "refresh"])
+ 
+     def update_system(self):
+         check_target_env_call(["pkcon", "-py", "update"])
+@@ -538,7 +538,7 @@ class PMPamac(PackageManager):
+ 
+     def update_db(self):
+         self.del_db_lock()
+-        check_target_env_call([self.backend, "update", "--no-confirm"])
++        target_env_process_output([self.backend, "update", "--no-confirm"])
+ 
+     def update_system(self):
+         self.del_db_lock()
+@@ -555,7 +555,7 @@ class PMPisi(PackageManager):
+         check_target_env_call(["pisi", "remove", "-y"] + pkgs)
+ 
+     def update_db(self):
+-        check_target_env_call(["pisi", "update-repo"])
++        target_env_process_output(["pisi", "update-repo"])
+ 
+     def update_system(self):
+         # Doesn't need to update the system explicitly
+@@ -573,7 +573,7 @@ class PMPortage(PackageManager):
+         check_target_env_call(["emerge", "--depclean", "-q"])
+ 
+     def update_db(self):
+-        check_target_env_call(["emerge", "--sync"])
++        target_env_process_output(["emerge", "--sync"])
+ 
+     def update_system(self):
+         # Doesn't need to update the system explicitly
+@@ -634,7 +634,7 @@ class PMZypp(PackageManager):
+                                "remove"] + pkgs)
+ 
+     def update_db(self):
+-        check_target_env_call(["zypper", "--non-interactive", "update"])
++        target_env_process_output(["zypper", "--non-interactive", "update"])
+ 
+     def update_system(self):
+         # Doesn't need to update the system explicitly
+@@ -772,9 +772,13 @@ def run():
+             libcalamares.utils.warning(str(e))
+             libcalamares.utils.debug("stdout:" + str(e.stdout))
+             libcalamares.utils.debug("stderr:" + str(e.stderr))
+-            return (_("Package Manager error"),
+-                    _("The package manager could not prepare updates. The command <pre>{!s}</pre> returned error code {!s}.")
+-                    .format(e.cmd, e.returncode))
++            ignore_cpe = libcalamares.job.configuration.get("ignore_update_db_error", False)
++            if ignore_cpe:
++                libcalamares.utils.warning("Ignoring package manager database update failure.")
++            else:
++                return (_("Package Manager error"),
++                        _("The package manager could not prepare updates. The command <pre>{!s}</pre> returned error code {!s}.")
++                        .format(e.cmd, e.returncode))
+ 
+     update_system = libcalamares.job.configuration.get("update_system", False)
+     if update_system and libcalamares.globalstorage.value("hasInternet"):
+--- a/src/modules/packages/packages.conf
++++ b/src/modules/packages/packages.conf
+@@ -59,8 +59,12 @@ backend: dummy
+ # post-installing additional packages may result in conflicts.
+ # Therefore set also "update_system" to 'true'.
+ #
++# If you want to ignore software database update failures, set
++# "ignore_update_db_error" to 'true'.
++#
+ skip_if_no_internet: false
+ update_db: true
++ignore_update_db_error: false
+ update_system: false
+ 
+ # pacman specific options
+--- a/src/modules/packages/packages.schema.yaml
++++ b/src/modules/packages/packages.schema.yaml
+@@ -26,6 +26,7 @@ properties:
+     update_db: { type: boolean, default: true }
+     update_system: { type: boolean, default: false }
+     skip_if_no_internet: { type: boolean, default: false }
++    ignore_update_db_error: { type: boolean, default: false }
+ 
+     pacman:
+         additionalProperties: false

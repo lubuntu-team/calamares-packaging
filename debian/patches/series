@@ -6,3 +6,4 @@ unmount-encrypted-devices.patch
 fix-checkbox-warning-confusion.patch
 repair-icon-size.patch
 populate-bootloader-installation-path.patch
+allow-ignore-software-db-update-failure.patch
