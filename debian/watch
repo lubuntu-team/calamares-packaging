@@ -1,5 +1,6 @@
-version=4
-opts="searchmode=plain, \
-pgpsigurlmangle=s/$/.asc/, \
-uversionmangle=s/(\d+\.\d+\.\d+).*/$1/" \
-  https://api.github.com/repos/calamares/@PACKAGE@/releases https:\/\/github.com\/calamares\/calamares\/releases\/download\/v(?:[-_]?(\d[\-+\.:\~\da-zA-Z]*))\/calamares-(?:[-_]?(\d[\-+\.:\~\da-zA-Z]*)).tar.gz
+Version: 5
+
+Source: https://codeberg.org/api/v1/repos/Calamares/calamares/releases
+Matching-Pattern: https://codeberg.org/Calamares/calamares/archive/[^"-_v]*@ANY_VERSION@@ARCHIVE_EXT@
+Search-Mode: plain
+Filename-Mangle: s%.*/[^"-_v]*@ANY_VERSION@%@PACKAGE@-$1%
