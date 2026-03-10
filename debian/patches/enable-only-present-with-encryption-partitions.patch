@@ -94,7 +94,7 @@ Last-Update: 2024-02-26
                          const QString& minSize = QString(),
 --- a/src/modules/partition/partition.conf
 +++ b/src/modules/partition/partition.conf
-@@ -316,6 +316,7 @@ lvm:
+@@ -323,6 +323,7 @@ lvm:
  #       type: "4f68bce3-e8cd-4db1-96e7-fbcaf984b709"
  #       filesystem: "ext4"
  #       noEncrypt: false
@@ -102,7 +102,7 @@ Last-Update: 2024-02-26
  #       mountPoint: "/"
  #       size: 20%
  #       minSize: 500M
-@@ -325,6 +326,7 @@ lvm:
+@@ -332,6 +333,7 @@ lvm:
  #       type: "933ac7e1-2eb4-4f13-b844-0e14e2aef915"
  #       filesystem: "ext4"
  #       noEncrypt: false
@@ -110,7 +110,7 @@ Last-Update: 2024-02-26
  #       mountPoint: "/home"
  #       size: 3G
  #       minSize: 1.5G
-@@ -353,6 +355,7 @@ lvm:
+@@ -360,6 +362,7 @@ lvm:
  #         default filesystem type, or the user's choice, will be applied instead
  #         of "unknown" (e.g. the user might pick ext4, or xfs).
  #   - noEncrypt: whether this partition is exempt from encryption if enabled (optional parameter; default is false)
