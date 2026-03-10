@@ -1,0 +1,31 @@
+Description: Repair icon-size initially
+ Create pixmap the size of the button, not the size of
+ the label; this might be (re-)scaled to match the eventual
+ button-size, but there are variations in Qt versions when
+ doing that. By using the size of the button, not the label,
+ the size is correct immediately.
+Author: Adriaan de Groot <groot@kde.org>
+Origin: https://codeberg.org/Calamares/calamares/commit/c9e49988651a1c7c2881810ec465446a1f96d822
+Last-Update: 2026-03-10
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3
+--- a/src/modules/users/UsersPage.cpp
++++ b/src/modules/users/UsersPage.cpp
+@@ -38,7 +38,7 @@ static inline void
+ labelError( QLabel* pix, QLabel* label, Calamares::ImageType icon, const QString& message )
+ {
+     label->setText( message );
+-    pix->setPixmap( Calamares::defaultPixmap( icon, Calamares::Original, label->size() ) );
++    pix->setPixmap( Calamares::defaultPixmap( icon, Calamares::Original, pix->size() ) );
+ }
+ 
+ /** @brief Clear error, set happy pixmap on a label to indicate "ok". */
+@@ -46,7 +46,7 @@ static inline void
+ labelOk( QLabel* pix, QLabel* label )
+ {
+     label->clear();
+-    pix->setPixmap( Calamares::defaultPixmap( Calamares::StatusOk, Calamares::Original, label->size() ) );
++    pix->setPixmap( Calamares::defaultPixmap( Calamares::StatusOk, Calamares::Original, pix->size() ) );
+ }
+ 
+ /** @brief Sets error or ok on a label depending on @p status and @p value

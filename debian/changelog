@@ -1,3 +1,9 @@
+calamares (3.3.14-0ubuntu21) resolute; urgency=medium
+
+  * Fix icon corruption on the "Users" page (LP: #2139358)
+
+ -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Tue, 10 Mar 2026 12:32:11 -0400
+
 calamares (3.3.14-0ubuntu20) resolute; urgency=medium
 
   * Add manual depend on python3-defaults >= 3.14

@@ -4,3 +4,4 @@ enable-only-present-with-encryption-partitions.patch
 grub-debconf-config.patch
 unmount-encrypted-devices.patch
 fix-checkbox-warning-confusion.patch
+repair-icon-size.patch
