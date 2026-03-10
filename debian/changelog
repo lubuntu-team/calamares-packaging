@@ -1,6 +1,7 @@
 calamares (3.3.14-0ubuntu21) resolute; urgency=medium
 
   * Fix icon corruption on the "Users" page (LP: #2139358)
+  * Fix initial population of bootloader installation path (LP: #2124977)
 
  -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Tue, 10 Mar 2026 12:32:11 -0400
 

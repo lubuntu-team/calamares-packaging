@@ -1,0 +1,11 @@
+--- a/src/modules/partition/gui/PartitionPage.cpp
++++ b/src/modules/partition/gui/PartitionPage.cpp
+@@ -545,7 +545,7 @@ PartitionPage::editExistingPartition( De
+ void
+ PartitionPage::updateBootLoaderInstallPath()
+ {
+-    if ( m_isEfi || !m_ui->bootLoaderComboBox->isVisible() )
++    if ( m_isEfi )
+     {
+         return;
+     }

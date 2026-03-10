@@ -5,3 +5,4 @@ grub-debconf-config.patch
 unmount-encrypted-devices.patch
 fix-checkbox-warning-confusion.patch
 repair-icon-size.patch
+populate-bootloader-installation-path.patch
