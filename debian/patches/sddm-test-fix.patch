@@ -1,0 +1,18 @@
+--- a/src/modules/displaymanager/tests/test-dm-sddm.py
++++ b/src/modules/displaymanager/tests/test-dm-sddm.py
+@@ -3,6 +3,7 @@
+ #
+ # Calamares Boilerplate
+ import libcalamares
++import os
+ libcalamares.globalstorage = libcalamares.GlobalStorage(None)
+ libcalamares.globalstorage.insert("testing", True)
+ 
+@@ -12,6 +13,7 @@ default_desktop_environment = main.Deskt
+ 
+ # Specific DM test
+ d = main.DMsddm("/tmp")
++os.makedirs("/tmp/etc", exist_ok=True)
+ d.set_autologin("d", True, default_desktop_environment)
+ # .. and again (this time checks load/save)
+ d.set_autologin("d", True, default_desktop_environment)
