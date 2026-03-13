@@ -1,3 +1,10 @@
+calamares (3.3.14-0ubuntu23) resolute; urgency=medium
+
+  * Cherry-pick patch to fix installer crash when using lomiri-greeter
+    (LP: #2143868)
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 13 Mar 2026 17:47:02 -0400
+
 calamares (3.3.14-0ubuntu22) resolute; urgency=medium
 
   * Fix a missing Python import in
