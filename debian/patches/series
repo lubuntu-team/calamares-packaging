@@ -8,4 +8,4 @@ repair-icon-size.patch
 populate-bootloader-installation-path.patch
 allow-ignore-software-db-update-failure.patch
 sddm-test-fix.patch
-lightdm-greeter-patch.patch
+lightdm-greeter-path.patch

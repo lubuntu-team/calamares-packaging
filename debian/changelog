@@ -1,4 +1,4 @@
-calamares (3.3.14-0ubuntu23) resolute; urgency=medium
+calamares (3.3.14-0ubuntu24) resolute; urgency=medium
 
   * Cherry-pick patch to fix installer crash when using lomiri-greeter
     (LP: #2143868)
