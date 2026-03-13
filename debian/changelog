@@ -1,3 +1,10 @@
+calamares (3.3.14-0ubuntu22) resolute; urgency=medium
+
+  * Fix a missing Python import in
+    'allow-ignore-software-db-update-failure.patch'.
+
+ -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Fri, 13 Mar 2026 13:32:41 -0400
+
 calamares (3.3.14-0ubuntu21) resolute; urgency=medium
 
   * Fix icon corruption on the "Users" page (LP: #2139358)

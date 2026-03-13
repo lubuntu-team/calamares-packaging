@@ -1,5 +1,14 @@
 --- a/src/modules/packages/main.py
 +++ b/src/modules/packages/main.py
+@@ -19,7 +19,7 @@ from string import Template
+ import subprocess
+ 
+ import libcalamares
+-from libcalamares.utils import check_target_env_call, target_env_call
++from libcalamares.utils import check_target_env_call, target_env_call, target_env_process_output
+ from libcalamares.utils import gettext_path, gettext_languages
+ 
+ import gettext
 @@ -252,7 +252,7 @@ class PMApk(PackageManager):
              check_target_env_call(["apk", "del", pkg])
  
