@@ -1,3 +1,9 @@
+calamares (3.3.14-0ubuntu25) resolute; urgency=medium
+
+  * Add libcrypt-dev build dependency to fix autopkgtests again.
+
+ -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Wed, 18 Mar 2026 13:57:57 -0400
+
 calamares (3.3.14-0ubuntu24) resolute; urgency=medium
 
   * Cherry-pick patch to fix installer crash when using lomiri-greeter
