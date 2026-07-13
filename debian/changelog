@@ -1,3 +1,9 @@
+calamares (3.3.14-0ubuntu26) UNRELEASED; urgency=medium
+
+  * Add sddm-add-sessiontype.patch to support SDDM Autologin SessionType.
+
+ -- Simon Quigley <tsimonq2@debian.org>  Mon, 13 Jul 2026 13:03:38 -0500
+
 calamares (3.3.14-0ubuntu25) resolute; urgency=medium
 
   * Add libcrypt-dev build dependency to fix autopkgtests again.
