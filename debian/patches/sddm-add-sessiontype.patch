@@ -1,0 +1,58 @@
+Description: Add SessionType and rework the Autologin logic for SDDM
+Author: Simon Quigley <tsimonq2@debian.org>
+Origin: vendor
+Last-Update: 2026-07-13
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/src/modules/displaymanager/main.py
++++ b/src/modules/displaymanager/main.py
+@@ -36,9 +36,10 @@ class DesktopEnvironment:
+     is independent of the *Display Manager*, which is what
+     we're configuring in this module.
+     """
+-    def __init__(self, exec, desktop):
++    def __init__(self, exec, desktop, session_type=None):
+         self.executable = exec
+         self.desktop_file = desktop
++        self.session_type = "wayland" if not session_type else session_type
+ 
+     def _search_executable(self, root_mount_point, pathname):
+         """
+@@ -767,20 +768,17 @@ class DMsddm(DisplayManager):
+         if os.path.isfile(sddm_conf_path):
+             sddm_config.read(sddm_conf_path)
+ 
+-        if 'Autologin' not in sddm_config:
+-            sddm_config.add_section('Autologin')
+-
+         if do_autologin:
++            if not sddm_config.has_section('Autologin'):
++                sddm_config.add_section('Autologin')
++
+             sddm_config.set('Autologin', 'User', username)
+-        elif sddm_config.has_option('Autologin', 'User'):
+-            sddm_config.remove_option('Autologin', 'User')
+ 
+-        if default_desktop_environment is not None:
+-            sddm_config.set(
+-                'Autologin',
+-                'Session',
+-                default_desktop_environment.desktop_file
+-                )
++            if default_desktop_environment is not None:
++                sddm_config.set('Autologin', 'Session', default_desktop_environment.desktop_file)
++                sddm_config.set('Autologin', 'SessionType', default_desktop_environment.session_type)
++        else:
++            sddm_config.remove_section('Autologin')
+ 
+         with open(sddm_conf_path, 'w') as sddm_config_file:
+             sddm_config.write(sddm_config_file, space_around_delimiters=False)
+@@ -995,7 +993,7 @@ def run():
+     if "defaultDesktopEnvironment" in libcalamares.job.configuration:
+         entry = libcalamares.job.configuration["defaultDesktopEnvironment"]
+         default_desktop_environment = DesktopEnvironment(
+-            entry["executable"], entry["desktopFile"]
++            entry["executable"], entry["desktopFile"], entry["sessionType"] if "sessionType" in entry else None
+             )
+         # Adjust if executable is bad, but desktopFile isn't.
+         if not default_desktop_environment.update_from_desktop_file(root_mount_point):
