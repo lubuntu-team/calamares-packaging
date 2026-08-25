@@ -1,3 +1,10 @@
+calamares (3.3.14-0ubuntu25.26.04.1) resolute; urgency=medium
+
+  * Ensure encrypted devices are claimed before trying to close them
+    (LP: #2156681)
+
+ -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Tue, 25 Aug 2026 16:59:21 -0400
+
 calamares (3.3.14-0ubuntu25) resolute; urgency=medium
 
   * Add libcrypt-dev build dependency to fix autopkgtests again.
