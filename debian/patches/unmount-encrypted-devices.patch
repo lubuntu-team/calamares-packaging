@@ -45,7 +45,7 @@ Subject: [PATCH 1/2] [libcalamares] Add a closeCryptsetup function to properly
   *
 --- a/src/modules/umount/UmountJob.cpp
 +++ b/src/modules/umount/UmountJob.cpp
-@@ -94,6 +94,38 @@ unmountTargetMounts( const QString& root
+@@ -94,6 +94,47 @@ unmountTargetMounts( const QString& root
  }
  
  static Calamares::JobResult
@@ -60,8 +60,17 @@ Subject: [PATCH 1/2] [libcalamares] Add a closeCryptsetup function to properly
 +            continue;
 +        }
 +
-+        // Define the mount point and ensure it exists
++        bool luksMapperClaimed = partitionMap.value("claimed").toBool();
++        if ( !luksMapperClaimed ) {
++            continue;
++        }
++
 +        QString luksMapperName = partitionMap.value("luksMapperName").toString();
++        if ( luksMapperName.isEmpty() ) {
++            continue;
++        }
++
++        // Ensure the device exists
 +        QFile deviceFile(QString("/dev/mapper/%1").arg(luksMapperName));
 +        if ( !deviceFile.exists() ) {
 +            continue;
@@ -84,7 +93,7 @@ Subject: [PATCH 1/2] [libcalamares] Add a closeCryptsetup function to properly
  exportZFSPools()
  {
      auto* gs = Calamares::JobQueue::instance()->globalStorage();
-@@ -149,6 +181,15 @@ UmountJob::exec()
+@@ -149,6 +190,15 @@ UmountJob::exec()
          if ( !r )
          {
              return r;
